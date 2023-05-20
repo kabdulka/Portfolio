@@ -1,0 +1,27 @@
+
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+
+.projects {
+    background-color: $background-third;
+    // border: green 1px solid;
+    width: 100%;
+    padding: 1.5rem;
+    
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 2rem;
+
+        @include tablet {
+            padding: 4rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            // justify-content: space-evenly;
+            // gap: 3rem;
+        }
+    }
+}

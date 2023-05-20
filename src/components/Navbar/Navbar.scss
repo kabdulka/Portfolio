@@ -1,0 +1,117 @@
+
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.navbar {
+  
+    background-color: $primary-background;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6rem;
+    padding: 0 1.5rem 0 1.5rem;
+
+
+    &--mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // height: 10rem;
+        // border: red solid 1px;
+        background-color: $primary-background;
+        width: 100vw;
+        height: 100vh;
+        transition: ease-out 0.25s all;
+        
+    }
+
+    @include tablet {
+        justify-content: center;
+        height: 8rem;
+    }
+
+    @include desktop {
+        height: 10rem;
+    }
+
+    &__list {
+
+        display: none;
+
+        @include tablet {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            // gap: 2rem;
+            justify-content: space-around;
+        }
+        
+        @include desktop {
+
+        }
+
+        &--mobile {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+
+            @include tablet {
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+        
+    }
+
+    &__item {
+
+        display: flex;
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $primary-text;
+        font-size: 2rem;
+        transition: ease-out 0.5s all;
+        
+        &:hover {
+            color: rgb(5, 65, 72);
+            background-color: $primary-text;
+            padding: 0.25rem 1rem 0.25rem 1rem;
+            font-weight: 700;
+            border-radius: 0.25rem;
+        }
+    }
+
+    &__button {
+
+        color: $primary-text;
+        border: none;
+        cursor: pointer;
+        background: none;
+        display: flex;
+
+        @include tablet {
+            display: none;
+        }
+
+        svg {
+            font-size: 3rem;
+            transition: font-size 0.5s;
+            &:hover {
+                font-size: 5rem;
+               
+            }
+        }
+
+        &--mobile {
+            position: absolute;
+            top: 2%;
+            
+        }
+    }
+
+}

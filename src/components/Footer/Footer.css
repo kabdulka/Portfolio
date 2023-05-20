@@ -1,0 +1,35 @@
+.footer {
+  padding: 3rem 1.5rem 3rem 1.5rem;
+  background-color: rgb(5, 65, 72);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (min-width: 768px) {
+  .footer__icons {
+    justify-content: center;
+    gap: 3rem;
+  }
+}
+.footer__icons svg {
+  color: #fff;
+  font-size: 3rem;
+  transition: ease 0.5s all;
+  cursor: pointer;
+}
+.footer__icons svg:hover {
+  font-size: 4rem;
+}
+.footer__copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.footer__copyright-text {
+  color: white;
+}/*# sourceMappingURL=Footer.css.map */

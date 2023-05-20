@@ -1,0 +1,128 @@
+.main__content {
+  padding: 4rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background-color: rgb(5, 65, 72);
+  padding: 4rem 1.5rem 4rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .main {
+    padding: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .main {
+    padding: 8rem;
+  }
+}
+.main__intro {
+  width: 100%;
+  text-align: center;
+}
+.main__intro-title {
+  color: rgb(247, 247, 178);
+}
+@media (min-width: 768px) {
+  .main__intro-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__intro-title {
+    font-size: 4rem;
+  }
+}
+.main__info {
+  text-align: center;
+  width: 70%;
+}
+.main__info-description {
+  font-weight: 100;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .main__info-description {
+    font-size: 0.85rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__info-description {
+    font-size: 1.5rem;
+  }
+}
+.main__icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.main__icons svg {
+  color: #fff;
+  font-size: 3rem;
+  transition: ease 0.5s all;
+  cursor: pointer;
+}
+.main__icons svg:hover {
+  font-size: 4rem;
+}
+
+.skills {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4rem;
+  gap: 4rem;
+}
+@media (min-width: 768px) {
+  .skills {
+    padding: 6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .skills {
+    padding: 10rem;
+  }
+}
+.skills__heading {
+  font-size: 3rem;
+  color: rgb(5, 65, 72);
+  font-style: none;
+}
+@media (min-width: 768px) {
+  .skills__heading {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .skills__heading {
+    font-size: 5rem;
+  }
+}
+.skills__details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.skills__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.skills__title {
+  color: rgb(5, 65, 72);
+  font-size: 2rem;
+}
+.skills__value {
+  color: rgb(5, 65, 72);
+  font-size: 1rem;
+  text-align: center;
+}/*# sourceMappingURL=Home.css.map */

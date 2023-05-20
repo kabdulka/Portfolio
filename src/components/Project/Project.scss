@@ -1,0 +1,55 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.project__item {
+    // border: 1px yellow solid;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(149, 146, 146);
+  
+    height: 75vw;
+    list-style: none;
+    // max-width: 20em;
+
+    @include tablet {
+        max-height: 22em;
+        max-width: 21em;
+        // width: 40%;
+        // min-width: 50rem;
+    }
+    
+    &__background {
+        // border: red solid 1px;
+        // display: flex;
+        border-radius: 0.5rem;
+        width: 100%;
+        // height: 15rem;
+        height: 100%;
+        aspect-ratio: 16/9;
+        // flex: 5;
+        flex: 1;
+
+       
+    }
+
+    &__title-wrapper {
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        // flex: 1;
+        padding: 1rem 1.5rem 2rem 1.5rem;
+     
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 5vw;
+
+        @include tablet {
+            font-size: 2vw;
+        }
+    }
+}
