@@ -7,7 +7,8 @@
     background-color: $background-third;
     // border: green 1px solid;
     width: 100%;
-    padding: 2rem;
+    // padding: 2.25rem;
+    padding: 2.25rem 2.25rem;
     
     &__list {
         list-style: none;
@@ -17,11 +18,17 @@
         gap: 2rem;
 
         @include tablet {
-            padding: 4rem;
+            padding: 6rem;
             flex-direction: row;
+            overflow-y: hidden;
+            
+        }
+
+        @include desktop {
+            padding: 8rem;
             flex-wrap: wrap;
-            // justify-content: space-evenly;
-            // gap: 3rem;
+            justify-content: center;
         }
     }
 }
+

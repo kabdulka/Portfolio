@@ -1,7 +1,7 @@
 .projects {
   background-color: #f0f0f0;
   width: 100%;
-  padding: 2rem;
+  padding: 2.25rem 2.25rem;
 }
 .projects__list {
   list-style: none;
@@ -11,8 +11,15 @@
 }
 @media (min-width: 768px) {
   .projects__list {
-    padding: 4rem;
+    padding: 6rem;
     flex-direction: row;
+    overflow-y: hidden;
+  }
+}
+@media (min-width: 1280px) {
+  .projects__list {
+    padding: 8rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }/*# sourceMappingURL=Projects.css.map */

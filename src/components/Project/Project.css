@@ -5,6 +5,11 @@
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(149, 146, 146);
   height: 75vw;
   list-style: none;
+  cursor: pointer;
+}
+.project__item:hover {
+  transform: rotateX(360deg);
+  transition: transform 1s;
 }
 @media (min-width: 768px) {
   .project__item {
@@ -17,7 +22,6 @@
   width: 100%;
   height: 100%;
   aspect-ratio: 16/9;
-  flex: 1;
 }
 .project__item__title-wrapper {
   display: flex;
@@ -28,10 +32,10 @@
 }
 .project__item__title {
   text-align: center;
-  font-size: 5vw;
+  font-size: 1.25rem;
 }
 @media (min-width: 768px) {
   .project__item__title {
-    font-size: 2vw;
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=Project.css.map */

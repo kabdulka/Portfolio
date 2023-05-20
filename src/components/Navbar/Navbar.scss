@@ -16,12 +16,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // height: 10rem;
-        // border: red solid 1px;
+        position: fixed;
+   
         background-color: $primary-background;
         width: 100vw;
         height: 100vh;
         transition: ease-out 0.25s all;
+        z-index: 999;
+
+        @include tablet {
+            position: sticky;
+
+        }
         
     }
 
@@ -42,7 +48,6 @@
             width: 100%;
             display: flex;
             list-style: none;
-            // gap: 2rem;
             justify-content: space-around;
         }
         
@@ -102,7 +107,7 @@
             font-size: 3rem;
             transition: font-size 0.5s;
             &:hover {
-                font-size: 5rem;
+                font-size: 3.5rem;
                
             }
         }

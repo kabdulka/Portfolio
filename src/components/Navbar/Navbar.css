@@ -10,10 +10,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: fixed;
   background-color: rgb(5, 65, 72);
   width: 100vw;
   height: 100vh;
   transition: ease-out 0.25s all;
+  z-index: 999;
+}
+@media (min-width: 768px) {
+  .navbar--mobile {
+    position: sticky;
+  }
 }
 @media (min-width: 768px) {
   .navbar {
@@ -83,7 +90,7 @@
   transition: font-size 0.5s;
 }
 .navbar__button svg:hover {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 .navbar__button--mobile {
   position: absolute;

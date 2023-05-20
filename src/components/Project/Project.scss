@@ -7,9 +7,19 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(149, 146, 146);
-  
     height: 75vw;
     list-style: none;
+
+    cursor: pointer;
+  
+    &:hover {
+        
+        transform: rotateX(360deg);
+        // transform: rotateX(180deg);
+        // rotate: 360deg;
+        transition: transform 1s;
+          
+    }
     // max-width: 20em;
 
     @include tablet {
@@ -17,6 +27,11 @@
         max-width: 21em;
         // width: 40%;
         // min-width: 50rem;
+    }
+
+    @include desktop {
+        // height: 35vw;
+        // width: 25%;
     }
     
     &__background {
@@ -28,7 +43,7 @@
         height: 100%;
         aspect-ratio: 16/9;
         // flex: 5;
-        flex: 1;
+        // flex: 1;
 
        
     }
@@ -46,10 +61,10 @@
 
     &__title {
         text-align: center;
-        font-size: 5vw;
+        font-size: 1.25rem;
 
         @include tablet {
-            font-size: 2vw;
+            font-size: 1.5rem;
         }
     }
 }
