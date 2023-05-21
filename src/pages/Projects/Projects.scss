@@ -9,6 +9,17 @@
     width: 100%;
     // padding: 2.25rem;
     padding: 2.25rem 2.25rem;
+
+    &__heading {
+        text-align: center;
+        color: $primary-background;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+        @include tablet {
+            margin-bottom: 0rem;
+        }
+    }
     
     &__list {
         list-style: none;
@@ -18,14 +29,15 @@
         gap: 2rem;
 
         @include tablet {
-            padding: 6rem;
+
+            padding: 2rem 6rem 2rem 6rem;
             flex-direction: row;
             overflow-y: hidden;
             
         }
 
         @include desktop {
-            padding: 8rem;
+            padding: 3rem 6rem 3rem 6rem;
             flex-wrap: wrap;
             justify-content: center;
         }

@@ -13,6 +13,10 @@ const Projects = () => {
     return (
         <section className="projects">  
 
+            <h2 className="projects__heading">
+                Projects I've worked on
+            </h2>
+
             <ul className="projects__list">
                 {/* <Project image={brainFlix} name="BrainFlix"/>
                 <Project image={movifi} name="MoviFi"/>

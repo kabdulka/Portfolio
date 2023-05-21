@@ -5,6 +5,7 @@
   align-items: center;
   height: 6rem;
   padding: 0 1.5rem 0 1.5rem;
+  transition: ease-out 0.25s all;
 }
 .navbar--mobile {
   display: flex;
@@ -25,12 +26,12 @@
 @media (min-width: 768px) {
   .navbar {
     justify-content: center;
-    height: 8rem;
+    height: 6rem;
   }
 }
 @media (min-width: 1280px) {
   .navbar {
-    height: 10rem;
+    height: 8rem;
   }
 }
 .navbar__list {
@@ -41,7 +42,14 @@
     width: 100%;
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navbar__list {
+    justify-content: center;
+    gap: 5rem;
   }
 }
 .navbar__list--mobile {

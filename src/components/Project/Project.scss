@@ -6,21 +6,19 @@
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(149, 146, 146);
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(214, 212, 212);
     height: 75vw;
     list-style: none;
-
     cursor: pointer;
   
     &:hover {
         
-        transform: rotateX(360deg);
+        transform: rotateY(360deg);
         // transform: rotateX(180deg);
-        // rotate: 360deg;
-        transition: transform 1s;
+        // rotate: 45deg;
+        transition: transform ease-in 0.5s;
           
     }
-    // max-width: 20em;
 
     @include tablet {
         max-height: 22em;
@@ -32,6 +30,10 @@
     @include desktop {
         // height: 35vw;
         // width: 25%;
+        // height: 18vw;
+        // width: 25vh;
+        height: 20rem;
+        width: 25rem;
     }
     
     &__background {
@@ -61,10 +63,13 @@
 
     &__title {
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
 
         @include tablet {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+        }
+        @include desktop {
+            font-size: 1rem;
         }
     }
 }

@@ -10,6 +10,7 @@
     align-items: center;
     height: 6rem;
     padding: 0 1.5rem 0 1.5rem;
+    transition: ease-out 0.25s all;
 
 
     &--mobile {
@@ -33,11 +34,11 @@
 
     @include tablet {
         justify-content: center;
-        height: 8rem;
+        height: 6rem;
     }
 
     @include desktop {
-        height: 10rem;
+        height: 8rem;
     }
 
     &__list {
@@ -48,11 +49,13 @@
             width: 100%;
             display: flex;
             list-style: none;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 5rem;
         }
         
         @include desktop {
-
+            justify-content: center;
+            gap: 5rem;
         }
 
         &--mobile {

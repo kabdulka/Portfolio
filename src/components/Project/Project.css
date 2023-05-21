@@ -2,19 +2,25 @@
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(149, 146, 146);
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(214, 212, 212);
   height: 75vw;
   list-style: none;
   cursor: pointer;
 }
 .project__item:hover {
-  transform: rotateX(360deg);
-  transition: transform 1s;
+  transform: rotateY(360deg);
+  transition: transform ease-in 0.5s;
 }
 @media (min-width: 768px) {
   .project__item {
     max-height: 22em;
     max-width: 21em;
+  }
+}
+@media (min-width: 1280px) {
+  .project__item {
+    height: 20rem;
+    width: 25rem;
   }
 }
 .project__item__background {
@@ -32,10 +38,15 @@
 }
 .project__item__title {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   .project__item__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .project__item__title {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=Project.css.map */

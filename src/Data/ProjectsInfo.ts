@@ -5,6 +5,7 @@ import movifi from "../assets/images/movifi.png"
 import auctions from "../assets/images/auctions.png"
 import encyclopedia from "../assets/images/encyclopedia.png"
 import connectFour from "../assets/images/connect4.png"
+import bandsite from "../assets/images/bandsite.png"
 
 interface projects {
     name: string
@@ -31,6 +32,12 @@ const projectsInfo: projects[] = [
         name: "BrainFlix",
         image: brainFlix,
         skills: "ReactJS, NodeJs, ExpressJS, Axios, SASS, BEM, Git",
+        description: ""
+    },
+    {
+        name: "Bandsite",
+        image: bandsite,
+        skills: "Javascript, Axios, SASS, BEM/HTML",
         description: ""
     },
     {
