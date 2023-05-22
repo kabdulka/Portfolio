@@ -8,16 +8,11 @@
   gap: 2rem;
   align-items: center;
   background-color: rgb(5, 65, 72);
-  padding: 4rem 1.5rem 4rem 1.5rem;
+  padding: 10rem 1.5rem 4rem 1.5rem;
 }
 @media (min-width: 768px) {
   .main {
-    padding: 6rem;
-  }
-}
-@media (min-width: 768px) {
-  .main {
-    padding: 8rem;
+    padding: 10rem;
   }
 }
 .main__intro {
@@ -82,12 +77,12 @@
 }
 @media (min-width: 768px) {
   .skills {
-    padding: 6rem;
+    padding: 8rem 8rem 11rem 8rem;
   }
 }
 @media (min-width: 1280px) {
   .skills {
-    padding: 10rem;
+    padding: 10rem 10rem 13rem 10rem;
   }
 }
 .skills__heading {

@@ -11,6 +11,10 @@
     height: 6rem;
     padding: 0 1.5rem 0 1.5rem;
     transition: ease-out 0.25s all;
+    // add here
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 
 
     &--mobile {
@@ -26,7 +30,7 @@
         z-index: 999;
 
         @include tablet {
-            position: sticky;
+            // position: sticky;
 
         }
         
@@ -34,11 +38,11 @@
 
     @include tablet {
         justify-content: center;
-        height: 6rem;
+        // height: 6rem;
     }
 
     @include desktop {
-        height: 8rem;
+        // height: 8rem;
     }
 
     &__list {
@@ -82,8 +86,12 @@
     &__link {
         text-decoration: none;
         color: $primary-text;
-        font-size: 2rem;
         transition: ease-out 0.5s all;
+        font-size: 2rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
         
         &:hover {
             color: rgb(5, 65, 72);

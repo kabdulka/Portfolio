@@ -13,6 +13,8 @@
 }
 @media (min-width: 768px) {
   .project__item {
+    height: 18rem;
+    width: 23rem;
     max-height: 22em;
     max-width: 21em;
   }
