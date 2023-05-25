@@ -1,12 +1,23 @@
-import { CSSProperties } from "react"
+import { CSSProperties, useState } from "react"
 import "./Project.scss"
+import { Link } from "react-router-dom"
 
 interface ProjectProps {
     image: string
     name: string
+    description: string
+    github: string
+    githubUrlFE: string
+    skills: string
 }
 
-const Project = ({image, name}: ProjectProps) => {
+const Project = ({image, skills, name, description, github, githubUrlFE}: ProjectProps) => {
+
+    const [clicked, setClicked] = useState<boolean>(false);
+
+    const handleProjectClick = (): void => {
+        setClicked(prev => !prev)
+    }
 
     // CSS properties
     const projectBGStyle: CSSProperties = {
@@ -20,15 +31,35 @@ const Project = ({image, name}: ProjectProps) => {
 
     return (
 
-        <li  className="project__item">
-            <div style={projectBGStyle} className="project__item__background">
+        <li onClick={handleProjectClick}  className={`project__item ${clicked ? "clicked" : ""}`}>
+            <div className="project__front-face">
 
+                <div style={projectBGStyle} className="project__item__background">
+
+                </div>
+                <div className="project__item__title-wrapper">
+
+                    <h1 className="project__item__title">
+                        {name}
+                    </h1>
+                </div>
             </div>
-            <div className="project__item__title-wrapper">
+            <div className="project__back-face">
 
-                <h1 className="project__item__title">
-                    {name}
-                </h1>
+                <p className="project__back-face__desc">
+                    {description}
+                </p>
+
+                <p className="project__back-face__skills">
+                    {` Technologies Used: ${skills}`}
+                </p>
+    
+                <Link className="project__back-face__ghub" to={`${githubUrlFE}`}>
+                    <p >
+                        {github}
+                    </p>
+                </Link>
+           
             </div>
         </li>
     )

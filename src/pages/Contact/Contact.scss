@@ -1,0 +1,22 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.contact {
+    padding: 8rem 2.5rem 8rem 2.5rem;
+}
+
+form {
+
+
+
+    &__contact-message {
+        resize: none;
+    }
+
+    &__contact-name {
+        
+    }
+    &__contact-message {
+        border: red;
+    }
+}

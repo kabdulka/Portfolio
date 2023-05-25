@@ -5,15 +5,38 @@ import { Link, useLocation } from "react-router-dom"
 import ReorderIcon from '@mui/icons-material/Reorder';
 import { useState, useEffect } from "react";
 
+const getCurrentpage = (queryStr: string): number => {
+    
+    if (queryStr === "/") {
+        return 0;
+    } else if (queryStr === "/projects") {
+        return 1
+    } else if (queryStr === "/experience") {
+        return 2
+    } else {
+        return 3
+    }
+}
+
 const Navbar = () => {
 
     const [toggleNavbar, setToggleNavbar] = useState<boolean>(false);
+    const [activeLink, setActiveLink] = useState<number>(0);
 
+    const location = useLocation();
+  
     const handleToggleNavbar = (): void => {
         setToggleNavbar(!toggleNavbar);
     }
 
-    const location = useLocation();
+    const handleActivELinkChange = (pageId: number):void => {
+        setActiveLink(pageId)
+    }
+
+    useEffect(() => {
+        handleActivELinkChange( getCurrentpage(location.pathname))
+    }, [])
+
 
     // const handleToggleNavbar = (): void => {
     //     setToggleNavbar(prev => !prev)
@@ -27,7 +50,6 @@ const Navbar = () => {
 
         <nav className={`navbar ${toggleNavbar ? "navbar--mobile": ""}`}>
             
-            {/* <div className={`${toggleNavbar ? "toggleButton--mobile" : "toggleButton"}`}> */}
             <div className={`navbar__button ${toggleNavbar ? "navbar__button--mobile" : ""}`}>
                 <button 
                     onClick={handleToggleNavbar} 
@@ -39,19 +61,49 @@ const Navbar = () => {
            </div>
 
             <ul className={`navbar__list ${toggleNavbar ? "navbar__list--mobile" : ""}`}>
-                <li className="navbar__item">
-                    <Link onClick={() => setToggleNavbar(false)} className="navbar__link" to="/">
+                <li className="navbar__item"
+                    onClick={() => {
+                        handleActivELinkChange(0)
+                    }}
+                    >
+                    <Link  
+                        className={`navbar__link ${activeLink === 0 ? "navbar__link--active" : ""}`}
+                        to="/"
+                        >
                         Home
                     </Link>
                 </li>
-                <li className="navbar__item">
-                    <Link className="navbar__link" to="/projects">
+                <li className="navbar__item"
+                    onClick={() => {
+                        handleActivELinkChange(1)
+                    }}
+                >
+                    <Link 
+                        className={`navbar__link ${activeLink === 1 ? "navbar__link--active" : ""}`}  
+                        to="/projects">
                         Projects
                     </Link>
                 </li>
-                <li className="navbar__item">
-                    <Link className="navbar__link" to="/experience">
+                <li className="navbar__item"
+                    onClick={() => {
+                        handleActivELinkChange(2)
+                    }}
+                >
+                    <Link 
+                        className={`navbar__link ${activeLink === 2 ? "navbar__link--active" : ""}`} 
+                        to="/experience">
                         Experience
+                    </Link>
+                </li>
+                <li className="navbar__item"
+                    onClick={() => {
+                        handleActivELinkChange(3)
+                    }}
+                >
+                    <Link 
+                        className={`navbar__link ${activeLink === 3 ? "navbar__link--active" : ""}`} 
+                        to="/contact">
+                        Contact
                     </Link>
                 </li>
 

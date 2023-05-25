@@ -74,9 +74,20 @@
 .navbar__link:hover {
   color: rgb(5, 65, 72);
   background-color: #fff;
-  padding: 0.25rem 1rem 0.25rem 1rem;
-  font-weight: 700;
+  padding: 0.15rem 1rem 0.15rem 1rem;
+  font-weight: 900;
   border-radius: 0.25rem;
+}
+.navbar__link--active {
+  border-bottom: #fff 2px solid;
+  padding-bottom: 1rem 0rem 1rem 0rem;
+}
+.navbar__link--active:hover {
+  background-color: rgb(5, 65, 72);
+  color: #fff;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 0rem;
 }
 .navbar__button {
   color: #fff;

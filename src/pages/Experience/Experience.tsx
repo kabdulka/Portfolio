@@ -6,9 +6,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import { CSSProperties } from "react";
 
 
-const timeLineBackground: string = "#054148";
+const timeLineEduColour: string = "#054148";
 const timeLineColour: string = "#fff";
-const timeLineWorkColour: string = "#F7F79E"
+const timeLineWorkColour: string = "#e3e35f";
 
 const Experience = () => {
 
@@ -33,7 +33,7 @@ const Experience = () => {
       return (
          <section className="experience">
 
-            <VerticalTimeline lineColor={timeLineBackground}>
+            <VerticalTimeline lineColor={timeLineEduColour}>
 
                <VerticalTimelineElement 
                   className="vertical-timeline-element---work"
@@ -53,7 +53,7 @@ const Experience = () => {
                <VerticalTimelineElement 
                   className="vertical-timeline-element---education"
                   date="Jan 2023 - Apr 2023"
-                  iconStyle={{background: timeLineBackground, color: timeLineColour}}
+                  iconStyle={{background: timeLineEduColour, color: timeLineColour}}
                   icon={<SchoolIcon />}
                   contentStyle={getTimeLineStyles("education")}
                   >
@@ -98,7 +98,7 @@ const Experience = () => {
                <VerticalTimelineElement 
                   className="vertical-timeline-element---education"
                   date="2013 - 2019"
-                  iconStyle={{background: timeLineBackground, color: timeLineColour}}
+                  iconStyle={{background: timeLineEduColour, color: timeLineColour}}
                   icon={<SchoolIcon />}
                   contentStyle={getTimeLineStyles("education")}
                   >

@@ -18,17 +18,17 @@ const Projects = () => {
             </h2>
 
             <ul className="projects__list">
-                {/* <Project image={brainFlix} name="BrainFlix"/>
-                <Project image={movifi} name="MoviFi"/>
-                <Project image={inStock} name="InStock"/>
-                <Project image={auctions} name="Auctions"/>
-                <Project image={encyclopedia} name="Wiki Encyclopedia"/> */}
+                
                 {
                     myProjects.map( (project, index) => 
                         <Project 
                             key={index}
                             image={project.image}
                             name={project.name}
+                            description={project.description}
+                            github={project.github}
+                            githubUrlFE={project.githubUrlFE}
+                            skills={project.skills}
                         />
                     )
                 }

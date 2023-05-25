@@ -15,11 +15,12 @@ export const backEndTechs: string[] = [
     "MySQL",
     "Django",
     "Knex.js",
+    "MongoDB"
 ]
 
 export const languages: string[] = [
     "Javascript",
-    "Python",
-    "Java",
     "Typescript",
+    "Python",
+    "Java"
 ]
