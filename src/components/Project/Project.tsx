@@ -45,15 +45,15 @@ const Project = ({image, skills, name, description, github, githubUrlFE}: Projec
                 </div>
             </div>
             <div className="project__back-face">
-
+            {/* <div className="project__back-face__info"> */}
                 <p className="project__back-face__desc">
                     {description}
                 </p>
 
                 <p className="project__back-face__skills">
-                    {` Technologies Used: ${skills}`}
+                    <span className="skills-title"> Technologies Used: </span> {skills}
                 </p>
-    
+            {/* </div> */}
                 <Link className="project__back-face__ghub" to={`${githubUrlFE}`}>
                     <p >
                         {github}
