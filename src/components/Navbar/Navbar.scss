@@ -11,11 +11,10 @@
     height: 6rem;
     padding: 0 1.5rem 0 1.5rem;
     transition: ease-out 0.25s all;
-    // add here
     position: fixed;
+    
     width: 100%;
     z-index: 999;
-
 
     &--mobile {
         display: flex;
@@ -55,6 +54,7 @@
             list-style: none;
             justify-content: center;
             gap: 5rem;
+            
         }
         
         @include desktop {
@@ -81,6 +81,9 @@
 
         display: flex;
 
+        &:hover {
+            padding: 0.15rem 1rem 0.15rem 1rem;
+        }
     }
 
     &__link {
@@ -88,6 +91,7 @@
         color: $primary-text;
         transition: ease-out 0.5s all;
         font-size: 2rem;
+        padding: 0.15rem 1rem 0.15rem 1rem;
 
         @include tablet {
             font-size: 1.5rem;
@@ -96,20 +100,23 @@
         &:hover {
             color: rgb(5, 65, 72);
             background-color: $primary-text;
+            // transition: ease-out 0.5s all;
+            // padding: 0.15rem 1rem 0.15rem 1rem;
             padding: 0.15rem 1rem 0.15rem 1rem;
-            font-weight: 900;
+            // font-weight: 900;
             border-radius: 0.25rem;
         }
 
         &--active {
 
             border-bottom: $primary-text 2px solid;
-            padding-bottom: 1rem 0rem 1rem 0rem;
+            // padding-bottom: 1rem 0rem 1rem 0rem;
+            // padding: 0.15rem 1rem 0.15rem 1rem;
 
             &:hover {
                 background-color: $primary-background;
                 color: $primary-text;
-                padding: 0;
+                // padding: 0;
                 font-weight: 500;
                 border-radius: 0rem;
             }

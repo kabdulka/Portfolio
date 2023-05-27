@@ -2,11 +2,13 @@
   border-radius: 0.5rem;
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(214, 212, 212);
   height: 75vw;
+  width: 75vw;
+  text-align: center;
   list-style: none;
   position: relative;
   transform-style: preserve-3d;
   transform: translate3d(0, 0, 0) rotateY("0");
-  transition: transform 0.5s;
+  transition: all 0.75s;
   transform-origin: center center 0;
   cursor: pointer;
 }
@@ -28,7 +30,6 @@
   background: linear-gradient(90deg, rgb(5, 65, 72) 0%, rgb(22, 117, 120) 84%);
   border-radius: 0.5rem;
   cursor: pointer;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -95,19 +96,25 @@
   }
 }
 .project__item .project__back-face__ghub:hover {
-  font-size: 3vw;
+  transform: scale(1.05);
   color: white;
   cursor: pointer;
 }
 @media (min-width: 768px) {
   .project__item .project__back-face__ghub:hover {
-    font-size: 1rem;
+    transform: scale(1.15);
   }
+}
+.project__item:hover {
+  transform: scale(1.05);
+}
+.project__item:hover.clicked {
+  transform: translate3d(0, 0, 0) rotateY(180deg);
 }
 @media (min-width: 768px) {
   .project__item {
-    height: 24rem;
-    width: 18.5rem;
+    height: 23.25rem;
+    width: 18.25rem;
   }
 }
 .project__item__background {

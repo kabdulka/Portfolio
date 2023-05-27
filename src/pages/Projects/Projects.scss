@@ -5,10 +5,11 @@
 
 .projects {
     background-color: $background-third;
-    // border: green 1px solid;
+    border: green 1px solid;
     width: 100%;
     // padding: 2.25rem;
     padding: 10rem 2.5rem 6rem 2.5rem;
+    border-bottom: darkcyan solid 1px;
 
     &__heading {
         text-align: center;
@@ -26,7 +27,7 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-       
+        align-items: center;
         gap: 2rem;
 
         @include tablet {

@@ -51,13 +51,13 @@ const Project = ({image, skills, name, description, github, githubUrlFE}: Projec
                 </p>
 
                 <p className="project__back-face__skills">
-                    <span className="skills-title"> Technologies Used: </span> {skills}
+                    <span className="skills-title"> TECHNOLOGIES USED: </span> {skills}
                 </p>
             {/* </div> */}
                 <Link className="project__back-face__ghub" to={`${githubUrlFE}`}>
-                    <p >
+                    {/* <p > */}
                         {github}
-                    </p>
+                    {/* </p> */}
                 </Link>
            
             </div>

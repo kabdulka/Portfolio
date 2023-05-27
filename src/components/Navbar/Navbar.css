@@ -60,11 +60,15 @@
 .navbar__item {
   display: flex;
 }
+.navbar__item:hover {
+  padding: 0.15rem 1rem 0.15rem 1rem;
+}
 .navbar__link {
   text-decoration: none;
   color: #fff;
   transition: ease-out 0.5s all;
   font-size: 2rem;
+  padding: 0.15rem 1rem 0.15rem 1rem;
 }
 @media (min-width: 768px) {
   .navbar__link {
@@ -75,17 +79,14 @@
   color: rgb(5, 65, 72);
   background-color: #fff;
   padding: 0.15rem 1rem 0.15rem 1rem;
-  font-weight: 900;
   border-radius: 0.25rem;
 }
 .navbar__link--active {
   border-bottom: #fff 2px solid;
-  padding-bottom: 1rem 0rem 1rem 0rem;
 }
 .navbar__link--active:hover {
   background-color: rgb(5, 65, 72);
   color: #fff;
-  padding: 0;
   font-weight: 500;
   border-radius: 0rem;
 }
