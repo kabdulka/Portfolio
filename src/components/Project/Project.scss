@@ -14,18 +14,12 @@
     list-style: none;
     // position: relative;
     transform-style: preserve-3d;
-    transform: translate3d(0,0,0) rotateY(0);
+    transform: translate3d(0,0,0) rotateY("0");
     transition: all 0.75s;
     transform-origin: center center 0;
     cursor: pointer;
 
-    &.clicked {
-        transform: translate3d(0, 0, 0) rotateY(-180deg);
-
-        // &:hover {
-        //     transform: scale(1.05);
-        // }
-    }
+   
 
     .project__front-face {
         border-radius: 0.25rem;
@@ -37,7 +31,7 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform: translate3d(0,0,0) rotateY(0);
-        z-index: 2;
+        // z-index: 2;
     }
 
     .project__back-face {
@@ -55,10 +49,10 @@
         height: 100%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
-        // transform: translate3d(0,0,0) rotateY(-180deg);
-        transform: translateZ(0) rotateY(180deg);
+    
+        transform: translate3d(0,0,0) rotateY(-180deg);
         padding: 1rem;
-        // position: relative;
+        position: absolute;
         z-index: 1;
 
         @include tablet {
@@ -85,7 +79,6 @@
             border-bottom: $primary-text 1px solid;
             border-right: $primary-text 1px solid;
             box-shadow: 2px 2px #888888;
-            z-index: 1;
             // color: rgb(183, 166, 166);
             @include tablet {
                 // padding: 0.5rem;
@@ -151,7 +144,7 @@
         }
     }
 
-    &:hover {
+    // &:hover {
        
         transform: scale(1.05);
         &.clicked {
@@ -163,7 +156,7 @@
             // width: 18.75rem;
             // transition: height width 0.5s;
         }
-    }
+    // }
 
     @include tablet {
         // line-height: 1rem;
