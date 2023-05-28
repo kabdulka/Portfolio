@@ -38,6 +38,7 @@
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0) rotateY(-180deg);
   padding: 1rem;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .project__item .project__back-face {
