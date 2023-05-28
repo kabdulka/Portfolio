@@ -144,19 +144,19 @@
         }
     }
 
-    // &:hover {
+    &:hover {
        
         transform: scale(1.05);
-        &.clicked {
-            transform: translate3d(0, 0, 0) rotateY(180deg);
-        }
+    }
+    &.clicked {
+        transform: translate3d(0, 0, 0) rotateY(180deg);
+    }
     
-        @include tablet {
-            // height: 23.78rem;
-            // width: 18.75rem;
-            // transition: height width 0.5s;
-        }
-    // }
+    @include tablet {
+        // height: 23.78rem;
+        // width: 18.75rem;
+        // transition: height width 0.5s;
+    }
 
     @include tablet {
         // line-height: 1rem;

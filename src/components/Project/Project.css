@@ -10,7 +10,6 @@
   transition: all 0.75s;
   transform-origin: center center 0;
   cursor: pointer;
-  transform: scale(1.05);
 }
 .project__item .project__front-face {
   border-radius: 0.25rem;
@@ -116,6 +115,9 @@
   .project__item .project__back-face__ghub:hover {
     transform: scale(1.15);
   }
+}
+.project__item:hover {
+  transform: scale(1.05);
 }
 .project__item.clicked {
   transform: translate3d(0, 0, 0) rotateY(180deg);
