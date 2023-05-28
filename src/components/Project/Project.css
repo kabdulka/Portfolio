@@ -23,6 +23,7 @@
   flex-direction: column;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0) rotateY(0);
+  z-index: 2;
 }
 .project__item .project__back-face {
   background: linear-gradient(90deg, rgb(5, 65, 72) 0%, rgb(22, 117, 120) 84%);
