@@ -61,7 +61,7 @@ const Navbar = () => {
            </div>
 
             <ul className={`navbar__list ${toggleNavbar ? "navbar__list--mobile" : ""}`}>
-                <li className="navbar__item"
+                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
                     onClick={() => {
                         handleActivELinkChange(0)
                     }}
@@ -73,7 +73,7 @@ const Navbar = () => {
                         Home
                     </Link>
                 </li>
-                <li className="navbar__item"
+                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
                     onClick={() => {
                         handleActivELinkChange(1)
                     }}
@@ -84,7 +84,7 @@ const Navbar = () => {
                         Projects
                     </Link>
                 </li>
-                <li className="navbar__item"
+                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
                     onClick={() => {
                         handleActivELinkChange(2)
                     }}
@@ -95,7 +95,7 @@ const Navbar = () => {
                         Experience
                     </Link>
                 </li>
-                <li className="navbar__item"
+                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
                     onClick={() => {
                         handleActivELinkChange(3)
                     }}

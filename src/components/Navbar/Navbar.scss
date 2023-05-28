@@ -11,10 +11,11 @@
     height: 6rem;
     padding: 0 1.5rem 0 1.5rem;
     transition: ease-out 0.25s all;
+    // add here
     position: fixed;
-    
     width: 100%;
     z-index: 999;
+
 
     &--mobile {
         display: flex;
@@ -53,8 +54,7 @@
             display: flex;
             list-style: none;
             justify-content: center;
-            gap: 5rem;
-            
+            gap: 2rem;
         }
         
         @include desktop {
@@ -78,30 +78,34 @@
     }
 
     &__item {
-
+        // border: red solid 1px;
         display: flex;
-
+        // transition: ease-out 0.5s all;
+        // padding: 0.15rem 1rem 0.15rem 1rem;
+        
         &:hover {
-            padding: 0.15rem 1rem 0.15rem 1rem;
+            // color: $primary-background;
+            // background-color: $primary-text;
+            // padding: 0.15rem 1rem 0.15rem 1rem;
+            // transform: scale(1.15);
         }
     }
 
     &__link {
         text-decoration: none;
         color: $primary-text;
-        transition: ease-out 0.5s all;
+        // color: $primary-background;
         font-size: 2rem;
         padding: 0.15rem 1rem 0.15rem 1rem;
-
+        transition: ease-out 0.5s all;
         @include tablet {
             font-size: 1.5rem;
         }
         
         &:hover {
+            transform: scale(1.15);
             color: rgb(5, 65, 72);
             background-color: $primary-text;
-            // transition: ease-out 0.5s all;
-            // padding: 0.15rem 1rem 0.15rem 1rem;
             padding: 0.15rem 1rem 0.15rem 1rem;
             // font-weight: 900;
             border-radius: 0.25rem;
@@ -110,14 +114,17 @@
         &--active {
 
             border-bottom: $primary-text 2px solid;
+            border-right: $primary-text 2px solid;
+            box-shadow: 3px 3px #888888;
+            border-radius: 0.25rem;
             // padding-bottom: 1rem 0rem 1rem 0rem;
-            // padding: 0.15rem 1rem 0.15rem 1rem;
 
             &:hover {
                 background-color: $primary-background;
                 color: $primary-text;
+                transform: scale(1);
                 // padding: 0;
-                font-weight: 500;
+                // font-weight: 500;
                 border-radius: 0rem;
             }
         }

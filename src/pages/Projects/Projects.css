@@ -1,9 +1,7 @@
 .projects {
   background-color: #f0f0f0;
-  border: green 1px solid;
   width: 100%;
   padding: 10rem 2.5rem 6rem 2.5rem;
-  border-bottom: darkcyan solid 1px;
 }
 .projects__heading {
   text-align: center;

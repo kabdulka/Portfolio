@@ -67,15 +67,15 @@ const projectsInfo: projects[] = [
     {
         name: "Connect Four",
         image: connectFour,
-        skills: "Java",
-        description: "description",
+        skills: "Java, Object Oriented Programming",
+        description: "Connecr Four is a Java project that allows users to interact with the command line to play Connect Four. This project was implemented using various concepts such as inheritance, object oriented programming, recursion and more. ",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/connect-4"
     },
     {
         name: "Wiki Encyclopedia",
         image: encyclopedia,
-        skills: "Django, Python, Git",
+        skills: "Django, Python, Bootstrap",
         description: "description",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Encyclopedia-Wiki"

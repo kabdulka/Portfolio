@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 .footer__icons svg:hover {
-  font-size: 4rem;
+  transform: scale(1.5);
 }
 .footer__copyright {
   width: 100%;
