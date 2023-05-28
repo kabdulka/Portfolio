@@ -44,7 +44,6 @@
   }
 }
 .project__item .project__back-face__info {
-  border: blue solid 1px;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
