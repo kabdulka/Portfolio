@@ -52,7 +52,7 @@ const projectsInfo: projects[] = [
         name: "Bandsite",
         image: bandsite,
         skills: "Javascript, Axios, SASS, BEM/HTML",
-        description: "description",
+        description: "Bandsite is a fully responsive website that allows users to search for their favourite bands and see when they are performing. In addition, users can comment on a band and see other user's comments",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/bandsite",
     },
@@ -60,7 +60,7 @@ const projectsInfo: projects[] = [
         name: "Auctions",
         image: auctions,
         skills: "Django, Python, SQLite",
-        description: "description",
+        description: "Auctions is an E-Commerce website that is developed in Django. Users can login or sign up to view, add, edit an existing listing or place bids on a listing. Users can also add listings to their watch list so they can view them later.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/E-Commerce"
     },
@@ -76,7 +76,7 @@ const projectsInfo: projects[] = [
         name: "Wiki Encyclopedia",
         image: encyclopedia,
         skills: "Django, Python, Bootstrap",
-        description: "description",
+        description: "Wiki Encyclopedia is an app that is similar to to Wikipedia where users can search for a topic and learn about it. As well, they can add new items/topics and provide a definition/explanation about that item",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Encyclopedia-Wiki"
     },

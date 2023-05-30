@@ -8,7 +8,7 @@ import { CSSProperties } from "react";
 
 const timeLineEduColour: string = "#054148";
 const timeLineColour: string = "#fff";
-const timeLineWorkColour: string = "#e3e35f";
+const timeLineWorkColour: string = "#e06666";
 
 const Experience = () => {
 
@@ -18,7 +18,7 @@ const Experience = () => {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            borderTop: "#F7F79E solid 4px"
+            borderTop: "#e06666 solid 4px"
          }
          const educationStyle: CSSProperties= {
             display: "flex",
