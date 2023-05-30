@@ -101,6 +101,7 @@ const Contact = () => {
         //     console.log("Please enter name")
         //     return;
         // }
+        
     }
 
     return(
