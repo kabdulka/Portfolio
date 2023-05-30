@@ -20,12 +20,13 @@ interface contactDetails {
     github: boolean
 }
 
-interface formErrorState {
-    phoneFieldError: boolean
-    emailFieldError: boolean
-    linkedInFieldError: boolean
-    githubFieldError: boolean
-}
+// TODO
+// interface formErrorState {
+//     phoneFieldError: boolean
+//     emailFieldError: boolean
+//     linkedInFieldError: boolean
+//     githubFieldError: boolean
+// }
 
 const Contact = () => {
 
@@ -42,12 +43,13 @@ const Contact = () => {
         github: false
     })
 
-    const [formError, setFormError] = useState<formErrorState>({
-        phoneFieldError: false,
-        emailFieldError: false,
-        linkedInFieldError: false,
-        githubFieldError: false
-    })
+    // TODO
+    // const [formError, setFormError] = useState<formErrorState>({
+    //     phoneFieldError: false,
+    //     emailFieldError: false,
+    //     linkedInFieldError: false,
+    //     githubFieldError: false
+    // })
 
     const handleInputChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
         const name = event.target.name
@@ -101,7 +103,7 @@ const Contact = () => {
         //     console.log("Please enter name")
         //     return;
         // }
-        
+        console.log(event)
     }
 
     return(
