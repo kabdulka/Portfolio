@@ -5,8 +5,6 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
-import { Email } from "@mui/icons-material";
-import { Link } from "@mui/icons-material";
 
 interface formInput {
     name: string
@@ -20,6 +18,13 @@ interface contactDetails {
     email: boolean,
     linkedIn: boolean,
     github: boolean
+}
+
+interface formErrorState {
+    phoneFieldError: boolean
+    emailFieldError: boolean
+    linkedInFieldError: boolean
+    githubFieldError: boolean
 }
 
 const Contact = () => {
@@ -37,6 +42,13 @@ const Contact = () => {
         github: false
     })
 
+    const [formError, setFormError] = useState<formErrorState>({
+        phoneFieldError: false,
+        emailFieldError: false,
+        linkedInFieldError: false,
+        githubFieldError: false
+    })
+
     const handleInputChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
         const name = event.target.name
         //[key] => [event.target.name]
@@ -52,7 +64,6 @@ const Contact = () => {
         // setPhoneNumVisible(!phoneNumvisible)
         setVontactVisibility({...contactVisibility, [key]: !contactVisibility[key] })
         // setVontactVisibility({...contactVisibility, [key]: true  })
-
     }
 
     const handleSubmit = (event : FormEvent<HTMLFormElement>) => {
@@ -79,6 +90,7 @@ const Contact = () => {
         } else {
             return;
         }
+
         handleFormValidation(event)
     }
 
@@ -160,6 +172,7 @@ const Contact = () => {
                 </div>
 
                 <article className="contact__me">
+
                     <div className="contact__me__divider">
 
                         <div className="contact__details">
@@ -183,30 +196,30 @@ const Contact = () => {
                                 <LinkedInIcon></LinkedInIcon>
                                 <p className="contact__linkedIn-header"> LinkedIn </p> 
                             </div>
-                            <p className={`${contactVisibility.linkedIn ? "" : "contact__info--hidden"}`} > 
+                            <div className={`${contactVisibility.linkedIn ? "" : "contact__info--hidden"}`} > 
                                 
-                                    <a href="https://www.linkedin.com/in/kenan-abdulkarim">
+                                    <a className="contact__info-link" href="https://www.linkedin.com/in/kenan-abdulkarim">
                                     {/* <span> */}
                                         https://www.linkedin.com/in/kenan-abdulkarim
                                     {/* </span> */}
                                     </a>
-                            </p>
+                            </div>
                         </div>
                         <div className="contact__details">
                             <div className="contact__details-info" onClick={()=>{handlePhoneNumChange("github")}}>
                                 <GitHubIcon></GitHubIcon>
                                 <p className="contact__email-header"> Github </p> 
                             </div>
-                            <p className={`${contactVisibility.github ? "" : "contact__info--hidden"}`} >
+                            <div className={`${contactVisibility.github ? "" : "contact__info--hidden"}`} >
 
-                                 <a href="https://github.com/kabdulka ">
+                                 <a className="contact__info-link" href="https://github.com/kabdulka ">
                                     {/* <span> */}
                                     https://github.com/kabdulka 
                                     
                                     {/* </span> */}
                                 </a>
                             
-                            </p>
+                            </div>
                         </div>
 
                         {/* <div className="contact__details" onClick={handlePhoneNumChange}>
