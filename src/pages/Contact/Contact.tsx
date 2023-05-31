@@ -5,6 +5,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import emailjs from '@emailjs/browser';
+
 
 interface formInput {
     name: string
@@ -21,14 +23,27 @@ interface contactDetails {
 }
 
 // TODO
-// interface formErrorState {
-//     phoneFieldError: boolean
-//     emailFieldError: boolean
-//     linkedInFieldError: boolean
-//     githubFieldError: boolean
-// }
+interface formErrorState {
+    // [key: string] : boolean,
+    nameFieldError: boolean
+    emailFieldError: boolean
+    messageFieldError: boolean
+
+}
 
 const Contact = () => {
+
+    function sendEmail (e: FormEvent<HTMLFormElement>): void {
+        e.preventDefault();
+
+        emailjs.sendForm('service_a8r638l', 'template_2cg550m', e.currentTarget, '2FwFN-s58a4asB6S6')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+        e.currentTarget.reset();
+    }
 
     const [contactInfo, setContactInfo] = useState<formInput>({
         name: "",
@@ -36,20 +51,20 @@ const Contact = () => {
         message: ""
     });
 
-    const [contactVisibility, setVontactVisibility] = useState<contactDetails>({
+    const [contactVisibility, setContactVisibility] = useState<contactDetails>({
         phone: false,
         email: false,
         linkedIn: false,
         github: false
     })
 
-    // TODO
-    // const [formError, setFormError] = useState<formErrorState>({
-    //     phoneFieldError: false,
-    //     emailFieldError: false,
-    //     linkedInFieldError: false,
-    //     githubFieldError: false
-    // })
+    const [formError, setFormError] = useState<formErrorState>({
+
+        nameFieldError: false,
+        emailFieldError: false,
+        messageFieldError: false,
+ 
+    })
 
     const handleInputChange = (event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>): void => {
         const name = event.target.name
@@ -62,49 +77,74 @@ const Contact = () => {
         setContactInfo({...contactInfo, [name]: event.target.value})
     }
 
-    const handlePhoneNumChange = (key: string):void => {
+    const handleVisibilityChange = (key: string):void => {
         // setPhoneNumVisible(!phoneNumvisible)
-        setVontactVisibility({...contactVisibility, [key]: !contactVisibility[key] })
-        // setVontactVisibility({...contactVisibility, [key]: true  })
+        setContactVisibility({...contactVisibility, [key]: !contactVisibility[key] })
+        // setContactVisibility({...contactVisibility, [key]: true  })
     }
 
     const handleSubmit = (event : FormEvent<HTMLFormElement>) => {
-        let formComplete: boolean = true;
-
+        
+            
         event.preventDefault();
-       
-        // console.log("event")
+        let formComplete: boolean = true;
+        // setFormError({...formError, ["nameFieldError"]: false, ["emailFieldError"]: false, ["messageFieldError"]: false })
+        
+        let localErrorState:formErrorState = {
+            nameFieldError: false,
+            emailFieldError: false,
+            messageFieldError: false
+        }
+        
         if (contactInfo.name === "") {
-            alert("fill in your name")
             formComplete = false
-        }
+            localErrorState.nameFieldError = true
+
+        } 
+  
         if (contactInfo.email === "") {
-            alert("email")
             formComplete = false
-        }
+            localErrorState.emailFieldError = true
+        } 
+
         if (contactInfo.message === "") {
-            alert("message")
             formComplete = false
-        }
+            localErrorState.messageFieldError = true
+        } 
+
+        setFormError(localErrorState);
 
         if (formComplete) {
             console.log(contactInfo)
+
+            alert("Form Submitted")
+            sendEmail(event)
+            setContactInfo({
+                name: "",
+                email: "",
+                message: ""
+            });
+        
         } else {
+            // form not complete with error states
             return;
         }
 
-        handleFormValidation(event)
     }
 
-    const handleFormValidation = (event: FormEvent<HTMLFormElement>):void => {
-        // console.log(event.target)
-        // const {name, email, message} = event.target
-        // if (name === "") {
-        //     console.log("Please enter name")
-        //     return;
-        // }
-        console.log(event)
-    }
+    // const handleFormValidation = (event: FormEvent<HTMLFormElement>):void => {
+
+    //     // console.log(event.target)
+    //     // const {name, email, message} = event.target
+    //     // if (name === "") {
+    //     //     console.log("Please enter name")
+    //     //     return;
+    //     // }
+
+
+
+    //     console.log(event)
+    // }
 
     return(
 
@@ -121,33 +161,38 @@ const Contact = () => {
                         <label htmlFor="name"> Name </label>
                         <input 
                             name="name" 
+                            id="name"
                             type="text" 
                             className="form__contact-name" 
                             value={contactInfo.name}
                             onChange={handleInputChange}
                         />
+                        <p className={`${formError.nameFieldError === true ? "form__contact-error--visible" : "form__contact-error"}`}> Please provide your name </p>
                     </div>
 
                     <div className="form__contact">
                         <label htmlFor="email"> Please enter your email </label>
                         <input 
                             name="email" 
+                            id="email"
                             type="email" 
                             className="form__contact-email"
                             value={contactInfo.email}
                             onChange={handleInputChange}
-                        />  
+                        />
+                        <p className={`${formError.emailFieldError === true ? "form__contact-error--visible" : "form__contact-error"}`}> Please provide a valid email </p>
                     </div>
                     
                     <div className="form__contact">
                         <label htmlFor="message"> Message </label>
                         <textarea 
-                        
                             name="message" 
+                            id="message"
                             className="form__contact-message"
                             value={contactInfo.message}
                             onChange={handleInputChange}
                         />
+                        <p className={`${formError.messageFieldError === true ? "form__contact-error--visible" : "form__contact-error"}`}> Please type a message </p>
                     </div>
 
                     <div className="form__contact form__contact--button">
@@ -179,7 +224,7 @@ const Contact = () => {
                     <div className="contact__me__divider">
 
                         <div className="contact__details">
-                            <div className="contact__details-info" onClick={()=>{handlePhoneNumChange("phone")}}>
+                            <div className="contact__details-info" onClick={()=>{handleVisibilityChange("phone")}}>
                                 <PhoneIcon></PhoneIcon>
                                 <p className="contact__phone-header"> phone number </p> 
                             </div>
@@ -187,7 +232,7 @@ const Contact = () => {
                         </div>
 
                         <div className="contact__details">
-                            <div className="contact__details-info" onClick={()=>{handlePhoneNumChange("email")}}>
+                            <div className="contact__details-info" onClick={()=>{handleVisibilityChange("email")}}>
                                 <EmailIcon></EmailIcon>
                                 <p className="contact__email-header"> Email </p> 
                             </div>
@@ -195,7 +240,7 @@ const Contact = () => {
                         </div>
 
                         <div className="contact__details">
-                            <div className="contact__details-info"onClick={() => {handlePhoneNumChange("linkedIn")}}>
+                            <div className="contact__details-info"onClick={() => {handleVisibilityChange("linkedIn")}}>
                                 <LinkedInIcon></LinkedInIcon>
                                 <p className="contact__linkedIn-header"> LinkedIn </p> 
                             </div>
@@ -209,7 +254,7 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="contact__details">
-                            <div className="contact__details-info" onClick={()=>{handlePhoneNumChange("github")}}>
+                            <div className="contact__details-info" onClick={()=>{handleVisibilityChange("github")}}>
                                 <GitHubIcon></GitHubIcon>
                                 <p className="contact__email-header"> Github </p> 
                             </div>
@@ -225,7 +270,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        {/* <div className="contact__details" onClick={handlePhoneNumChange}>
+                        {/* <div className="contact__details" onClick={handleVisibilityChange}>
                             <div className="contact__details-info">
                                 <PhoneIcon></PhoneIcon>
                                 <p className="contact__linkedIn-header"> LinkedIn </p> 

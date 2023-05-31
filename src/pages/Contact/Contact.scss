@@ -19,7 +19,7 @@
     }
 
     @include tablet {
-        padding: 12rem 4rem 6rem 4rem;
+        padding: 10rem 4rem 6rem 4rem;
         
     }
 
@@ -120,7 +120,7 @@
     // background-color: $primary-background;
     // border: red 1px solid;
     padding: 0rem 2rem 2rem 2rem;
-    color: white;
+    // color: white;
     font-weight: bold;
     display: flex;
     flex-direction: column;
@@ -153,6 +153,18 @@
             justify-content: center;
             width: 100%;
         }
+
+    }
+
+    &__contact-error {
+        visibility: hidden;
+        // color: red;
+        // border: red solid 1px;
+    }
+    &__contact-error--visible {
+        // visibility: hidden;
+        color: rgb(186, 48, 48);
+        // border: red solid 1px;
     }
 
     &__contact-email {

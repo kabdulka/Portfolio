@@ -10,7 +10,7 @@
 }
 @media (min-width: 768px) {
   .contact {
-    padding: 12rem 4rem 6rem 4rem;
+    padding: 10rem 4rem 6rem 4rem;
   }
 }
 .contact__divider {
@@ -82,7 +82,6 @@
 
 .form {
   padding: 0rem 2rem 2rem 2rem;
-  color: white;
   font-weight: bold;
   display: flex;
   flex-direction: column;
@@ -103,6 +102,12 @@
   display: flex;
   justify-content: center;
   width: 100%;
+}
+.form__contact-error {
+  visibility: hidden;
+}
+.form__contact-error--visible {
+  color: rgb(186, 48, 48);
 }
 .form__contact-email {
   border: rgb(5, 65, 72) solid 1px;
