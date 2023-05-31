@@ -4,6 +4,7 @@
   gap: 2rem;
 }
 .contact__header {
+  font-size: 1rem;
   color: rgb(5, 65, 72);
   width: 100%;
   margin-bottom: 2rem;
@@ -53,6 +54,7 @@
 .contact__info-link {
   color: white;
   text-decoration: none;
+  word-break: break-all;
 }
 .contact__info-link:hover {
   transform: scale(1.15);
@@ -86,12 +88,19 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .form {
+    padding: 0rem 2rem 0rem 2rem;
     width: 95%;
   }
+}
+.form__submitted {
+  color: rgb(24, 112, 24);
+}
+.form__submitted--hidden {
+  display: none;
 }
 .form__contact {
   display: flex;
@@ -119,7 +128,12 @@
   resize: none;
   border-radius: 0.25rem;
   padding: 0.5rem;
-  height: 8rem;
+  height: 10rem;
+}
+@media (min-width: 768px) {
+  .form__contact-message {
+    height: 8rem;
+  }
 }
 .form__contact-name {
   border: rgb(5, 65, 72) solid 1px;
@@ -146,8 +160,15 @@
 .form__contact-button:hover {
   transform: scale(1.15);
 }
+.form__border {
+  padding: 0rem 2rem;
+}
+.form__border--inner {
+  border-top: rgb(5, 65, 72) solid 1px;
+}
 @media (min-width: 768px) {
   .form__border {
+    padding: 0rem;
     border: none;
     border-right: rgb(5, 65, 72) solid 1px;
   }

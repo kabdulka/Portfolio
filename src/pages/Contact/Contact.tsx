@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import emailjs from '@emailjs/browser';
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 interface formInput {
@@ -22,7 +23,6 @@ interface contactDetails {
     github: boolean
 }
 
-// TODO
 interface formErrorState {
     // [key: string] : boolean,
     nameFieldError: boolean
@@ -32,6 +32,8 @@ interface formErrorState {
 }
 
 const Contact = () => {
+
+    const navigate = useNavigate();
 
     function sendEmail (e: FormEvent<HTMLFormElement>): void {
         e.preventDefault();
@@ -44,6 +46,8 @@ const Contact = () => {
           });
         e.currentTarget.reset();
     }
+
+    const [formSubmitted, setFormSubmitted] = useState<boolean>(false)
 
     const [contactInfo, setContactInfo] = useState<formInput>({
         name: "",
@@ -115,16 +119,22 @@ const Contact = () => {
         setFormError(localErrorState);
 
         if (formComplete) {
+
             console.log(contactInfo)
 
             alert("Form Submitted")
-            sendEmail(event)
+            setFormSubmitted(!formSubmitted)
+            // sendEmail(event)
             setContactInfo({
                 name: "",
                 email: "",
                 message: ""
             });
-        
+            setTimeout(() => {
+
+                navigate(0)
+                // console.log("here")
+            }, 5000)
         } else {
             // form not complete with error states
             return;
@@ -150,7 +160,7 @@ const Contact = () => {
 
         <section className="contact">
 
-            <h2 className="contact__header"> What would you like to ask? </h2>
+            <h2 className="contact__header"> Do you have a question? Feel free to reach out! </h2>
             
             <div className="contact__divider">
 
@@ -197,15 +207,19 @@ const Contact = () => {
 
                     <div className="form__contact form__contact--button">
                         <button 
-                            // type="submit"
                             name="button" 
                             className="form__contact-button"
-                            // value={contactInfo.message}
-                            // onChange={handleInputChange}
+
                         >
                             Submit
                         </button>
                     </div>
+
+                    <p className={`${formSubmitted ? "form__submitted" : "form__submitted--hidden"}`}> 
+                        Awesome! Your message has been sent!
+                        The page will refresh in a 5 seconds
+                        
+                    </p>
 
                     {/* <div className="form__border">
 
