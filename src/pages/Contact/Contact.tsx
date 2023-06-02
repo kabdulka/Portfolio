@@ -6,8 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import emailjs from '@emailjs/browser';
-import { Navigate, useNavigate } from "react-router-dom";
-
+import {useNavigate } from "react-router-dom";
 
 interface formInput {
     name: string
@@ -124,7 +123,7 @@ const Contact = () => {
 
             alert("Form Submitted")
             setFormSubmitted(!formSubmitted)
-            // sendEmail(event)
+            sendEmail(event)
             setContactInfo({
                 name: "",
                 email: "",
@@ -134,7 +133,7 @@ const Contact = () => {
 
                 navigate(0)
                 // console.log("here")
-            }, 5000)
+            }, 7000)
         } else {
             // form not complete with error states
             return;
@@ -142,36 +141,25 @@ const Contact = () => {
 
     }
 
-    // const handleFormValidation = (event: FormEvent<HTMLFormElement>):void => {
-
-    //     // console.log(event.target)
-    //     // const {name, email, message} = event.target
-    //     // if (name === "") {
-    //     //     console.log("Please enter name")
-    //     //     return;
-    //     // }
-
-
-
-    //     console.log(event)
-    // }
-
     return(
 
         <section className="contact">
 
-            <h2 className="contact__header"> Do you have a question? Feel free to reach out! </h2>
-            
+            <h2 className="contact__header"> Got a question?  </h2>
+            <h2 className="contact__header"> Or do you want to just say hi? </h2>
+            <h2 className="contact__header"> Feel free to reach out! </h2>
+
             <div className="contact__divider">
 
 
                 <form onSubmit={handleSubmit} className="form">
 
                     <div className="form__contact">
-                        <label htmlFor="name"> Name </label>
+                        <label htmlFor="name"> Your Name </label>
                         <input 
                             name="name" 
                             id="name"
+                            placeholder="Enter your name"
                             type="text" 
                             className="form__contact-name" 
                             value={contactInfo.name}
@@ -181,11 +169,12 @@ const Contact = () => {
                     </div>
 
                     <div className="form__contact">
-                        <label htmlFor="email"> Please enter your email </label>
+                        <label htmlFor="email"> Email Address </label>
                         <input 
                             name="email" 
                             id="email"
-                            type="email" 
+                            type="email"
+                            placeholder="Enter your email" 
                             className="form__contact-email"
                             value={contactInfo.email}
                             onChange={handleInputChange}
@@ -194,15 +183,18 @@ const Contact = () => {
                     </div>
                     
                     <div className="form__contact">
-                        <label htmlFor="message"> Message </label>
+                        <label htmlFor="message"> What would you like to tell me? </label>
                         <textarea 
                             name="message" 
                             id="message"
+                            placeholder="Type your message"
                             className="form__contact-message"
                             value={contactInfo.message}
                             onChange={handleInputChange}
                         />
-                        <p className={`${formError.messageFieldError === true ? "form__contact-error--visible" : "form__contact-error"}`}> Please type a message </p>
+                        <p className={`${formError.messageFieldError === true ? "form__contact-error--visible" : "form__contact-error"}`}> 
+                            Are you sure there's nothing you wanna tell me? Even feedback on this site would be nice {";)"}
+                        </p>
                     </div>
 
                     <div className="form__contact form__contact--button">
@@ -217,7 +209,7 @@ const Contact = () => {
 
                     <p className={`${formSubmitted ? "form__submitted" : "form__submitted--hidden"}`}> 
                         Awesome! Your message has been sent!
-                        The page will refresh in a 5 seconds
+                        The page will refresh in a 7 seconds!
                         
                     </p>
 

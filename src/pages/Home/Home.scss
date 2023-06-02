@@ -3,9 +3,9 @@
 @use "../../styles//variables" as *;
 
 
-.main__content {
-    padding: 4rem;
-}
+// .main__content {
+//     padding: 4rem;
+// }
 
 .main {
 
@@ -13,15 +13,72 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    background-color: $primary-background;
-    padding: 10rem 1.5rem 4rem 1.5rem;
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(5, 65, 72) 0%, rgba(22,117,120,1) 84%);
+    padding: 10rem 2rem 2rem 2rem;
 
     @include tablet {
-        padding: 10rem;
+        padding: 10rem 6rem 10rem 6rem;
+        // flex-direction: row;
     }
 
     @include tablet {
         // padding: 8rem;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image-profile {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 0.5rem;
+        transition: all 0.5s;
+        // filter: grayscale(1);
+
+        &:hover {
+            box-shadow: 4px 4px #888888;
+        //     filter: grayscale(0);
+        }
+
+        @include tablet {
+            height: 20rem;
+            width: 20rem;
+        }
+
+    }
+
+    &__to-skills {
+        // font-size: 1rem;
+        
+        // font-size: min(1rem);
+        // font-size: max(3vw);
+        animation: blinking 1.5s linear infinite;
+        @include text-bliking;
+
+        @media screen and (max-width: 500px) {
+            margin-top: 3rem;
+            font-size: 3.5vw;
+        }
+
+        align-self: flex-end;
+        color: #ddd7d7;
+
+        &:hover {
+            color: white;
+        }
+
+        cursor: pointer;
     }
 
     &__intro {
@@ -29,15 +86,16 @@
         // justify-content: center;
         width: 100%;
         text-align: center;
+        font-size: 0.75rem;
 
         &-title {
             color: $intro-title;
 
             @include tablet {
-                font-size: 4rem;
+                font-size: 2rem;
             }
             @include desktop {
-                font-size: 4rem;
+                font-size: 3rem;
             }
         }
     }
@@ -45,12 +103,13 @@
     &__info {
         text-align: center;
         width: 70%;
+
         &-description {
             font-weight: 100;
             color: $primary-text;
-            @include tablet {
-                font-size: 0.85rem;
-            }
+            font-size: 1rem;
+
+            
             @include tablet {
                 font-size: 1.5rem;
 
@@ -80,8 +139,11 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 4rem;
-    gap: 4rem;
+    padding: 2rem;
+    gap: 2.5rem;
+    // background: url("../../assets/images/background.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
 
     @include tablet {
         padding: 8rem 8rem 11rem 8rem;
@@ -92,12 +154,62 @@
 
     }
 
+    &__list {
+
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        // width: 100%;
+        // overflow-y: hidden;
+        
+        // #box {
+            // width: 200px;
+            // margin: 0 10px 0;
+            // -webkit-animation-name: move;
+            // -webkit-animation-duration: 10s;
+            // -webkit-animation-iteration-count: infinite;
+            // -webkit-animation-direction: up;
+            // -webkit-animation-timing-function:linear;
+            // margin-top:100%;
+        //  }
+
+        @include tablet {
+            gap: 1rem;
+        }
+    }
+    // @-webkit-keyframes move {
+    //     0% {
+    //        transform:translateX(0);
+    //     }
+    //     100% {
+    //        transform:translateX(-100%);
+    //     }
+    //  }
+
+    &__value {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        // background-color: $primary-background;
+        background-color: #ddd7d7;;
+        border-radius: 0.25rem;
+        
+        &:hover {
+            // border: blue solid 1px;
+            cursor: default;
+            color: white;
+     
+            // background-color: #cabbbb;
+        }
+    }
+
     &__heading {
-        font-size: 3rem;
+        font-size: 2rem;
         color: $secondary-text;
         font-style: none;
+        margin-top: 6rem;
+
         @include tablet {
-            font-size: 4rem;
+            font-size: 3rem;
         }
         @include desktop {
             font-size: 5rem;
@@ -112,22 +224,47 @@
  
         
         @include tablet {
+            gap: 4rem
         }
     }
 
     &__info {
         @include skills-info;
+        // border-top: black solid 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        border: 0.05px solid black;
+        border-radius: 0.25rem;
+        gap: 2rem;
+        transition: all 0.75s;
+
+        &:hover {
+            background-color: rgb(238, 241, 247);
+            box-shadow: 4px 4px rgb(183, 186, 184);
+        }
+
     }
 
     &__title {
         color: $secondary-text;
-        font-size: 2rem;
+        text-align: center;
+        font-size: 1rem;
+
+        @include tablet {
+            font-size: 2rem;
+        }
     }
 
     &__value {
         color: $secondary-text;
-        font-size: 1rem;
+        font-size: 0.75rem;
         text-align: center;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
     }
 
 

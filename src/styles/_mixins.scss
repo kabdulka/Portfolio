@@ -14,7 +14,12 @@
 
 @mixin icon-styles {
   color: $primary-text;
-  font-size: 3rem;
+  font-size: 2rem;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+
   transition: ease 0.5s all;
   cursor: pointer;
   &:hover {
@@ -29,4 +34,29 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+}
+
+@mixin input-fields {
+
+    &:hover {
+      outline: $primary-background solid 1px;
+      background-color: rgb(248, 243, 237);
+  }
+
+  &:focus {
+      // border: none;
+      outline: $primary-background solid 1px;
+      background-color: rgb(248, 243, 237);;
+  }
+
+}
+
+@mixin text-bliking {
+
+  @-webkit-keyframes blinking {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1.0; }
+  }
+
 }

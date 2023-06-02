@@ -8,21 +8,22 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 6rem;
+    height: 4rem;
     padding: 0 1.5rem 0 1.5rem;
-    transition: ease-out 0.25s all;
+    transition: ease 0.25s all;
     // add here
     position: fixed;
     width: 100%;
     z-index: 10;
-
+    // border-bottom: rgb(142, 148, 142) solid 2px;
 
     &--mobile {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: fixed;
-   
+        border: none;
+
         background-color: $primary-background;
         width: 100vw;
         height: 100vh;
@@ -38,7 +39,7 @@
 
     @include tablet {
         justify-content: center;
-        // height: 6rem;
+        height: 6rem;
     }
 
     @include desktop {
@@ -97,7 +98,7 @@
         // color: $primary-background;
         font-size: 2rem;
         padding: 0.15rem 1rem 0.15rem 1rem;
-        transition: ease-out 0.5s all;
+        transition: ease-out 0.125s all;
         @include tablet {
             font-size: 1.5rem;
         }
@@ -136,24 +137,33 @@
         border: none;
         cursor: pointer;
         background: none;
-        display: flex;
+        // display: flex;
+        // width: 100%;
+        // border: red solid 1px;
+        // height: 100%;
+        // justify-content: flex-end;
+        position:fixed;
+        top: 1rem;
+        right: 1rem;
+
 
         @include tablet {
             display: none;
         }
 
         svg {
-            font-size: 3rem;
-            transition: font-size 0.5s;
+            font-size: 2.25rem;
+            transition: all 0.5s;
             &:hover {
-                font-size: 3.5rem;
+                transform: scale(1.15);
+                // font-size: 3.5rem;
                
             }
         }
 
         &--mobile {
-            position: absolute;
-            top: 2%;
+            // position: absolute;
+            // top: 2%;
             
         }
     }

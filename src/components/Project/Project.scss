@@ -11,9 +11,10 @@
     list-style: none;
     transform-style: preserve-3d;
     transform: translate3d(0,0,0) rotateY("0");
-    transition: all 0.75s;
+    // filter: grayscale(1);
     transform-origin: center center 0;
     cursor: pointer;
+    transition: all 0.75s;
 
     .project__front-face {
         border-radius: 0.25rem;
@@ -25,6 +26,12 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform: translate3d(0,0,0) rotateY(0);
+         filter: grayscale(1);
+
+        &:hover {
+
+            filter: grayscale(0);
+        }
     }
 
     .project__back-face {
@@ -135,6 +142,7 @@
 
     &:hover {
         transform: scale(1.05);
+        // filter: grayscale(0);
     }
     
     &.clicked {

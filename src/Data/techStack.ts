@@ -1,3 +1,9 @@
+export const futureTech: string[] = [
+    "Next.js",
+    "MongoDB",
+    "Tailwind CSS",
+    
+]
 
 export const frontEndTechs: string[] = [
     "React",
@@ -15,7 +21,7 @@ export const backEndTechs: string[] = [
     "MySQL",
     "Django",
     "Knex.js",
-    "MongoDB"
+    
 ]
 
 export const languages: string[] = [
