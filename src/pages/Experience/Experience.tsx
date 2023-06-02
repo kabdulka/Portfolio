@@ -59,8 +59,8 @@ const Experience = () => {
                   >
                   <h3 className="vertical-timeline-element-title"> Brainstation, Vancouver, British Columbia, Canada </h3>
                   <h4> Web Development Diploma </h4>
-                  <p> Graduated from Brainstation's Web Development Diploma program and developed projects that
-                     require technologies such as Javascript (ES6), SASS/BEM, NodeJS, ReactJS, Express, Knex, MySQL,
+                  <p> Graduated from Brainstation's Web Development Diploma program and developed projects
+                     using technologies such as Javascript (ES6), SASS/BEM, NodeJS, ReactJS, Express, Knex, MySQL,
                      Deployment (Heroku and Netlify), Testing (Jest), Agile Development and more.
                   </p>
                </VerticalTimelineElement>

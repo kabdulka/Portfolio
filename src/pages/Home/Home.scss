@@ -13,9 +13,9 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
     background: linear-gradient(90deg, rgb(5, 65, 72) 0%, rgba(22,117,120,1) 84%);
-    padding: 10rem 2rem 2rem 2rem;
+    padding: 10rem 2rem 10rem 2rem;
 
     @include tablet {
         padding: 10rem 6rem 10rem 6rem;

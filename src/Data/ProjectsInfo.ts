@@ -6,6 +6,7 @@ import auctions from "../assets/images/auctions.png"
 import encyclopedia from "../assets/images/encyclopedia.png"
 import connectFour from "../assets/images/connect4.png"
 import bandsite from "../assets/images/bandsite.png"
+import portfolio from "../assets/images/portfolio.png"
 
 interface projects {
     name: string
@@ -19,6 +20,16 @@ interface projects {
 
 const projectsInfo: projects[] = [
 
+
+    {
+        name: "Portfolio Website",
+        image: portfolio,
+        skills: "React, Typescript, Axios, SASS, BEM",
+        description: "This website is my portfolio website that has been developed using React and Typescript. It is a work in progress as I am constantly trying to improve it. Feel free to leave me a feedback!",
+        github: "Github Repo",
+        githubUrlFE: "https://github.com/kabdulka/Portfolio",
+        // githubUrlBE: "https://github.com/koionaroll/InStock-Backend"
+    },
     {
         name: "Instock",
         image: inStock,
