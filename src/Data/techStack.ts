@@ -2,11 +2,12 @@ export const futureTech: string[] = [
     "Next.js",
     "MongoDB",
     "Tailwind CSS",
-    
+
 ]
 
 export const frontEndTechs: string[] = [
     "React",
+    "Axios",
     "SASS/CSS",
     "BEM",
     "HTML",
@@ -28,5 +29,6 @@ export const languages: string[] = [
     "Javascript",
     "Typescript",
     "Python",
-    "Java"
+    "Java",
+    "C/C++"
 ]
