@@ -3,6 +3,7 @@ import "./Navbar.scss"
 import "../../App.scss"
 import { Link, useLocation } from "react-router-dom"
 import ReorderIcon from '@mui/icons-material/Reorder';
+import CloseIcon from '@mui/icons-material/Close';
 import { useState, useEffect } from "react";
 
 const getCurrentpage = (queryStr: string): number => {
@@ -60,10 +61,18 @@ const Navbar = () => {
             <div className={`navbar__button ${toggleNavbar ? "navbar__button--mobile" : ""}`}>
                 <button 
                     onClick={handleToggleNavbar} 
-                    className="navbar__button"
+                    className={`${toggleNavbar === true ? "navbar__button--clicked" : "navbar__button"} `}
                 >
 
-                    <ReorderIcon />          
+                    <ReorderIcon /> 
+
+                </button>
+                <button 
+                    onClick={handleToggleNavbar} 
+                    className={`${toggleNavbar === false ? "navbar__button--clicked" : "navbar__button"} `}
+                >
+
+                    <CloseIcon />          
                 </button>
            </div>
 
