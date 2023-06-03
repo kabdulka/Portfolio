@@ -18,9 +18,10 @@ function App() {
       <Routes>
 
         <Route path="/" element={<Home />}/>
-        <Route path="/projects" element={<Projects />}/>
+        <Route path="/projects" element={<Projects />} />
         <Route path="/experience" element={<Experience />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="/projects/:prjId" element={<Projects />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

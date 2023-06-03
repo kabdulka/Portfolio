@@ -192,12 +192,12 @@
         // background-color: $primary-background;
         background-color: #ddd7d7;;
         border-radius: 0.25rem;
+        text-decoration: none;
         
         &:hover {
             // border: blue solid 1px;
-            cursor: default;
             color: white;
-     
+            cursor: pointer;
             // background-color: #cabbbb;
         }
     }

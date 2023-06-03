@@ -4,7 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import { CSSProperties } from "react";
-
+import { useEffect } from "react";
 
 const timeLineEduColour: string = "#054148";
 const timeLineColour: string = "#fff";
@@ -29,6 +29,10 @@ const Experience = () => {
 
          return timeLineType === "work" ? workStyle : educationStyle;
       }
+
+      useEffect(() => {
+         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+     }, [])
     
       return (
          <section className="experience">

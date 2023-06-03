@@ -6,7 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import {frontEndTechs, backEndTechs, languages, futureTech} from "../../Data/techStack";
 import profileImage from "../../assets/images/IMG_5053.jpg";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 // import Contact from "../Contact/Contact";
 
 
@@ -23,6 +23,10 @@ const Home = () => {
         // ref.current?.scrollToView(behavior: "smooth")
         refSkills.current?.scrollIntoView({behavior: "smooth"})
     }
+
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, [])
 
    return (
     
@@ -72,7 +76,13 @@ const Home = () => {
                             {
                                 frontEndTechs.map((skill: string, index: number) => 
                                     
-                                    <span key={index} className="skills__value"> {skill} </span>
+                                    <Link 
+                                    className="skills__value"
+                                    to={`/projects/${skill}`}
+                                    key={index}
+                                    >
+                                        <span> {skill} </span>
+                                    </Link>
                                 )
                             }
                         </div>
@@ -85,8 +95,14 @@ const Home = () => {
 
                             {
                                 backEndTechs.map((skill: string, index: number) => 
-                                    
-                                    <span key={index} className="skills__value"> {skill} </span>
+                                    <Link 
+                                
+                                        className="skills__value"
+                                        to={`/projects/${skill}`}
+                                        key={index}
+                                    >
+                                        <span> {skill} </span>
+                                    </Link>
                                 )
                             }
                         </div>
@@ -99,7 +115,13 @@ const Home = () => {
                             {
                                 languages.map((skill: string, index: number) => 
                                     
-                                    <span key={index} className="skills__value"> {skill} </span>
+                                    <Link 
+                                    className="skills__value"
+                                    to={`/projects/${skill}`}
+                                    key={index}
+                                    >
+                                        <span> {skill} </span>
+                                    </Link>
                                 )
                             }
                         </div>

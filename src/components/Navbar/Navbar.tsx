@@ -8,14 +8,19 @@ import { useState, useEffect } from "react";
 const getCurrentpage = (queryStr: string): number => {
     
     if (queryStr === "/") {
+        console.log("navbar", queryStr)
         return 0;
-    } else if (queryStr === "/projects") {
-        return 1
     } else if (queryStr === "/experience") {
         return 2
-    } else {
+    } else if (queryStr === "/contact") {
+        console.log("navbar", queryStr)
         return 3
-    }
+    } else  {
+        // projects
+        return 1
+    } 
+     
+
 }
 
 const Navbar = () => {
@@ -24,7 +29,8 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<number>(0);
 
     const location = useLocation();
-  
+    console.log("inside navbar ", location)
+
     const handleToggleNavbar = (): void => {
         setToggleNavbar(!toggleNavbar);
     }
@@ -33,9 +39,9 @@ const Navbar = () => {
         setActiveLink(pageId)
     }
 
-    useEffect(() => {
-        handleActivELinkChange( getCurrentpage(location.pathname))
-    }, [])
+    // useEffect(() => {
+    //     handleActivELinkChange( getCurrentpage(location.pathname))
+    // }, [])
 
 
     // const handleToggleNavbar = (): void => {
@@ -44,6 +50,7 @@ const Navbar = () => {
 
     useEffect((): void => {
         setToggleNavbar(false)
+        handleActivELinkChange( getCurrentpage(location.pathname))
     }, [location])
 
     return (

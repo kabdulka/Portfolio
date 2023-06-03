@@ -24,7 +24,7 @@ const projectsInfo: projects[] = [
     {
         name: "Portfolio Website",
         image: portfolio,
-        skills: "React, Typescript, Axios, SASS, BEM",
+        skills: "React, Typescript, SASS, BEM",
         description: "This website is my portfolio website that has been developed using React and Typescript. It is a work in progress as I am constantly trying to improve it. Feel free to leave me a feedback!",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Portfolio",
@@ -33,7 +33,7 @@ const projectsInfo: projects[] = [
     {
         name: "Instock",
         image: inStock,
-        skills: "ReactJS, NodeJs, ExpressJS, Axios, MySQL, KnexJS, SASS, BEM",
+        skills: "Node.js, React, ExpressJS, Axios, MySQL, Knex.js, SASS, BEM",
         description: "InStock is a full stack react website that tracks the inventory of items across various different warehouses. I collaborated on this project with classmates from the Brainstation Bootcamp utilizing Git Version control in order to contribute to a single codebase. the backend Express Server handles fetches to the MySQL databases using Knex. The frontend handles user validation when creating/ editing inventory/warehouse information.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/koionaroll/InStock-Frontend",
@@ -42,7 +42,7 @@ const projectsInfo: projects[] = [
     {
         name: "MoviFi",
         image: movifi,
-        skills: "ReactJS, NodeJs, ExpressJS, Axios, MySQL, KnexJS, SASS, BEM",
+        skills: "React, Node.js, Express.js, Axios, MySQL, Knex.js, SASS, BEM",
         description: "Movifi is a full stack React web application that allows users to search for their favourite movies, add them to a watchlist get movie recommendations that are tailored for each user.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Capstone",
@@ -52,7 +52,7 @@ const projectsInfo: projects[] = [
     {
         name: "BrainFlix",
         image: brainFlix,
-        skills: "ReactJS, NodeJs, ExpressJS, Axios, SASS, BEM",
+        skills: "React, Node.js, Express.js, Axios, SASS, BEM",
         description: "BrainFlix is a video streaming website similar in design and functionality to vimo. The tech stack of this project includes ReactJs for the frontend and ExpressJs for the backend API. The user can select and view videos from a suggestion bar as well as upload them.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/BrainFlix",
@@ -62,7 +62,7 @@ const projectsInfo: projects[] = [
     {
         name: "Bandsite",
         image: bandsite,
-        skills: "Javascript, Axios, SASS, BEM/HTML",
+        skills: "Javascript, Axios, SASS, BEM, HTML",
         description: "Bandsite is a fully responsive website that allows users to search for their favourite bands and see when they are performing. In addition, users can comment on a band and see other user's comments",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/bandsite",

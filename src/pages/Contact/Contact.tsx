@@ -7,6 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import emailjs from '@emailjs/browser';
 import {useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 interface formInput {
     name: string
@@ -33,6 +34,10 @@ interface formErrorState {
 const Contact = () => {
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+    }, [])
 
     function sendEmail (e: FormEvent<HTMLFormElement>): void {
         e.preventDefault();
