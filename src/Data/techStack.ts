@@ -10,9 +10,18 @@ export const frontEndTechs: string[] = [
     "SASS",
     "BEM",
     "HTML",
+
+]
+
+export const otherTech: string[] = [
     "NPM",
+    "Git",
     "MaterialUI",
-    "Selenium"
+    "Selenium",
+    "Object Oriented Programming",
+    "MVC",
+    "C++",
+    "C"
 ]
 
 export const backEndTechs: string[] = [
@@ -29,6 +38,5 @@ export const languages: string[] = [
     "Typescript",
     "Python",
     "Java",
-    "C++",
-    "C"
+
 ]

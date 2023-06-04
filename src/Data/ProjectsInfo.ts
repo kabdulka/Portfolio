@@ -7,6 +7,8 @@ import encyclopedia from "../assets/images/encyclopedia.png"
 import connectFour from "../assets/images/connect4.png"
 import bandsite from "../assets/images/bandsite.png"
 import portfolio from "../assets/images/portfolio.png"
+import hangMan from "../assets/images/hangman.png"
+import budgetPlanner from "../assets/images/budgetPlanner.png"
 
 interface projects {
     name: string
@@ -90,6 +92,22 @@ const projectsInfo: projects[] = [
         description: "Wiki Encyclopedia is an app that is similar to to Wikipedia where users can search for a topic and learn about it. As well, they can add new items/topics and provide a definition/explanation about that item",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Encyclopedia-Wiki"
+    },
+    {
+        name: "Hangman",
+        image: hangMan,
+        skills: "Javascript, HTML, CSS",
+        description: "Hangman is, well, as you guessed it, a game where users can guess letters from a word until they get the word correctly or run out of guesses. This project was one of my first projects that I developed using Vanilla Javascript so that I can practice the language.",
+        github: "Github Repo",
+        githubUrlFE: "https://github.com/kabdulka/Hangman",
+    },
+    {
+        name: "Budget planner",
+        image: budgetPlanner,
+        skills: "Javascript, HTML, CSS",
+        description: "This app allow users to add their expenses and income and calculates their budge for the month",
+        github: "Github Repo",
+        githubUrlFE: "https://github.com/kabdulka/PersonalBudgetApp",
     },
 
 ];

@@ -151,7 +151,7 @@ const Contact = () => {
         <section className="contact">
 
             <h2 className="contact__header"> Got a question?  </h2>
-            <h2 className="contact__header"> Or do you want to just say hi? </h2>
+            <h2 className="contact__header"> Or do you just want to say hi? </h2>
             <h2 className="contact__header"> Feel free to reach out! </h2>
 
             <div className="contact__divider">

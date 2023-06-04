@@ -4,16 +4,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
-import {frontEndTechs, backEndTechs, languages, futureTech} from "../../Data/techStack";
+import {frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
 import profileImage from "../../assets/images/IMG_5053.jpg";
 import { useRef, useEffect } from "react";
-// import Contact from "../Contact/Contact";
-
-
-// const formattedFrontEndData: string = frontEndTechs.join(", ");
-// const formattedBackEndData: string = backEndTechs.join(", ");
-// const formattedLanguages: string = languages.join(", ");
-
+ 
 
 const Home = () => {
 
@@ -77,9 +71,9 @@ const Home = () => {
                                 frontEndTechs.map((skill: string, index: number) => 
                                     
                                     <Link 
-                                    className="skills__value"
-                                    to={`/projects/${skill}`}
-                                    key={index}
+                                        className="skills__value"
+                                        to={`/projects/${skill}`}
+                                        key={index}
                                     >
                                         <span> {skill} </span>
                                     </Link>
@@ -116,12 +110,25 @@ const Home = () => {
                                 languages.map((skill: string, index: number) => 
                                     
                                     <Link 
-                                    className="skills__value"
-                                    to={`/projects/${skill}`}
-                                    key={index}
+                                        className="skills__value"
+                                        to={`/projects/${skill}`}
+                                        key={index}
                                     >
                                         <span> {skill} </span>
                                     </Link>
+                                )
+                            }
+                        </div>
+                    </article>
+
+                    <article className="skills__info">
+                        <h2 className="skills__title"> Other Technologies/Languages </h2>
+                        <div className="skills__list">
+
+                            {
+                                otherTech.map((skill: string, index: number) => 
+                                    
+                                    <span key={index} className="skills__value"> {skill} </span>
                                 )
                             }
                         </div>
