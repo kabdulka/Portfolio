@@ -5,7 +5,7 @@
     
     border-radius: 0.5rem;
     box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(214, 212, 212);
-    height: 75vw;
+    height: 80vw;
     width: 75vw;
     text-align: center;
     list-style: none;
@@ -49,7 +49,7 @@
         backface-visibility: hidden;
     
         transform: translate3d(0,0,0) rotateY(-180deg);
-        padding: 1rem;
+        padding: 1.25rem;
         position: absolute;
         z-index: 1;
 
@@ -71,16 +71,19 @@
             width: 100%;
             font-weight: 400;
             border-radius: 0.5rem;
-            font-size: 2.5vw;
-            padding: 0.5rem;
+            font-size: 3.5vw;
+            padding: 0.75rem;
             color: white;
             border-bottom: $primary-text 1px solid;
             border-right: $primary-text 1px solid;
             box-shadow: 2px 2px #888888;
+            overflow-y: scroll;
 
             @include tablet {
                 // padding: 0.5rem;
-                font-size: 0.70rem;
+
+                font-size: 0.9rem;
+        
             }
         }
 
@@ -88,15 +91,15 @@
             border-radius: 0.5rem;
             color: white;
             padding: 0.5rem;
-            font-size: 2.5vw;
+            font-size: 3.25vw;
             border-bottom: $primary-text 1px solid;
             border-right: $primary-text 1px solid;
             box-shadow: 2px 2px #888888;
-
-
+            overflow-y: scroll;
 
             @include tablet {
-                font-size: 0.70rem;
+               
+                font-size: 0.9rem;
                 // padding: 1rem;
             }
         }
@@ -181,6 +184,7 @@
     &__title {
         text-align: center;
         font-size: 1.25rem;
+        color: $primary-background;
 
         @include tablet {
             font-size: 1.25rem;

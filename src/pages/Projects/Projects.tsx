@@ -6,9 +6,6 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 
-// interface ProjectsProp {
-//     projectSelection: string
-// }
 
 interface ProjectType {
 
@@ -39,13 +36,11 @@ const getFilteredProjects = (projectSelection: string): ProjectType[] => {
 
     return filteredProjects;
 
-    // return [{}]
 }
 
 const Projects = () => {
 
     const {prjId}: any = useParams();
-    // const [projectId, setProjectId] = useState<string>(prjId)
 
     // fix type here later
     console.log("projects section")
@@ -68,8 +63,12 @@ const Projects = () => {
     return (
         <section className="projects">  
 
+            {/* TODO back arrow */}
             <h2 className="projects__heading">
-                What have I worked on?
+                Here are some project(s) that I have worked on 
+                {
+                    `${prjId  ? " using " + prjId: ""}  `
+                }
             </h2>
 
             <ul className="projects__list">

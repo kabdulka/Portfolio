@@ -178,14 +178,6 @@
             gap: 1rem;
         }
     }
-    // @-webkit-keyframes move {
-    //     0% {
-    //        transform:translateX(0);
-    //     }
-    //     100% {
-    //        transform:translateX(-100%);
-    //     }
-    //  }
 
     &__value {
         padding: 0.5rem 1rem 0.5rem 1rem;
@@ -195,10 +187,8 @@
         text-decoration: none;
         
         &:hover {
-            // border: blue solid 1px;
-            color: white;
+            color: rgb(227, 134, 134);
             cursor: pointer;
-            // background-color: #cabbbb;
         }
     }
 
@@ -206,7 +196,7 @@
         font-size: 2rem;
         color: $secondary-text;
         font-style: none;
-        margin-top: 6rem;
+        margin-top: 4rem;
 
         @include tablet {
             font-size: 3rem;

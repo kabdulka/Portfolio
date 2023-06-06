@@ -6,6 +6,7 @@ import ReorderIcon from '@mui/icons-material/Reorder';
 import CloseIcon from '@mui/icons-material/Close';
 import { useState, useEffect } from "react";
 
+
 const getCurrentpage = (queryStr: string): number => {
     
     if (queryStr === "/") {
@@ -86,7 +87,7 @@ const Navbar = () => {
                         className={`navbar__link ${activeLink === 0 ? "navbar__link--active" : ""}`}
                         to="/"
                         >
-                        Home
+                        Projects
                     </Link>
                 </li>
                 <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
@@ -96,8 +97,8 @@ const Navbar = () => {
                 >
                     <Link 
                         className={`navbar__link ${activeLink === 1 ? "navbar__link--active" : ""}`}  
-                        to="/projects">
-                        Projects
+                        to="/home">
+                        About
                     </Link>
                 </li>
                 <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}

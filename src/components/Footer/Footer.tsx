@@ -20,10 +20,10 @@ const Footer = () => {
                 <Link to="https://www.linkedin.com/in/kenan-abdulkarim">
                     <LinkedInIcon />
                 </Link>
-                <Link to="">
+                <Link to="https://www.instagram.com/kenanseif/">
                     <InstagramIcon />
                 </Link>
-                <Link to="https://www.facebook.com/">
+                <Link to="https://www.facebook.com/kenan.abdulkarim">
                     <FacebookIcon />
                 </Link>
             </div>

@@ -107,7 +107,7 @@
         
         &:hover {
             transform: scale(1.15);
-            color: rgb(5, 65, 72);
+            color: $contrast-colour;
             background-color: $primary-text;
             padding: 0.15rem 1rem 0.15rem 1rem;
             // font-weight: 900;
@@ -116,13 +116,14 @@
 
         &--active {
 
-            border-bottom: $primary-text 2px solid;
-            border-right: $primary-text 2px solid;
-            box-shadow: 3px 3px #888888;
+            border-bottom: $contrast-colour 2px solid;
+            border-right: $contrast-colour 2px solid;
+            // box-shadow: 3px 3px #888888;
             border-radius: 0.25rem;
             // padding-bottom: 1rem 0rem 1rem 0rem;
 
             &:hover {
+
                 background-color: $primary-background;
                 color: $primary-text;
                 transform: scale(1);
@@ -162,6 +163,7 @@
             transition: all 0.5s;
             &:hover {
                 transform: scale(1.15);
+                
                 // font-size: 3.5rem;
                
             }

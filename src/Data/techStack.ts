@@ -18,7 +18,7 @@ export const otherTech: string[] = [
     "Git",
     "MaterialUI",
     "Selenium",
-    "Object Oriented Programming",
+    "OOP",
     "MVC",
     "C++",
     "C"

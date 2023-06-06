@@ -7,14 +7,13 @@ import { Link } from 'react-router-dom';
 import {frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
 import profileImage from "../../assets/images/IMG_5053.jpg";
 import { useRef, useEffect } from "react";
- 
+import { Typewriter } from 'react-simple-typewriter'
 
 const Home = () => {
 
     const refSkills = useRef<null | HTMLElement>(null)
 
     const handleClick = ():void => {
-        // ref.current?.scrollToView(behavior: "smooth")
         refSkills.current?.scrollIntoView({behavior: "smooth"})
     }
 
@@ -36,10 +35,31 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="main__info">
+                {/* <Typical steps={['Hello', 1000, 'World', 500]} loop={Infinity} wrapper="p" /> */}
                     <h3 className="main__info-description"> 
                         Full Stack Developer / Software Developer with a passion for learning and creating
                     </h3>
                 </div>
+                
+            <div
+                className="main__about"
+                style={{ color: 'rgb(227, 134, 134)', fontWeight: 'bold', fontSize: '1.5rem' }}>
+          {/* Style will be inherited from the parent element */}
+        
+                <Typewriter
+                    
+                    words={['Full Stack Developer / Software Developer with a passion for learning and creating']}
+                    loop={2}
+                    cursor
+                    cursorStyle='>'
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                
+                    // onLoopDone={handleDone}
+                    // onType={handleType}
+                />
+            </div>
                 <div className="main__icons">
                     <Link to="https://www.linkedin.com/in/kenan-abdulkarim">
                         <LinkedInIcon />
@@ -47,7 +67,8 @@ const Home = () => {
                     <Link to="https://github.com/kabdulka">
                         <GitHubIcon />
                     </Link>
-                    <Link to="https://mail.google.com/">
+                    <Link to="/contact
+                    ">
                         <EmailIcon />
                     </Link>
                     
