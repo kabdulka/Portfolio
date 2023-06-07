@@ -4,13 +4,15 @@
 
 
 .modal {
-
-    width: 80vw;
-    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90vw;
+    height: 70vh;
     background-color: rgb(194, 216, 236);
     // border: red solid 1px;
     z-index: 20;
-    position: fixed;
+    position: absolute;
     top: 200px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     padding: 2rem;
@@ -26,6 +28,48 @@
     // position: absolute;
 
 
-    transition: ease all 3s;
+    transition: ease all 0.2s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    &__close {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        // margin-top: 2rem;
+
+
+    }
+
+    &__close-btn {
+        padding: 0.25rem 1rem 0.25rem 1rem;
+        width: 10rem;
+        border: none;
+        // background-color: rgb(59, 99, 134);
+        cursor: pointer;
+
+        @include tablet {
+            // width: 15rem;
+            padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+            border-radius: 0.5rem;
+        }
+    }
 
 }

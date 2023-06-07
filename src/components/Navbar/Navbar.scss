@@ -13,11 +13,14 @@
     transition: ease 0.25s all;
     // add here
     position: fixed;
-    opacity: 0.9;
-    width: 100%;
+    // opacity: 0.5;
+   
     // background: transparent;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    // filter: blur(6px);
+    width: 100%;
     z-index: 10;
-    // border-bottom: rgb(142, 148, 142) solid 2px;
 
     &--mobile {
         display: flex;

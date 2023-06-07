@@ -2,7 +2,9 @@
 @use "../../styles/variables" as *;
 
 .contact {
-    
+    // background: linear-gradient(90deg, rgb(165, 187, 189) 0%, rgba(22,117,120,1) 84%);
+    background: linear-gradient(90deg, rgb(186, 195, 196) 0%, rgb(101, 125, 126) 84%);
+
     padding: 6rem 1rem 1rem 1rem;
     width: 100%;
     // height: 100vh;
@@ -36,8 +38,8 @@
     &__divider {
         // border: red solid 1px;
         padding: 2rem 0rem;
-        background: linear-gradient(90deg, rgb(165, 187, 189) 0%, rgba(22,117,120,1) 84%);
-
+        // background: linear-gradient(90deg, rgb(165, 187, 189) 0%, rgba(22,117,120,1) 84%);
+        
         color: $primary-background;
         display: flex;
         flex-direction: column;
@@ -166,7 +168,7 @@
      
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.5rem;
         // border-right: blue 1px solid;
         // width: 50%
 
@@ -216,6 +218,7 @@
 
     &__contact-name {
         border: $primary-background solid 1px;
+        // border: none;
         border-radius: 0.25rem;
         padding: 0.5rem;
         

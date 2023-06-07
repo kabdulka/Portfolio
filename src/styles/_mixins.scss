@@ -39,15 +39,27 @@
 
 @mixin input-fields {
 
+    background: transparent;
+    
+   
+    border: none;
+    border-bottom: 1px solid  $primary-background;
+    transition: all 0.2s;
     &:hover {
-      outline: $primary-background solid 1px;
+      // outline: $primary-background solid 1px;
       background-color: rgb(248, 243, 237);
+      // border-bottom: 1px solid  rgb(248, 243, 237);
+      // border: none;
+      
   }
 
   &:focus {
+    // transition: all 0.2s;
       // border: none;
-      outline: $primary-background solid 1px;
-      background-color: rgb(248, 243, 237);;
+      // outline: rgb(248, 243, 237) solid 2px;
+      background-color: rgb(248, 243, 237);
+      // border-bottom: 1px solid  rgb(248, 243, 237);
+      outline: none;
   }
 
 }
@@ -56,7 +68,7 @@
 
   @-webkit-keyframes blinking {
     0% { opacity: 1.0; }
-    50% { opacity: 0.5; }
+    50% { opacity: 0.2; }
     100% { opacity: 1.0; }
   }
 

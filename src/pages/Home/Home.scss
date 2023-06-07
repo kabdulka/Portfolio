@@ -16,7 +16,7 @@
     width: 100%;
 
     // background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
-    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.45), rgba(6, 6, 6, 0.45)), url("/src/assets/images/background2.jpg") center/cover;
 
     // background-position:initial;
     aspect-ratio: 16/9;
@@ -28,14 +28,12 @@
     padding: 3rem 2rem 3rem 2rem;
     
     &__modal--open {
-        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
-        background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
+        // background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
+        background: linear-gradient(rgba(10, 10, 10, .75), rgba(6, 6, 6, .75)), url("/src/assets/images/background2.jpg") center/cover;
 
         // background: linear-gradient(rgba(206, 197, 197, 0.35), rgba(223, 212, 220, 0.35)), url("/src/assets/images/background2.jpg") center/cover;
 
     }
-
-
 
     @include tablet {
         // background: linear-gradient(rgba(128, 121, 121, 0.25), rgba(189, 169, 182, 0.25)), url("/src/assets/images/background4.jpg") center/cover;
@@ -91,20 +89,28 @@
         animation: blinking 1.5s linear infinite;
         @include text-bliking;
         font-size: 0.75rem;
+        cursor: pointer;
 
         @media screen and (min-width: 350px) {
             // margin-top: 3rem;
             font-size: 1.25rem;
+
+        }
+
+        @include tablet {
+            font-size: 1.5rem;
         }
 
         align-self: flex-end;
-        color: #a55f5f;
+        // color: #a55f5f;
+        color: $primary-background;
 
         &:hover {
-            color: rgb(138, 123, 123);
+            // color: $primary-text
+            color: white;
         }
 
-        cursor: pointer;
+      
     }
 
     &__intro {
@@ -117,7 +123,8 @@
     &__intro-title {
         color: $intro-title;
         font-size: 3.4rem;
-        color: rgb(255 0 69);
+        // color: rgb(255 0 69);
+        color: white;
         animation: blinking 2s linear infinite;
 
         @include text-bliking;
