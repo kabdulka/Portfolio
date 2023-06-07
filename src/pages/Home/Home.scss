@@ -3,9 +3,6 @@
 @use "../../styles//variables" as *;
 
 
-// .main__content {
-//     padding: 4rem;
-// }
 
 .main {
 
@@ -13,18 +10,46 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    // height: 100vh;
-    background: linear-gradient(90deg, rgb(5, 65, 72) 0%, rgba(22,117,120,1) 84%);
-    padding: 10rem 2rem 10rem 2rem;
+    height: 100vh;
+    justify-content: space-around;
+    // height: 10rem;
+    width: 100%;
+
+    // background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
+
+    // background-position:initial;
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: cover;
+    // object-fit: cover;
+    background-repeat: no-repeat;
+    
+    padding: 3rem 2rem 3rem 2rem;
+    
+    &__modal--open {
+        background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
+        background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
+
+        // background: linear-gradient(rgba(206, 197, 197, 0.35), rgba(223, 212, 220, 0.35)), url("/src/assets/images/background2.jpg") center/cover;
+
+    }
+
+
 
     @include tablet {
+        // background: linear-gradient(rgba(128, 121, 121, 0.25), rgba(189, 169, 182, 0.25)), url("/src/assets/images/background4.jpg") center/cover;
+
         padding: 10rem 6rem 10rem 6rem;
+        justify-content: space-evenly;
         // flex-direction: row;
+        height: 45rem;
     }
 
-    @include tablet {
-        // padding: 8rem;
+    @include desktop {
+        height: 55rem;
     }
+
 
     &__left {
         display: flex;
@@ -65,17 +90,18 @@
         // font-size: max(3vw);
         animation: blinking 1.5s linear infinite;
         @include text-bliking;
+        font-size: 0.75rem;
 
-        @media screen and (max-width: 500px) {
-            margin-top: 3rem;
-            font-size: 3.5vw;
+        @media screen and (min-width: 350px) {
+            // margin-top: 3rem;
+            font-size: 1.25rem;
         }
 
         align-self: flex-end;
-        color: #ddd7d7;
+        color: #a55f5f;
 
         &:hover {
-            color: white;
+            color: rgb(138, 123, 123);
         }
 
         cursor: pointer;
@@ -86,34 +112,59 @@
         // justify-content: center;
         width: 100%;
         text-align: center;
-        font-size: 0.75rem;
+    }
 
-        &-title {
-            color: $intro-title;
+    &__intro-title {
+        color: $intro-title;
+        font-size: 3.4rem;
+        color: rgb(255 0 69);
+        animation: blinking 2s linear infinite;
 
-            @include tablet {
-                font-size: 2rem;
-            }
-            @include desktop {
-                font-size: 3rem;
-            }
+        @include text-bliking;
+
+        @include tablet {
+            font-size: 4rem;
+        }
+        @include desktop {
+            font-size: 5rem;
         }
     }
 
     &__info {
         text-align: center;
-        width: 70%;
+        // width: 70%;
 
-        &-description {
-            font-weight: 100;
-            color: $primary-text;
-            font-size: 1rem;
+    }
 
+    &__info-about {
+        font-weight: 100;
+        // color: $primary-text;
+        font-size: 0.85rem;
+        // color: $primary-background;
+        // background: transparent;
+        
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        line-height: 1.1rem;
+        border: 0.5px $primary-background solid;
+        // border: white solid 1.5px;
+        // filter: brightness(20%);
+        border: none;
+        transition: 0.3s all;
+        // stroke-dashoffset: -480;
+        &:hover {
+            cursor: pointer;
+            // background-color: darken(transparent, 25%);
+            // background-color: #888888;
+            // text-underline-offset:initial;
             
-            @include tablet {
-                font-size: 1.5rem;
+            filter: brightness(80%);
+            transition: 0.3s all;
+        }
+        
+        @include tablet {
+            font-size: 1.5rem;
 
-            }
         }
     }
 

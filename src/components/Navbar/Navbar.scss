@@ -13,7 +13,9 @@
     transition: ease 0.25s all;
     // add here
     position: fixed;
+    opacity: 0.9;
     width: 100%;
+    // background: transparent;
     z-index: 10;
     // border-bottom: rgb(142, 148, 142) solid 2px;
 
@@ -116,8 +118,8 @@
 
         &--active {
 
-            border-bottom: $contrast-colour 2px solid;
-            border-right: $contrast-colour 2px solid;
+            border-bottom: $primary-text 2px solid;
+            border-right: $primary-text 2px solid;
             // box-shadow: 3px 3px #888888;
             border-radius: 0.25rem;
             // padding-bottom: 1rem 0rem 1rem 0rem;

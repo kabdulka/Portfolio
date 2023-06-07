@@ -5,61 +5,60 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import {frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
-import profileImage from "../../assets/images/IMG_5053.jpg";
-import { useRef, useEffect } from "react";
-import { Typewriter } from 'react-simple-typewriter'
+// import profileImage from "../../assets/images/IMG_5053.jpg";
+import { useRef, useEffect, useState } from "react";
+import Modal from "../../components/Modal/Modal";
 
 const Home = () => {
 
     const refSkills = useRef<null | HTMLElement>(null)
 
+    const [isModalopen, setIsModalopen] = useState<boolean>(false)
+
     const handleClick = ():void => {
         refSkills.current?.scrollIntoView({behavior: "smooth"})
     }
 
+    const handleModalChange = (): void => {
+        setIsModalopen(!isModalopen)
+    }
+
+    // automatic scroll to the top on page mount
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     }, [])
 
+    // prevent scrolling when modal is open and allow it when modal is closed
+    useEffect(() => {
+        if (isModalopen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'unset';
+        }
+      }, [isModalopen]);
+
    return (
     
         <>
-            <main className="main">
+            <main className={`main ${isModalopen ? "main__modal--open" : ""}`}>
                 <div className="main__left">
 
                     <div className="main__image">
-                        <img src={profileImage} alt="profile-image" className="main__image-profile" />
+                        {/* <img src={profileImage} alt="profile-image" className="main__image-profile" /> */}
                     </div>
                     <div className="main__intro">
-                        <h1 className="main__intro-title"> Hello, My name is Kenan </h1>
+                        <h1 className="main__intro-title"> Hello! I'm Kenan</h1>
                     </div>
                 </div>
-                <div className="main__info">
-                {/* <Typical steps={['Hello', 1000, 'World', 500]} loop={Infinity} wrapper="p" /> */}
-                    <h3 className="main__info-description"> 
-                        Full Stack Developer / Software Developer with a passion for learning and creating
-                    </h3>
+                <div className="main__info" onClick={handleModalChange}>
+                    <button className="main__info-about"> 
+                        A bit about me
+                    </button>
                 </div>
-                
-            <div
-                className="main__about"
-                style={{ color: 'rgb(227, 134, 134)', fontWeight: 'bold', fontSize: '1.5rem' }}>
-          {/* Style will be inherited from the parent element */}
-        
-                <Typewriter
-                    
-                    words={['Full Stack Developer / Software Developer with a passion for learning and creating']}
-                    loop={2}
-                    cursor
-                    cursorStyle='>'
-                    typeSpeed={70}
-                    deleteSpeed={50}
-                    delaySpeed={1000}
-                
-                    // onLoopDone={handleDone}
-                    // onType={handleType}
-                />
-            </div>
+
+
+                {isModalopen === true && <Modal handleModalChange={handleModalChange}/>}
+            
                 <div className="main__icons">
                     <Link to="https://www.linkedin.com/in/kenan-abdulkarim">
                         <LinkedInIcon />

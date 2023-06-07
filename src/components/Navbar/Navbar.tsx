@@ -10,14 +10,20 @@ import { useState, useEffect } from "react";
 const getCurrentpage = (queryStr: string): number => {
     
     if (queryStr === "/") {
+        // Projects
         console.log("navbar", queryStr)
         return 0;
     } else if (queryStr === "/experience") {
+        // experience
         return 2
     } else if (queryStr === "/contact") {
         console.log("navbar", queryStr)
         return 3
-    } else  {
+    } else if (queryStr === "/about") {
+        return 4
+    }
+    else  {
+        console.log("navbar", queryStr)
         // projects
         return 1
     } 
@@ -31,7 +37,7 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<number>(0);
 
     const location = useLocation();
-    console.log("inside navbar ", location)
+    // console.log("inside navbar ", location)
 
     const handleToggleNavbar = (): void => {
         setToggleNavbar(!toggleNavbar);
@@ -40,6 +46,7 @@ const Navbar = () => {
     const handleActivELinkChange = (pageId: number):void => {
         setActiveLink(pageId)
     }
+    console.log("After query string", activeLink)
 
     // useEffect(() => {
     //     handleActivELinkChange( getCurrentpage(location.pathname))
@@ -56,7 +63,7 @@ const Navbar = () => {
     }, [location])
 
     return (
-
+        // HERE
         <nav className={`navbar ${toggleNavbar ? "navbar--mobile": ""}`}>
             
             <div className={`navbar__button ${toggleNavbar ? "navbar__button--mobile" : ""}`}>
@@ -78,30 +85,30 @@ const Navbar = () => {
            </div>
 
             <ul className={`navbar__list ${toggleNavbar ? "navbar__list--mobile" : ""}`}>
-                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
+                <li className={`navbar__item `}
                     onClick={() => {
                         handleActivELinkChange(0)
                     }}
                     >
                     <Link  
-                        className={`navbar__link ${activeLink === 0 ? "navbar__link--active" : ""}`}
+                        className={`navbar__link ${activeLink === 0 || activeLink === 1 ? "navbar__link--active" : ""}`}
                         to="/"
                         >
                         Projects
                     </Link>
                 </li>
-                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
+                <li className={`navbar__item`}
                     onClick={() => {
                         handleActivELinkChange(1)
                     }}
                 >
                     <Link 
-                        className={`navbar__link ${activeLink === 1 ? "navbar__link--active" : ""}`}  
-                        to="/home">
+                        className={`navbar__link ${activeLink === 4 ? "navbar__link--active" : ""}`}  
+                        to="/about">
                         About
                     </Link>
                 </li>
-                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
+                <li className={`navbar__item`}
                     onClick={() => {
                         handleActivELinkChange(2)
                     }}
@@ -112,7 +119,7 @@ const Navbar = () => {
                         Experience
                     </Link>
                 </li>
-                <li className={`navbar__item ${activeLink === 0 ? "navbar__item--active" : ""}`}
+                <li className={`navbar__item `}
                     onClick={() => {
                         handleActivELinkChange(3)
                     }}
