@@ -8,9 +8,11 @@
     flex-direction: column;
     gap: 2rem;
     width: 90vw;
-    height: 70vh;
-    background-color: rgb(194, 216, 236);
+    height: 51rem;
+    // height: 60vh;
+    background-color: rgb(242, 248, 244);
     // border: red solid 1px;
+    overflow-x: scroll;
     z-index: 20;
     position: fixed;
     // top: 200px;
@@ -18,20 +20,26 @@
     padding: 2rem;
     border-radius: 1rem;
 
-    // background-color: rgba(0, 0, 0, 0.2);
-    // width: 100vw;
-    // height: 100vh;
-    // z-index: 0;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // position: absolute;
-
-
     transition: ease all 0.2s;
 
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 
+    &__profile-img {
+        width: 15rem;
+        height: 10rem;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
 
+    &__about {
+        color: rgb(227, 134, 134); 
+        font-weight: bold; 
+        font-size: 0.9rem;
+    }
 
 
 
@@ -59,16 +67,23 @@
     }
 
     &__close-btn {
-        padding: 0.25rem 1rem 0.25rem 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
         width: 10rem;
         border: none;
-        // background-color: rgb(59, 99, 134);
-        cursor: pointer;
+        color: $primary-text;
+        background-color: rgb(72, 113, 149);
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(17, 78, 131);
+        }
+
 
         @include tablet {
             // width: 15rem;
             padding: 0.75rem 2.5rem 0.75rem 2.5rem;
             border-radius: 0.5rem;
+            
         }
     }
 

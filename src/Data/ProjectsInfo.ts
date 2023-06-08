@@ -33,6 +33,16 @@ const projectsInfo: projects[] = [
         // githubUrlBE: "https://github.com/koionaroll/InStock-Backend"
     },
     {
+        name: "BrainFlix",
+        image: brainFlix,
+        skills: "React, Typescript, Node.js, Express.js, Axios, SASS, BEM",
+        description: "BrainFlix is a video streaming website similar in design and functionality to vimo. The tech stack of this project includes ReactJs for the frontend and ExpressJs for the backend API. The user can select and view videos from a suggestion bar as well as upload them.",
+        github: "Github Repo",
+        githubUrlFE: "https://github.com/kabdulka/BrainFlix",
+        // githubUrlBE: "https://github.com/kabdulka/brainflix-api"
+
+    },
+    {
         name: "Instock",
         image: inStock,
         skills: "Node.js, React, ExpressJS, Axios, MySQL, Knex.js, SASS, BEM",
@@ -51,16 +61,7 @@ const projectsInfo: projects[] = [
         // githubUrlBE: "https://github.com/koionaroll/InStock-Backend"
 
     },
-    {
-        name: "BrainFlix",
-        image: brainFlix,
-        skills: "React, Node.js, Express.js, Axios, SASS, BEM",
-        description: "BrainFlix is a video streaming website similar in design and functionality to vimo. The tech stack of this project includes ReactJs for the frontend and ExpressJs for the backend API. The user can select and view videos from a suggestion bar as well as upload them.",
-        github: "Github Repo",
-        githubUrlFE: "https://github.com/kabdulka/BrainFlix",
-        // githubUrlBE: "https://github.com/kabdulka/brainflix-api"
 
-    },
     {
         name: "Bandsite",
         image: bandsite,

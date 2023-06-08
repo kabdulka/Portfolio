@@ -3,8 +3,8 @@
 
 .contact {
     // background: linear-gradient(90deg, rgb(165, 187, 189) 0%, rgba(22,117,120,1) 84%);
-    background: linear-gradient(90deg, rgb(186, 195, 196) 0%, rgb(101, 125, 126) 84%);
-
+    // background: linear-gradient(90deg, rgb(249, 253, 253) 0%, rgb(246, 252, 252) 84%);
+    background: linear-gradient(rgba(248, 243, 243, 0.96), rgba(255,255,255,0.95)), url("../../assets/images/contactBg.webp") ;   
     padding: 6rem 1rem 1rem 1rem;
     width: 100%;
     // height: 100vh;
@@ -27,6 +27,8 @@
     }
 
     @include tablet {
+        background: linear-gradient(rgba(248, 243, 243, 0.97), rgba(255,255,255,0.97)), url("../../assets/images/contactBg.webp") ;   
+
         padding: 8rem 2rem 2rem 2rem;
         
     }
@@ -87,7 +89,7 @@
     }
 
     &__info-link {
-        color: white;
+        color: $primary-background;
         text-decoration: none;
         word-break: break-all;
         // font-size: 0.65rem;
@@ -97,7 +99,10 @@
         }
     }
 
+
+
     &__details {
+        color: $primary-background;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
@@ -263,12 +268,3 @@
     
 }
 
-    // .contact__me {
-    //     // border: yellow solid 1px;
-    //     // background-color: red;
-    //     width: 100%;
-
-    //     @include tablet {
-    //         width: 50%;
-    //     }
-    // }

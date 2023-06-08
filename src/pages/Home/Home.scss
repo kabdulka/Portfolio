@@ -16,7 +16,7 @@
     width: 100%;
 
     // background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
-    background: linear-gradient(rgba(10, 10, 10, 0.45), rgba(6, 6, 6, 0.45)), url("/src/assets/images/background2.jpg") center/cover;
+    background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(6, 6, 6, 0.1)), url("/src/assets/images/background2.jpg") center/cover;
 
     // background-position:initial;
     aspect-ratio: 16/9;
@@ -41,7 +41,7 @@
         padding: 10rem 6rem 10rem 6rem;
         justify-content: space-evenly;
         // flex-direction: row;
-        height: 45rem;
+        height: 50rem;
     }
 
     @include desktop {
@@ -192,18 +192,75 @@
     
 }
 
+@keyframes blink {
+    // 0% {
+    //     background: linear-gradient(rgba(248, 243, 243, 0.9), rgba(255,255,255,1)), url("../../assets/images/skills_bg.avif") ;    
+    //     background-size:cover;
+    //     background-position: 0% 0%;
+    //     // animation: blink 1.5s infinite;
+    // }
+
+    // 50% {
+    //     background: linear-gradient(rgba(248, 243, 243, 0.8), rgba(255,255,255,.75)), url("../../assets/images/skills_bg.avif") ;
+    //     //   opacity: 0;
+    //     // background-size:cover;
+    //     // background-position:center;
+    //     // animation: blink 1.5s infinite;
+    //     background-size:cover;
+    //     background-position:0% 100%;
+    // }
+
+    // 100% {
+    //     background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.5)), url("../../assets/images/skills_bg.avif") ;    
+    //     // background-size:cover;
+    //     background-position: 0% 0%;
+    //     // animation: blink 1.5s infinite;
+    //     background-size:cover;
+    //     background-position:center;
+    // }
+    // from { background-position: 0 0; }
+    // to { background-position: 100% 0; }
+    from { 
+        // background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
+        background-size:cover;
+        background-position: 0%; 
+    }
+    to { 
+        // background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
+        background-size:cover;
+        background-position: 90000%; 
+    }
+}
+
+// @keyframes blink2 {
+//     from {
+//         background-position: 0 0;
+//     }
+//     to {
+//         background-position: 0  860px; 
+//     }
+// }
 
 .skills {
-    background-color: $secondary-background;
+    background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
+    // background-color: rgb(5, 65, 72);
+    background-size:cover;
+    // background-position: 0px 0px;
+    // background-color: rgb(250, 241, 241, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 2rem;
     gap: 2.5rem;
-    // background: url("../../assets/images/background.jpg");
+    background-repeat: repeat-x;
+    // background: url("../../assets/images/skills_bg.avif");
     // background-repeat: no-repeat;
-    // background-size: cover;
+    // background-size:cover;
+    // background-position: 100% 100%;
+    // background-size: 100% 100%;
+    // animation: blink 12500s infinite;
+    animation: blink 5000s infinite;
 
     @include tablet {
         padding: 8rem 8rem 11rem 8rem;
@@ -220,19 +277,6 @@
         justify-content: center;
         gap: 0.5rem;
         flex-wrap: wrap;
-        // width: 100%;
-        // overflow-y: hidden;
-        
-        // #box {
-            // width: 200px;
-            // margin: 0 10px 0;
-            // -webkit-animation-name: move;
-            // -webkit-animation-duration: 10s;
-            // -webkit-animation-iteration-count: infinite;
-            // -webkit-animation-direction: up;
-            // -webkit-animation-timing-function:linear;
-            // margin-top:100%;
-        //  }
 
         @include tablet {
             gap: 1rem;
@@ -241,8 +285,7 @@
 
     &__value {
         padding: 0.5rem 1rem 0.5rem 1rem;
-        // background-color: $primary-background;
-        background-color: #ddd7d7;;
+        // background-color: #ddd7d7;
         border-radius: 0.25rem;
         text-decoration: none;
         
@@ -285,14 +328,14 @@
         flex-direction: column;
         align-items: center;
         padding: 2rem 1rem;
-        border: 0.05px solid black;
+        // border: 0.05px solid black;
         border-radius: 0.25rem;
         gap: 2rem;
         transition: all 0.75s;
 
         &:hover {
-            background-color: rgb(238, 241, 247);
-            box-shadow: 4px 4px rgb(183, 186, 184);
+            background-color: rgb(229, 233, 243, 0.4);
+            box-shadow: 4px 4px rgb(233, 228, 228);
         }
 
     }
@@ -300,16 +343,16 @@
     &__title {
         color: $secondary-text;
         text-align: center;
-        font-size: 1rem;
-
+        font-size: 1.25rem;
+        line-break:loose;
         @include tablet {
-            font-size: 2rem;
+            font-size: 2.25rem;
         }
     }
 
     &__value {
         color: $secondary-text;
-        font-size: 0.75rem;
+        font-size: 1rem;
         text-align: center;
 
         @include tablet {
