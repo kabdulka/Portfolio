@@ -142,7 +142,7 @@ const Home = () => {
                     </article>
 
                     <article className="skills__info">
-                        <h2 className="skills__title"> Other Technologies/Languages </h2>
+                        <h2 className="skills__title"> Other Technologies </h2>
                         <div className="skills__list">
 
                             {

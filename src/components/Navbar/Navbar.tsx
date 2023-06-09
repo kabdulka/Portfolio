@@ -57,6 +57,16 @@ const Navbar = () => {
     //     setToggleNavbar(prev => !prev)
     // }
 
+    useEffect (() => {
+        if (toggleNavbar) {
+
+                document.body.style.overflow = 'hidden';
+        } else {
+                document.body.style.overflow = 'unset';
+            
+        }
+    }, [toggleNavbar])
+
     useEffect((): void => {
         setToggleNavbar(false)
         handleActivELinkChange( getCurrentpage(location.pathname))

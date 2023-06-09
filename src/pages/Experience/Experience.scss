@@ -3,16 +3,28 @@
 
 .experience {
     background-color: $background-third;
-    padding-top: 6rem;
+    padding-top: 4rem;
+
+    @include tablet {
+        padding-top: 6rem;
+    }
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
-    width: 10rem;
-    border-radius: 0.25rem;
-    text-align: center;
-    padding: 0.8em 1rem;
-    opacity: .8; 
-    background-color: antiquewhite;
+    float: left;
+    padding: 0.8em 0;
+    opacity: .9;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    // width: 10rem;
+    // border-radius: 0.25rem;
+    // text-align: center;
+    // padding: 0.8em 1rem;
+    // opacity: .8; 
+    // background-color: antiquewhite;
+    color: #101d42;
+    // color: white;
     
 }
 
@@ -25,13 +37,10 @@
     // justify-content: center;
     // color: red;
     
-    text-align: center;
+    // text-align: center;
 }
 
-.vertical-timeline-element--left {
-    border: red solid 1px;
 
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+
+
+

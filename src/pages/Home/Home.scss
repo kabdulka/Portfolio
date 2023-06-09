@@ -16,8 +16,9 @@
     width: 100%;
 
     // background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
-    background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(6, 6, 6, 0.1)), url("/src/assets/images/background2.jpg") center/cover;
-
+    // background: linear-gradient(rgba(4, 4, 192, 0.6), rgba(4, 28, 167, 0.6)), url("/src/assets/images/background2.jpg") center/cover;
+    background: linear-gradient(rgba(16,29,66, 0.80), rgba(16,29,66, 0.80)), url("/src/assets/images/newBG.jpg") center/cover;
+    // background: #101d42 url("/src/assets/images/background2.jpg") center/cover;
     // background-position:initial;
     aspect-ratio: 16/9;
     background-position: center;
@@ -26,10 +27,12 @@
     background-repeat: no-repeat;
     
     padding: 3rem 2rem 3rem 2rem;
-    
+    // background-repeat: repeat-x ;
+    // animation: blink 1000s infinite;
+
     &__modal--open {
         // background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
-        background: linear-gradient(rgba(10, 10, 10, .75), rgba(6, 6, 6, .75)), url("/src/assets/images/background2.jpg") center/cover;
+        background: linear-gradient(rgba(227, 220, 220, 0.1), rgba(230, 207, 207, 0.1)), url("/src/assets/images/background2.jpg") center/cover;
 
         // background: linear-gradient(rgba(206, 197, 197, 0.35), rgba(223, 212, 220, 0.35)), url("/src/assets/images/background2.jpg") center/cover;
 
@@ -333,8 +336,10 @@
         gap: 2rem;
         transition: all 0.75s;
 
+        background-color: rgb(229, 233, 243, 0.4);
+
         &:hover {
-            background-color: rgb(229, 233, 243, 0.4);
+            transform: scale(1.1);
             box-shadow: 4px 4px rgb(233, 228, 228);
         }
 
@@ -346,7 +351,7 @@
         font-size: 1.25rem;
         line-break:loose;
         @include tablet {
-            font-size: 2.25rem;
+            font-size: 1.5rem;
         }
     }
 

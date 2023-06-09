@@ -6,7 +6,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { CSSProperties } from "react";
 import { useEffect } from "react";
 
-const timeLineEduColour: string = "#054148";
+const timeLineEduColour: string = "#101d42";
 const timeLineColour: string = "#fff";
 const timeLineWorkColour: string = "#e06666";
 
@@ -24,7 +24,7 @@ const Experience = () => {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            borderTop: "#054148 solid 4px"
+            borderTop: "#101d42 solid 4px"
          }
 
          return timeLineType === "work" ? workStyle : educationStyle;
