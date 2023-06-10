@@ -37,7 +37,7 @@ const Modal = ({handleModalChange}: ModalProps) => {
             
                     <Typewriter
                         
-                        words={['I am Full Stack Developer / Software Developer with a passion for learning and creating', "dsadlkjsad;lakjda;"]}
+                        words={['I am Full Stack Developer / Software Developer with a passion for learning and creating', ""]}
                         loop={1}
                         cursor
                         cursorStyle='>'
