@@ -1,6 +1,6 @@
 
 import "./Modal.scss"
-import profileImage from "../../assets/images/Profile.jpeg"
+import profileImage from "../../assets/images/profileMain.jpeg"
 import { Typewriter } from 'react-simple-typewriter'
 // import profilePicture from "../../assets/images/profileImage.jpg"
 
@@ -25,14 +25,14 @@ const Modal = ({handleModalChange}: ModalProps) => {
                         className="modal__profile-img"
                     />
                     <div className="modal__hobbies">
-                        <h3 className="modal__hobies-title">Hobbies</h3>
+                        <h3 className="modal__hobbies-title">Hobbies</h3>
                         <p className="modal__hobbies-desc">
                         ⚽ 🏓 🏋️‍♂️ 👨‍💻 🏃‍♂️🏕️ ☕ 🍝 🎵
                         </p>
                     </div>
                 </div>
                 <div
-                    className="modal__about"
+                    className="modal__currently"
                     >
             
                     <Typewriter
@@ -50,9 +50,8 @@ const Modal = ({handleModalChange}: ModalProps) => {
                     />
                 </div>
                 <div
-                    className="modal__about"
+                    className="modal__story"
                 >
-            
                     <Typewriter
                         
                         words={[`I haven't always been tech enthusiast`, `In fact, When I was younger, my dream was to make it pro in ⚽`, `I even made it to the Whitecaps youth team`, `Unfortunately, injuries got in the way of my dream 😔`]}

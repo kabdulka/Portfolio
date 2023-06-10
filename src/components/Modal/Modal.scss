@@ -4,11 +4,12 @@
 
 
 .modal {
+    color: $primary-background;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     width: 90vw;
-    height: 51rem;
+    // height: 45rem;
     // height: 60vh;
     background-color: rgb(242, 248, 244);
     // border: red solid 1px;
@@ -18,7 +19,7 @@
     // top: 200px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
 
     transition: ease all 0.2s;
 
@@ -29,13 +30,29 @@
     }
 
     &__profile-img {
-        width: 15rem;
-        height: 10rem;
+        text-align: center;
+        height: 60vw;
+        // max-width: 40rem;
+        // max-height: 30rem;
         object-fit: cover;
         aspect-ratio: 16/9;
+        border-radius: 0.25rem;
+
+        @include tablet {
+
+        }
     }
 
-    &__about {
+    &__hobbies-title {
+        font-size: 2rem;
+    }
+
+
+    &__hobbies-desc {
+        font-size: 2rem;
+    }
+
+    &__story {
         color: rgb(227, 134, 134); 
         font-weight: bold; 
         font-size: 0.9rem;

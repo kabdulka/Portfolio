@@ -47,7 +47,8 @@ const Home = () => {
                         {/* <img src={profileImage} alt="profile-image" className="main__image-profile" /> */}
                     </div>
                     <div className="main__intro">
-                        <h1 className="main__intro-title"> Hello! I'm Kenan</h1>
+                        <h1 className="main__intro-title"> Hello! I'm Kenan  </h1>
+                        <span className="main__intro-wave">👋</span>
                     </div>
                 </div>
                 <div className="main__info" onClick={handleModalChange}>

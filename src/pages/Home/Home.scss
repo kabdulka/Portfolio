@@ -32,7 +32,7 @@
 
     &__modal--open {
         // background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
-        background: linear-gradient(rgba(227, 220, 220, 0.1), rgba(230, 207, 207, 0.1)), url("/src/assets/images/background2.jpg") center/cover;
+        background: linear-gradient(rgba(227, 220, 220, 0.1), rgba(230, 207, 207, 0.1)), url("/src/assets/images/newBG.jpg") center/cover;
 
         // background: linear-gradient(rgba(206, 197, 197, 0.35), rgba(223, 212, 220, 0.35)), url("/src/assets/images/background2.jpg") center/cover;
 
@@ -91,7 +91,11 @@
         // font-size: max(3vw);
         animation: blinking 1.5s linear infinite;
         @include text-bliking;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        align-self: flex-end;
+        // color: #a55f5f;
+        color: $primary-background;
+        color: white;
         cursor: pointer;
 
         @media screen and (min-width: 350px) {
@@ -104,9 +108,7 @@
             font-size: 1.5rem;
         }
 
-        align-self: flex-end;
-        // color: #a55f5f;
-        color: $primary-background;
+
 
         &:hover {
             // color: $primary-text
@@ -128,17 +130,52 @@
         font-size: 3.4rem;
         // color: rgb(255 0 69);
         color: white;
-        animation: blinking 2s linear infinite;
+        // animation: blinking 2s linear infinite;
 
-        @include text-bliking;
+        // @include text-bliking;
+        background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include text-shine-mobile;
+        animation: shine-mobile 2s infinite linear;
+        
 
         @include tablet {
+            @include text-shine-tablet;
+            animation: shine 2s infinite linear;
             font-size: 4rem;
         }
         @include desktop {
             font-size: 5rem;
         }
     }
+
+    &__intro-wave {
+        // background-color: red;
+        @include wave-animation;
+        // animation: wave 2s infinite linear;
+        animation-name: wave;
+        animation-iteration-count: infinite;
+        animation-duration: 2.5s; 
+        transform-origin: 70% 70%; 
+        // display: flex;
+        // flex-direction: column;
+        display: inline-block;
+        font-size: 3.4rem;
+        // @include text-shine-mobile;
+        // animation: shine 2s infinite linear;
+
+        @include tablet {
+            font-size: 4rem;
+        }
+
+        @include desktop {
+            font-size: 5rem;
+        }
+        
+    }
+
+
 
     &__info {
         text-align: center;
@@ -175,7 +212,9 @@
         }
         
         @include tablet {
-            font-size: 1.5rem;
+            // padding: 0,5rem 1rem 0.5rem 1rem;
+            font-size: 1rem;
+            width: 10rem;
 
         }
     }
@@ -257,13 +296,8 @@
     padding: 2rem;
     gap: 2.5rem;
     background-repeat: repeat-x;
-    // background: url("../../assets/images/skills_bg.avif");
-    // background-repeat: no-repeat;
-    // background-size:cover;
-    // background-position: 100% 100%;
-    // background-size: 100% 100%;
-    // animation: blink 12500s infinite;
-    animation: blink 5000s infinite;
+
+    animation: blink 15000s infinite linear;
 
     @include tablet {
         padding: 8rem 8rem 11rem 8rem;
