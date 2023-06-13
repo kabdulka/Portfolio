@@ -1,6 +1,6 @@
 .footer {
   padding: 3rem 1.5rem 3rem 1.5rem;
-  background-color: rgb(5, 65, 72);
+  background-color: rgba(16, 29, 66, 0.95);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -18,9 +18,15 @@
 }
 .footer__icons svg {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #fff;
   transition: ease 0.5s all;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .footer__icons svg {
+    font-size: 2.5rem;
+  }
 }
 .footer__icons svg:hover {
   transform: scale(1.5);

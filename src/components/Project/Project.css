@@ -1,15 +1,15 @@
 .project__item {
   border-radius: 0.5rem;
   box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem rgb(214, 212, 212);
-  height: 75vw;
+  height: 80vw;
   width: 75vw;
   text-align: center;
   list-style: none;
   transform-style: preserve-3d;
   transform: translate3d(0, 0, 0) rotateY("0");
-  transition: all 0.75s;
   transform-origin: center center 0;
   cursor: pointer;
+  transition: all 0.75s;
 }
 .project__item .project__front-face {
   border-radius: 0.25rem;
@@ -34,7 +34,7 @@
   height: 100%;
   backface-visibility: hidden;
   transform: translate3d(0, 0, 0) rotateY(-180deg);
-  padding: 1rem;
+  padding: 1.25rem;
   position: absolute;
   z-index: 1;
 }
@@ -53,30 +53,32 @@
   width: 100%;
   font-weight: 400;
   border-radius: 0.5rem;
-  font-size: 2.5vw;
-  padding: 0.5rem;
+  font-size: 3.5vw;
+  padding: 0.75rem;
   color: white;
   border-bottom: #fff 1px solid;
   border-right: #fff 1px solid;
   box-shadow: 2px 2px #888888;
+  overflow-y: scroll;
 }
 @media (min-width: 768px) {
   .project__item .project__back-face__desc {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 .project__item .project__back-face__skills {
   border-radius: 0.5rem;
   color: white;
   padding: 0.5rem;
-  font-size: 2.5vw;
+  font-size: 3.25vw;
   border-bottom: #fff 1px solid;
   border-right: #fff 1px solid;
   box-shadow: 2px 2px #888888;
+  overflow-y: scroll;
 }
 @media (min-width: 768px) {
   .project__item .project__back-face__skills {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 .project__item .project__back-face .skills-title {
@@ -93,7 +95,7 @@
   padding: 0.25rem 1rem 0.25rem 1rem;
   margin-top: auto;
   margin-bottom: 2rem;
-  background-color: rgb(5, 65, 72);
+  background-color: rgba(16, 29, 66, 0.95);
   border-bottom: #fff 1px solid;
   border-right: #fff 1px solid;
   box-shadow: 2px 2px #888888;
@@ -123,8 +125,8 @@
 }
 @media (min-width: 768px) {
   .project__item {
-    height: 21.25rem;
-    width: 18.25rem;
+    height: 19.25rem;
+    width: 18.5rem;
   }
 }
 .project__item__background {
@@ -136,13 +138,16 @@
 .project__item__title-wrapper {
   display: flex;
   justify-content: center;
+  background-color: white;
   align-items: center;
   width: 100%;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
   padding: 1rem 1.5rem 2rem 1.5rem;
 }
 .project__item__title {
   text-align: center;
   font-size: 1.25rem;
+  color: rgba(16, 29, 66, 0.95);
 }
 @media (min-width: 768px) {
   .project__item__title {

@@ -1,0 +1,67 @@
+.modal {
+  color: rgba(16, 29, 66, 0.95);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90vw;
+  background-color: rgb(242, 248, 244);
+  overflow-x: scroll;
+  z-index: 20;
+  position: fixed;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  transition: ease all 0.2s;
+}
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.modal__profile-img {
+  text-align: center;
+  height: 60vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: 0.25rem;
+}
+.modal__hobbies-title {
+  font-size: 2rem;
+}
+.modal__hobbies-desc {
+  font-size: 2rem;
+}
+.modal__currently {
+  color: rgb(227, 134, 134);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.modal__story {
+  color: rgb(227, 134, 134);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.modal__close {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.modal__close-btn {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 10rem;
+  border: none;
+  color: #fff;
+  background-color: rgb(72, 113, 149);
+}
+.modal__close-btn:hover {
+  cursor: pointer;
+  background-color: rgb(17, 78, 131);
+}
+@media (min-width: 768px) {
+  .modal__close-btn {
+    padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+}/*# sourceMappingURL=Modal.css.map */

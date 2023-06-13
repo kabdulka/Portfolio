@@ -24,6 +24,8 @@ const Project = ({image, skills, name, description, github, githubUrlFE}: Projec
         backgroundImage: `url(${image})`,
         // objectFit: `cover`,
         backgroundSize: "100% 100%",
+        // backgroundPosition: "100% 100%",
+        // backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
 
         // backgroundColor: "blue"

@@ -1,11 +1,12 @@
 .navbar {
-  background-color: rgb(5, 65, 72);
+  background-color: rgba(16, 29, 66, 0.95);
+  background-color: rgba(16, 29, 66, 0.975);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 6rem;
+  height: 4rem;
   padding: 0 1.5rem 0 1.5rem;
-  transition: ease-out 0.25s all;
+  transition: ease 0.25s all;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -15,15 +16,17 @@
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  background-color: rgb(5, 65, 72);
+  border: none;
+  background-color: rgba(16, 29, 66, 0.95);
   width: 100vw;
   height: 100vh;
-  transition: ease-out 0.25s all;
+  transition: ease-out 0.5s all;
   z-index: 999;
 }
 @media (min-width: 768px) {
   .navbar {
     justify-content: center;
+    height: 6rem;
   }
 }
 .navbar__list {
@@ -65,7 +68,7 @@
   color: #fff;
   font-size: 2rem;
   padding: 0.15rem 1rem 0.15rem 1rem;
-  transition: ease-out 0.5s all;
+  transition: ease-out 0.125s all;
 }
 @media (min-width: 768px) {
   .navbar__link {
@@ -74,7 +77,7 @@
 }
 .navbar__link:hover {
   transform: scale(1.15);
-  color: rgb(5, 65, 72);
+  color: #e06666;
   background-color: #fff;
   padding: 0.15rem 1rem 0.15rem 1rem;
   border-radius: 0.25rem;
@@ -82,11 +85,10 @@
 .navbar__link--active {
   border-bottom: #fff 2px solid;
   border-right: #fff 2px solid;
-  box-shadow: 3px 3px #888888;
   border-radius: 0.25rem;
 }
 .navbar__link--active:hover {
-  background-color: rgb(5, 65, 72);
+  background-color: rgba(16, 29, 66, 0.95);
   color: #fff;
   transform: scale(1);
   border-radius: 0rem;
@@ -96,7 +98,12 @@
   border: none;
   cursor: pointer;
   background: none;
-  display: flex;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+.navbar__button--clicked {
+  display: none;
 }
 @media (min-width: 768px) {
   .navbar__button {
@@ -104,13 +111,10 @@
   }
 }
 .navbar__button svg {
-  font-size: 3rem;
-  transition: font-size 0.5s;
+  font-size: 2.25rem;
+  transition: all 0.5s;
 }
 .navbar__button svg:hover {
-  font-size: 3.5rem;
-}
-.navbar__button--mobile {
-  position: absolute;
-  top: 2%;
+  transform: scale(1.15);
+  transition: all 0.5s;
 }/*# sourceMappingURL=Navbar.css.map */
