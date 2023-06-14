@@ -51,19 +51,12 @@
     }
 
     &:hover {
-      // outline: $primary-background solid 1px;
       background-color: rgb(248, 243, 237);
-      // border-bottom: 1px solid  rgb(248, 243, 237);
-      // border: none;
-      
   }
 
   &:focus {
-    // transition: all 0.2s;
-      // border: none;
-      // outline: rgb(248, 243, 237) solid 2px;
+
       background-color: rgb(248, 243, 237);
-      // border-bottom: 1px solid  rgb(248, 243, 237);
       outline: none;
   }
 

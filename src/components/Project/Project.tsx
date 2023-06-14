@@ -23,12 +23,13 @@ const Project = ({image, skills, name, description, github, githubUrlFE}: Projec
     const projectBGStyle: CSSProperties = {
         backgroundImage: `url(${image})`,
         // objectFit: `cover`,
-        backgroundSize: "100% 100%",
+        // backgroundSize: "100% 100%",
         // backgroundPosition: "100% 100%",
         // backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-
-        // backgroundColor: "blue"
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+ 
     }
 
     return (
@@ -47,14 +48,22 @@ const Project = ({image, skills, name, description, github, githubUrlFE}: Projec
                 </div>
             </div>
             <div className="project__back-face">
-            {/* <div className="project__back-face__info"> */}
                 <p className="project__back-face__desc">
                     {description}
                 </p>
 
-                <p className="project__back-face__skills">
-                    <span className="skills-title"> TECHNOLOGIES USED: </span> {skills}
-                </p>
+                <div className="project__back-face__skills">
+                    <span className="skills-title"> TECHNOLOGIES USED:  </span> 
+                        <div className="skills__container">
+
+                            {
+                                skills.split(",").map((skill)=> {
+                                    return <span className="skills-value"> {skill} </span>
+                                })
+                            } 
+                        </div>
+                     
+                </div>
             {/* </div> */}
                 <Link className="project__back-face__ghub" to={`${githubUrlFE}`}>
                     {/* <p > */}

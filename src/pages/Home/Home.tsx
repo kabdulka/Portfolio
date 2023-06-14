@@ -33,7 +33,7 @@ const Home = () => {
         if (isModalopen) {
           document.body.style.overflow = 'hidden';
         } else {
-          document.body.style.overflow = 'unset';
+          document.body.style.overflow = 'auto';
         }
       }, [isModalopen]);
 
@@ -78,7 +78,7 @@ const Home = () => {
                 
             </main>
 
-            <section className="skills" ref={refSkills}>
+            <section className={`skills ${isModalopen ? "skills__modal--open" : ""}`} ref={refSkills}>
 
                 <h1 className="skills__heading"> Skills </h1>
 

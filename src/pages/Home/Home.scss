@@ -15,35 +15,25 @@
     // height: 10rem;
     width: 100%;
 
-    // background: linear-gradient(rgba(10, 10, 10, 0), rgba(6, 6, 6, 0)), url("/src/assets/images/background2.jpg") center/cover;
-    // background: linear-gradient(rgba(4, 4, 192, 0.6), rgba(4, 28, 167, 0.6)), url("/src/assets/images/background2.jpg") center/cover;
     background: linear-gradient(rgba(16,29,66, 0.80), rgba(16,29,66, 0.80)), url("/src/assets/images/newBG.jpg") center/cover;
-    // background: #101d42 url("/src/assets/images/background2.jpg") center/cover;
-    // background-position:initial;
+
     aspect-ratio: 16/9;
     background-position: center;
     background-size: cover;
-    // object-fit: cover;
     background-repeat: no-repeat;
     
     padding: 3rem 2rem 3rem 2rem;
-    // background-repeat: repeat-x ;
-    // animation: blink 1000s infinite;
+
 
     &__modal--open {
-        // background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(6, 6, 6, 0.5)), url("/src/assets/images/background2.jpg") center/cover;
-        background: linear-gradient(rgba(227, 220, 220, 0.1), rgba(230, 207, 207, 0.1)), url("/src/assets/images/newBG.jpg") center/cover;
-
-        // background: linear-gradient(rgba(206, 197, 197, 0.35), rgba(223, 212, 220, 0.35)), url("/src/assets/images/background2.jpg") center/cover;
+        background: linear-gradient(rgba(3, 8, 35, 0.9), rgba(3, 8, 35, 0.9)), url("/src/assets/images/newBG.jpg") center/cover;
 
     }
 
     @include tablet {
-        // background: linear-gradient(rgba(128, 121, 121, 0.25), rgba(189, 169, 182, 0.25)), url("/src/assets/images/background4.jpg") center/cover;
 
         padding: 10rem 6rem 10rem 6rem;
         justify-content: space-evenly;
-        // flex-direction: row;
         height: 50rem;
     }
 
@@ -70,11 +60,9 @@
         height: 50vw;
         border-radius: 0.5rem;
         transition: all 0.5s;
-        // filter: grayscale(1);
 
         &:hover {
             box-shadow: 4px 4px #888888;
-        //     filter: grayscale(0);
         }
 
         @include tablet {
@@ -85,33 +73,24 @@
     }
 
     &__to-skills {
-        // font-size: 1rem;
-        
-        // font-size: min(1rem);
-        // font-size: max(3vw);
+
         animation: blinking 1.5s linear infinite;
         @include text-bliking;
         font-size: 0.8rem;
         align-self: flex-end;
-        // color: #a55f5f;
         color: $primary-background;
         color: white;
         cursor: pointer;
 
         @media screen and (min-width: 350px) {
-            // margin-top: 3rem;
             font-size: 1.25rem;
-
         }
 
         @include tablet {
             font-size: 1.5rem;
         }
 
-
-
         &:hover {
-            // color: $primary-text
             color: white;
         }
 
@@ -119,8 +98,7 @@
     }
 
     &__intro {
-        // display: flex;
-        // justify-content: center;
+
         width: 100%;
         text-align: center;
     }
@@ -128,11 +106,8 @@
     &__intro-title {
         color: $intro-title;
         font-size: 3.4rem;
-        // color: rgb(255 0 69);
         color: white;
-        // animation: blinking 2s linear infinite;
 
-        // @include text-bliking;
         background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -151,19 +126,15 @@
     }
 
     &__intro-wave {
-        // background-color: red;
         @include wave-animation;
-        // animation: wave 2s infinite linear;
         animation-name: wave;
         animation-iteration-count: infinite;
         animation-duration: 2.5s; 
         transform-origin: 70% 70%; 
-        // display: flex;
-        // flex-direction: column;
+
         display: inline-block;
         font-size: 3.4rem;
-        // @include text-shine-mobile;
-        // animation: shine 2s infinite linear;
+ 
 
         @include tablet {
             font-size: 4rem;
@@ -179,40 +150,30 @@
 
     &__info {
         text-align: center;
-        // width: 70%;
 
     }
 
     &__info-about {
         font-weight: 100;
-        // color: $primary-text;
         font-size: 0.85rem;
-        // color: $primary-background;
-        // background: transparent;
+
         
         padding: 1rem 1.5rem;
         border-radius: 0.5rem;
         line-height: 1.1rem;
         border: 0.5px $primary-background solid;
-        // border: white solid 1.5px;
-        // filter: brightness(20%);
+
         border: none;
         color: $primary-background;
         font-weight: 500;
         transition: 0.3s all;
-        // stroke-dashoffset: -480;
         &:hover {
             cursor: pointer;
-            // background-color: darken(transparent, 25%);
-            // background-color: #888888;
-            // text-underline-offset:initial;
-            
             filter: brightness(80%);
             transition: 0.3s all;
         }
         
         @include tablet {
-            // padding: 0,5rem 1rem 0.5rem 1rem;
             font-size: 1rem;
             width: 10rem;
 
@@ -235,65 +196,27 @@
 }
 
 @keyframes blink {
-    // 0% {
-    //     background: linear-gradient(rgba(248, 243, 243, 0.9), rgba(255,255,255,1)), url("../../assets/images/skills_bg.avif") ;    
-    //     background-size:cover;
-    //     background-position: 0% 0%;
-    //     // animation: blink 1.5s infinite;
-    // }
 
-    // 50% {
-    //     background: linear-gradient(rgba(248, 243, 243, 0.8), rgba(255,255,255,.75)), url("../../assets/images/skills_bg.avif") ;
-    //     //   opacity: 0;
-    //     // background-size:cover;
-    //     // background-position:center;
-    //     // animation: blink 1.5s infinite;
-    //     background-size:cover;
-    //     background-position:0% 100%;
-    // }
-
-    // 100% {
-    //     background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.5)), url("../../assets/images/skills_bg.avif") ;    
-    //     // background-size:cover;
-    //     background-position: 0% 0%;
-    //     // animation: blink 1.5s infinite;
-    //     background-size:cover;
-    //     background-position:center;
-    // }
-    // from { background-position: 0 0; }
-    // to { background-position: 100% 0; }
     from { 
-        // background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
         background-size:cover;
         background-position: 0%; 
     }
     to { 
-        // background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
         background-size:cover;
         background-position: 90000%; 
     }
 }
 
-// @keyframes blink2 {
-//     from {
-//         background-position: 0 0;
-//     }
-//     to {
-//         background-position: 0  860px; 
-//     }
-// }
 
 .skills {
-    background: linear-gradient(rgba(248, 243, 243, 0.7), rgba(255,255,255,0.7)), url("../../assets/images/skills_bg.avif") ;    
-    // background-color: rgb(5, 65, 72);
+    background: linear-gradient(rgba(239, 243, 247, 0.7), rgba(247, 249, 250, 0.7)), url("../../assets/images/skills_bg.avif") ;    
     background-size:cover;
-    // background-position: 0px 0px;
-    // background-color: rgb(250, 241, 241, 0.5);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 4rem 6rem 4rem;
     gap: 2.5rem;
     background-repeat: repeat-x;
 
@@ -308,13 +231,17 @@
 
     }
 
+    &__modal--open {
+        background: linear-gradient(rgba(119, 117, 117, 0.9), rgba(119, 117, 117, 0.9)), url("../../assets/images/skills_bg.avif") ;    
+
+    }
+
     &__list {
 
         display: flex;
         justify-content: center;
         gap: 0.5rem;
         flex-wrap: wrap;
-
         @include tablet {
             gap: 1rem;
         }
@@ -322,7 +249,6 @@
 
     &__value {
         padding: 0.5rem 1rem 0.5rem 1rem;
-        // background-color: #ddd7d7;
         border-radius: 0.25rem;
         text-decoration: none;
         
@@ -360,12 +286,10 @@
 
     &__info {
         @include skills-info;
-        // border-top: black solid 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 2rem 1rem;
-        // border: 0.05px solid black;
         border-radius: 0.25rem;
         gap: 2rem;
         transition: all 0.75s;
@@ -373,8 +297,8 @@
         background-color: rgb(229, 233, 243, 0.4);
 
         &:hover {
-            transform: scale(1.1);
-            box-shadow: 4px 4px rgb(233, 228, 228);
+            transform: scale(1.05);
+            box-shadow: 3px 3px rgba(8, 19, 49, 0.5);
         }
 
     }

@@ -21,40 +21,37 @@ const Modal = ({handleModalChange}: ModalProps) => {
             <section className={`modal`}>
                 <div className="modal__header">
 
-                    <h2 className="modal__header">
+                    <h2 className="modal__header-title">
                         About me
                     </h2>
-                    <img
-                        src={profileImage} 
-                        className="modal__profile-img"
-                    />
-                 </div>
 
-                <div
-                    className="modal__currently"
-                    >
-        
-                    {/* <Typewriter
-                        
-                        words={['I am a Full Stack Developer / Software Developer who enjoys learning and creating and seeing my solutions come to life']}
-                        loop={1}
-                        cursor
-                        cursorStyle='>'
-                        typeSpeed={30}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
+                    <div className="modal__header-content">
+                        <img
+                            src={profileImage} 
+                            className="modal__profile-img"
+                        />
                     
-                        // onLoopDone={handleDone}
-                        // onType={handleType}
-                    /> */}
-                    <p> I am a Full Stack Developer / Software Developer who enjoys learning, creating and seeing my solutions come to life </p>
-                </div>
 
-                <div className="modal__hobbies">
-                    <h3 className="modal__hobbies-title">Hobbies</h3>
-                    <p className="modal__hobbies-desc">
-                        ⚽ 🏓 🏋️‍♂️ 👨‍💻 🏃‍♂️🏕️ ☕ 🍝 🎵
-                    </p>
+                        {/* <div
+                            className=""
+                            > */}
+                    <div className="modal__header-content--inner">
+
+                        <p className="modal__currently"> 
+                            I am a Full Stack Developer / Software Developer who enjoys learning, creating and seeing my solutions come to life 
+                        </p>
+
+                        <div className="modal__hobbies">
+                            <h3 className="modal__hobbies-title">Hobbies</h3>
+                            <p className="modal__hobbies-desc">
+                                ⚽ 🏓 🏋️‍♂️ 👨‍💻 🏃‍♂️🏕️ ☕ 🍝 🎵
+                            </p>
+                        </div>
+
+                    </div>
+                            
+                        {/* </div> */}
+                    </div>
                 </div>
                
              
@@ -67,6 +64,20 @@ const Modal = ({handleModalChange}: ModalProps) => {
                         onClick={() => {setToggleMyStory(prev => !prev)}}
                         > 
                         My story:
+                        {
+                            toggleMyStory === false &&
+                            <Typewriter
+                            
+                                words={[``]}
+                                loop={1}
+                                cursor
+                                cursorStyle='<'
+                                typeSpeed={35}
+                                deleteSpeed={30}
+                                delaySpeed={2000}
+                            />
+
+                        }
                     </h2>
                     {
                         toggleMyStory === true &&

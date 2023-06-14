@@ -104,6 +104,20 @@
             }
         }
 
+        .skills__container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.25rem;
+        }
+
+        .skills-value {
+            background-color: #888888;
+            margin: 0.5rem;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+        }
+
         .skills-title {
             font-weight: 900;
         }
@@ -118,7 +132,7 @@
             width: 28vw;
             padding: 0.25rem 1rem 0.25rem 1rem;
             margin-top: auto;
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
             // border: red solid 1px;
             background-color: $primary-background;
             border-bottom: $primary-text 1px solid;
@@ -180,7 +194,7 @@
         align-items: center;
         width: 100%;
         border-radius: 0rem 0rem 0.5rem 0.5rem;
-        padding: 1rem 1.5rem 2rem 1.5rem;
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
      
     }
 
@@ -188,9 +202,9 @@
         text-align: center;
         font-size: 1.25rem;
         color: $primary-background;
-
+        
         @include tablet {
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
         @include desktop {
             font-size: 1rem;

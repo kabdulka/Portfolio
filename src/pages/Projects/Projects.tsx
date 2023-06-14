@@ -2,13 +2,11 @@
 import Project from "../../components/Project/Project";
 import "./Projects.scss";
 import myProjects from "../../Data/ProjectsInfo"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
-
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 interface ProjectType {
-
     name: string
     image: string
     skills: string
@@ -26,10 +24,8 @@ const getFilteredProjects = (projectSelection: string): ProjectType[] => {
     }
 
     myProjects.forEach(project => {
-        console.log(project.skills.split(","))
-        // console.log(project)
-        console.log(projectSelection)
-        if (project.skills.split(", ").includes(projectSelection)) {
+
+        if (project.skills.split(",").includes(projectSelection)) {
             filteredProjects.push(project)
         }
     })
@@ -42,19 +38,11 @@ const Projects = () => {
 
     const {prjId}: any = useParams();
 
-    // fix type here later
-    console.log("projects section")
-    console.log(typeof prjId)
-    // const prj = "Node.js"
-
-
+    console.log(prjId)
     const myProjects = getFilteredProjects(prjId)
     console.log(myProjects)
 
-    useEffect( () => {
-        console.log("useEffect")
 
-    }, [prjId])
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -63,13 +51,24 @@ const Projects = () => {
     return (
         <section className="projects">  
 
-            {/* TODO back arrow */}
-            <h2 className="projects__heading">
-                Here are some project(s) that I have worked on 
+            <div className="projects__header">
                 {
-                    `${prjId  ? " using " + prjId: ""}  `
+                    prjId !== undefined && 
+                        <Link 
+                            className="projects__back-link" 
+                            to="/about"> 
+                            
+                            <ArrowBackIcon className="projects__back"></ArrowBackIcon> 
+                        </Link>
                 }
-            </h2>
+                {/* prjId is the project name that appears in the url */}
+                <h2 className="projects__heading">
+                    {
+                        `Here are the ${prjId  ?  prjId : ""}  projects that I have worked on`
+                    }
+                </h2>
+
+            </div>
 
             <ul className="projects__list">
                 
