@@ -251,11 +251,54 @@
         padding: 0.5rem 1rem 0.5rem 1rem;
         border-radius: 0.25rem;
         text-decoration: none;
+        display: flex;
+        gap: 0.25rem;
+        color: $secondary-text;
+        font-size: 1rem;
+        text-align: center;
         
         &:hover {
             color: rgb(227, 134, 134);
             cursor: pointer;
+            
         }
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__value--inactive {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        display: flex;
+        gap: 0.25rem;
+        color: $secondary-text;
+        font-size: 1rem;
+        text-align: center;
+        cursor: default;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__name--inactive {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-size: 1.25rem;
+        display: flex;
+        gap: 0.25rem;
+        // display: flex;
+        // gap: 0.25rem;
+        cursor: default;
+    }
+
+
+    &__icon--backEnd {
+        font-size: 1.5rem;
     }
 
     &__heading {
@@ -313,15 +356,15 @@
         }
     }
 
-    &__value {
-        color: $secondary-text;
-        font-size: 1rem;
-        text-align: center;
+    // &__value {
+    //     color: $secondary-text;
+    //     font-size: 1rem;
+    //     text-align: center;
 
-        @include tablet {
-            font-size: 1.25rem;
-        }
-    }
+    //     @include tablet {
+    //         font-size: 1.25rem;
+    //     }
+    // }
 
 
     

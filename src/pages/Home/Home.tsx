@@ -4,13 +4,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
-import {frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
+import { techType, frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
 // import profileImage from "../../assets/images/IMG_5053.jpg";
 import { useRef, useEffect, useState } from "react";
 import Modal from "../../components/Modal/Modal";
+// import { FaCss3, FaHtml5, FaReact, FaSass, FaNode, FaPython, FaJava} from "react-icons/fa";
+// import {DiJavascript, DiDjango} from "react-icons/di";
+// import { SiAxios,SiExpress, SiTypescript} from "react-icons/si"; 
+
+
+
+
 
 const Home = () => {
-
     const refSkills = useRef<null | HTMLElement>(null)
 
     const [isModalopen, setIsModalopen] = useState<boolean>(false)
@@ -81,23 +87,33 @@ const Home = () => {
             <section className={`skills ${isModalopen ? "skills__modal--open" : ""}`} ref={refSkills}>
 
                 <h1 className="skills__heading"> Skills </h1>
-
+         
                 <div className="skills__details">
                     <article className="skills__info">
                         <h2 className="skills__title"> Front-End </h2>
-
+                        {/* <div 
+                            className="skills__icons"
+                            style={{display: "flex"}}> */}
+                        {/* <FaReact style={{transform: "scale(1.5)"}}/>
+                        <FaReact style={{transform: "scale(1.5)"}}/>
+                         */}
+                        {/* </div> */}
                         <div className="skills__list">
 
                             {
-                                frontEndTechs.map((skill: string, index: number) => 
-                                    
-                                    <Link 
-                                        className="skills__value"
-                                        to={`/projects/${skill}`}
-                                        key={index}
-                                    >
-                                        <span> {skill} </span>
-                                    </Link>
+                                frontEndTechs.map((skill: techType, index: number) => {
+                                        const Icon = skill.icon;
+                                        return (
+                                            <Link 
+                                                className="skills__value"
+                                                to={`/projects/${skill.name}`}
+                                                key={index}
+                                            >
+                                                <span className="skills__icon"> <Icon /> </span>
+                                                <span className="skills__name"> {skill.name} </span>
+                                            </Link>
+                                        )
+                                    }
                                 )
                             }
                         </div>
@@ -109,15 +125,28 @@ const Home = () => {
                         <div className="skills__list">
 
                             {
-                                backEndTechs.map((skill: string, index: number) => 
-                                    <Link 
-                                
-                                        className="skills__value"
-                                        to={`/projects/${skill}`}
-                                        key={index}
-                                    >
-                                        <span> {skill} </span>
-                                    </Link>
+                                backEndTechs.map((skill: techType, index: number) => {
+                                    const Icon = skill.icon;
+                                    return (
+                                        <Link 
+                                    
+                                            className="skills__value"
+                                            to={`/projects/${skill.name}`}
+                                            key={index}
+                                        >
+                                            <span 
+                                                className="skills__icon skills__icon--backEnd"> <Icon /> 
+                                            
+                                            </span>
+                                            <span 
+                                                className="skills__name"
+                                          
+                                            > 
+                                                {skill.name} 
+                                            </span>
+                                        </Link>
+                                    )
+                                }
                                 )
                             }
                         </div>
@@ -128,15 +157,19 @@ const Home = () => {
                         <div className="skills__list">
 
                             {
-                                languages.map((skill: string, index: number) => 
-                                    
-                                    <Link 
-                                        className="skills__value"
-                                        to={`/projects/${skill}`}
-                                        key={index}
-                                    >
-                                        <span> {skill} </span>
-                                    </Link>
+                                languages.map((skill: techType, index: number) => {
+                                        const Icon = skill.icon
+                                        return (
+                                            <Link 
+                                                className="skills__value"
+                                                to={`/projects/${skill.name}`}
+                                                key={index}
+                                            >
+                                                <span className="skills__icon"> <Icon /> </span>
+                                                <span className="skills__name"> {skill.name} </span>
+                                            </Link>
+                                        )
+                                    }
                                 )
                             }
                         </div>
@@ -149,7 +182,7 @@ const Home = () => {
                             {
                                 otherTech.map((skill: string, index: number) => 
                                     
-                                    <span key={index} className="skills__value"> {skill} </span>
+                                    <span key={index} className="skills__name--inactive"> {skill} </span>
                                 )
                             }
                         </div>
@@ -160,9 +193,24 @@ const Home = () => {
                         <div className="skills__list">
 
                             {
-                                futureTech.map((skill: string, index: number) => 
+                                futureTech.map((skill: techType, index: number) => {
+                                    const Icon = skill.icon;
+                                    return (
+                                        <div 
+                                            key={index}
+                                            className="skills__value--inactive"
+                                        >
+
+                                            <span className="skills__icon"> <Icon /> </span>
+                                            <span 
+                                                className="skills__name"
+                                            > 
+                                                {skill.name}
+                                            </span>
+                                        </div>
+                                    )
+                                }
                                     
-                                    <span key={index} className="skills__value"> {skill} </span>
                                 )
                             }
                         </div>

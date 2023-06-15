@@ -26,7 +26,7 @@ const projectsInfo: projects[] = [
     {
         name: "Portfolio Website",
         image: portfolio,
-        skills: "React,Typescript,SASS,BEM",
+        skills: "React,Typescript,SASS,BEM,Vite",
         description: "This website is my portfolio website that has been developed using React and Typescript. It is a work in progress as I am constantly trying to improve it. Feel free to leave me a feedback!",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/Portfolio",
@@ -35,7 +35,7 @@ const projectsInfo: projects[] = [
     {
         name: "BrainFlix",
         image: brainFlix,
-        skills: "React,Typescript,Node.js,Express.js,Axios,SASS,BEM",
+        skills: "React,Typescript,Node.js,Vite,Express.js,Axios,SASS,BEM",
         description: "BrainFlix is a video streaming website similar in design and functionality to vimo. The tech stack of this project includes ReactJs for the frontend and ExpressJs for the backend API. The user can select and view videos from a suggestion bar as well as upload them.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/kabdulka/BrainFlix",

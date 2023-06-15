@@ -11,7 +11,7 @@
     gap: 2rem;
     height: 70vh;
     width: 90vw;
-    background-color: rgb(109, 141, 178);
+    background-color: rgb(255, 255, 255);
     overflow-x: scroll;
     z-index: 20;
     position: fixed;
@@ -142,7 +142,7 @@
         width: 5rem;
         &:hover {
             cursor: pointer;
-            color: white;
+            color: $contrast-colour;
         }
   
         @include tablet {

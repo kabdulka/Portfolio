@@ -27,8 +27,6 @@ const getCurrentpage = (queryStr: string): number => {
         // projects
         return 1
     } 
-     
-
 }
 
 const Navbar = () => {
@@ -37,7 +35,6 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<number>(0);
 
     const location = useLocation();
-    // console.log("inside navbar ", location)
 
     const handleToggleNavbar = (): void => {
         setToggleNavbar(!toggleNavbar);
@@ -46,7 +43,6 @@ const Navbar = () => {
     const handleActivELinkChange = (pageId: number):void => {
         setActiveLink(pageId)
     }
-    console.log("After query string", activeLink)
 
     // useEffect(() => {
     //     handleActivELinkChange( getCurrentpage(location.pathname))
