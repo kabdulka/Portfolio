@@ -1,6 +1,6 @@
 .footer {
-  padding: 3rem 1.5rem 3rem 1.5rem;
-  background-color: rgba(16, 29, 66, 0.95);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  background-color: rgba(8, 19, 49, 0.95);
   display: flex;
   flex-direction: column;
   gap: 2rem;

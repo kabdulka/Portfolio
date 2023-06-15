@@ -6,7 +6,7 @@
 }
 .contact__header {
   font-size: 1rem;
-  color: rgb(16, 29, 66);
+  color: rgb(8, 19, 49);
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -21,13 +21,18 @@
     padding: 8rem 2rem 2rem 2rem;
   }
 }
+@media (min-width: 1280px) {
+  .contact {
+    padding: 10rem 6rem 6rem 6rem;
+  }
+}
 .contact__divider {
   padding: 2rem 0rem;
-  color: rgb(16, 29, 66);
+  color: rgb(8, 19, 49);
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  border: rgba(16, 29, 66, 0.95) 1px solid;
+  border: rgba(8, 19, 49, 0.95) 1px solid;
 }
 @media (min-width: 768px) {
   .contact__divider {
@@ -62,7 +67,7 @@
   }
 }
 .contact__info-link {
-  color: rgb(16, 29, 66);
+  color: rgb(8, 19, 49);
   text-decoration: none;
   word-break: break-all;
 }
@@ -70,7 +75,7 @@
   transform: scale(1.15);
 }
 .contact__details {
-  color: rgb(16, 29, 66);
+  color: rgb(8, 19, 49);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -83,7 +88,7 @@
 }
 .contact__details-info:hover {
   cursor: pointer;
-  color: rgb(16, 29, 66);
+  color: rgb(8, 19, 49);
 }
 .contact__details-info:hover svg {
   transform: scale(1.5);
@@ -131,12 +136,12 @@
   color: rgb(186, 48, 48);
 }
 .form__contact-email {
-  border: rgba(16, 29, 66, 0.95) solid 1px;
+  border: rgba(8, 19, 49, 0.95) solid 1px;
   border-radius: 0.25rem;
   padding: 0.5rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(16, 29, 66, 0.95);
+  border-bottom: 1px solid rgba(8, 19, 49, 0.95);
   transition: all 0.2s;
 }
 .form__contact-email::-moz-placeholder {
@@ -153,14 +158,14 @@
   outline: none;
 }
 .form__contact-message {
-  border: rgba(16, 29, 66, 0.95) solid 1px;
+  border: rgba(8, 19, 49, 0.95) solid 1px;
   resize: none;
   border-radius: 0.25rem;
   padding: 0.5rem;
   height: 10rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(16, 29, 66, 0.95);
+  border-bottom: 1px solid rgba(8, 19, 49, 0.95);
   transition: all 0.2s;
 }
 .form__contact-message::-moz-placeholder {
@@ -182,12 +187,12 @@
   }
 }
 .form__contact-name {
-  border: rgba(16, 29, 66, 0.95) solid 1px;
+  border: rgba(8, 19, 49, 0.95) solid 1px;
   border-radius: 0.25rem;
   padding: 0.5rem;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(16, 29, 66, 0.95);
+  border-bottom: 1px solid rgba(8, 19, 49, 0.95);
   transition: all 0.2s;
 }
 .form__contact-name::-moz-placeholder {
@@ -209,7 +214,7 @@
   padding: 0.25rem 1rem;
   cursor: pointer;
   color: #fff;
-  background-color: rgba(16, 29, 66, 0.95);
+  background-color: rgba(8, 19, 49, 0.95);
   border: none;
   border-bottom: #fff 1px solid;
   border-right: #fff 1px solid;
@@ -223,12 +228,12 @@
   padding: 0rem 1.5rem;
 }
 .form__border--inner {
-  border-top: rgba(16, 29, 66, 0.95) solid 1px;
+  border-top: rgba(8, 19, 49, 0.95) solid 1px;
 }
 @media (min-width: 768px) {
   .form__border {
     padding: 0rem;
     border: none;
-    border-right: rgba(16, 29, 66, 0.95) solid 1px;
+    border-right: rgba(8, 19, 49, 0.95) solid 1px;
   }
 }/*# sourceMappingURL=Contact.css.map */

@@ -1,46 +1,135 @@
 .modal {
-  color: rgba(16, 29, 66, 0.95);
+  color: rgba(8, 19, 49, 0.95);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: 70vh;
   width: 90vw;
-  background-color: rgb(242, 248, 244);
+  background-color: rgb(255, 255, 255);
   overflow-x: scroll;
   z-index: 20;
   position: fixed;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 4px rgba(0, 0, 0, 0.04);
   padding: 2rem;
   border-radius: 0.25rem;
   transition: ease all 0.2s;
 }
+@media (min-width: 768px) {
+  .modal {
+    margin-bottom: 0rem;
+    margin-top: 10rem;
+    max-height: 38rem;
+    max-width: 60rem;
+    padding: 2rem 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .modal {
+    padding: 2rem 4rem;
+    margin-top: 20rem;
+    margin-bottom: 20rem;
+  }
+}
 .modal__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+.modal__header-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+@media (min-width: 768px) {
+  .modal__header-content {
+    flex-direction: row;
+  }
+}
+.modal__header-content--inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .modal__header-content--inner {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .modal__header-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
 .modal__profile-img {
+  outline: rgba(8, 19, 49, 0.95) 1px solid;
   text-align: center;
-  height: 60vw;
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 16/9;
   border-radius: 0.25rem;
+  width: 100%;
+  height: 60vw;
+  max-width: 40rem;
+}
+@media (min-width: 768px) {
+  .modal__profile-img {
+    height: 15rem;
+    width: 15rem;
+  }
+}
+.modal__hobbies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .modal__hobbies-title {
-  font-size: 2rem;
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  .modal__hobbies-title {
+    font-size: 1.75rem;
+  }
 }
 .modal__hobbies-desc {
   font-size: 2rem;
 }
 .modal__currently {
-  color: rgb(227, 134, 134);
+  color: rgba(8, 19, 49, 0.95);
   font-weight: bold;
   font-size: 0.9rem;
 }
-.modal__story {
-  color: rgb(227, 134, 134);
-  font-weight: bold;
+@media (min-width: 768px) {
+  .modal__currently {
+    font-size: 1.25rem;
+  }
+}
+.modal__story-wrapper {
+  color: rgba(8, 19, 49, 0.95);
+  font-weight: 500;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal__story-title {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 5rem;
+}
+.modal__story-title:hover {
+  cursor: pointer;
+  color: #e06666;
+}
+@media (min-width: 768px) {
+  .modal__story-title {
+    width: auto;
+    font-size: 1.75rem;
+  }
+}
+.modal__story {
+  font-size: 1rem;
 }
 .modal__close {
   position: relative;
@@ -52,12 +141,13 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   width: 10rem;
   border: none;
+  border-radius: 0.25rem;
   color: #fff;
-  background-color: rgb(72, 113, 149);
+  background-color: rgb(17, 78, 131);
 }
 .modal__close-btn:hover {
   cursor: pointer;
-  background-color: rgb(17, 78, 131);
+  background-color: rgba(8, 19, 49, 0.95);
 }
 @media (min-width: 768px) {
   .modal__close-btn {

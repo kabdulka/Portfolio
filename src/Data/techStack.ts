@@ -1,6 +1,6 @@
 import { FaCss3, FaHtml5, FaReact, FaSass, FaNode, FaPython, FaJava } from "react-icons/fa";
-import { DiNpm, DiJavascript, DiDjango, DiMongodb } from "react-icons/di";
-import { SiBackendless, SiTailwindcss, SiVite, SiSelenium, SiMysql, SiAxios,SiExpress, SiTypescript } from "react-icons/si";
+import {  DiJavascript, DiDjango, DiMongodb } from "react-icons/di";
+import { SiBackendless, SiTailwindcss, SiVite, SiMysql, SiAxios,SiExpress, SiTypescript } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb"
 
 export interface techType {

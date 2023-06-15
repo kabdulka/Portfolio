@@ -1,6 +1,5 @@
 .navbar {
-  background-color: rgba(16, 29, 66, 0.95);
-  background-color: rgba(16, 29, 66, 0.975);
+  background-color: rgba(8, 17, 42, 0.975);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -17,7 +16,7 @@
   justify-content: center;
   position: fixed;
   border: none;
-  background-color: rgba(16, 29, 66, 0.95);
+  background-color: rgba(8, 19, 49, 0.95);
   width: 100vw;
   height: 100vh;
   transition: ease-out 0.5s all;
@@ -88,7 +87,7 @@
   border-radius: 0.25rem;
 }
 .navbar__link--active:hover {
-  background-color: rgba(16, 29, 66, 0.95);
+  background-color: rgba(8, 19, 49, 0.95);
   color: #fff;
   transform: scale(1);
   border-radius: 0rem;
