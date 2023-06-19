@@ -1,5 +1,5 @@
 .modal {
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -63,7 +63,7 @@
   }
 }
 .modal__profile-img {
-  outline: rgba(8, 19, 49, 0.95) 1px solid;
+  outline: rgba(16, 29, 66, 0.95) 1px solid;
   text-align: center;
   -o-object-fit: cover;
      object-fit: cover;
@@ -96,7 +96,7 @@
   font-size: 2rem;
 }
 .modal__currently {
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -106,7 +106,7 @@
   }
 }
 .modal__story-wrapper {
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   font-weight: 500;
   font-size: 0.9rem;
   display: flex;
@@ -147,7 +147,7 @@
 }
 .modal__close-btn:hover {
   cursor: pointer;
-  background-color: rgba(8, 19, 49, 0.95);
+  background-color: rgba(16, 29, 66, 0.95);
 }
 @media (min-width: 768px) {
   .modal__close-btn {

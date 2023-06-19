@@ -3,7 +3,8 @@
 
 .contact {
 
-    background: linear-gradient(rgba(248, 243, 243, 0.96), rgba(255,255,255,0.95)), url("../../assets/images/contactBg.webp") ;   
+    // background: linear-gradient(rgba(248, 243, 243, 0.96), rgba(255,255,255,0.95)), url("../../assets/images/contactBg.webp") ;   
+    background: linear-gradient(rgb(233, 233, 233), rgb(232, 232, 232)), url(/src/assets/images/contactBg.webp);
     padding: 6rem 1rem 1rem 1rem;
     width: 100%;
 
@@ -22,8 +23,7 @@
     }
 
     @include tablet {
-        background: linear-gradient(rgba(248, 243, 243, 0.97), rgba(255,255,255,0.97)), url("../../assets/images/contactBg.webp") ;   
-
+        // background: linear-gradient(rgba(248, 243, 243, 0.97), rgba(255,255,255,0.97)), url("../../assets/images/contactBg.webp") ;   
         padding: 8rem 2rem 2rem 2rem;
         
     }
@@ -80,7 +80,6 @@
         color: $secondary-text;
         text-decoration: none;
         word-break: break-all;
-        // font-size: 0.65rem;
         
         &:hover {
             transform: scale(1.15);

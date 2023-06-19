@@ -5,16 +5,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import { Link } from 'react-router-dom';
 import { techType, frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
-// import profileImage from "../../assets/images/IMG_5053.jpg";
 import { useRef, useEffect, useState } from "react";
 import Modal from "../../components/Modal/Modal";
-// import { FaCss3, FaHtml5, FaReact, FaSass, FaNode, FaPython, FaJava} from "react-icons/fa";
-// import {DiJavascript, DiDjango} from "react-icons/di";
-// import { SiAxios,SiExpress, SiTypescript} from "react-icons/si"; 
-
-
-
-
 
 const Home = () => {
     const refSkills = useRef<null | HTMLElement>(null)

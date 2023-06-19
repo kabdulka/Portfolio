@@ -12,11 +12,8 @@
     align-items: center;
     height: 100vh;
     justify-content: space-evenly;
-    // height: 10rem;
     width: 100%;
-
     background: linear-gradient(rgba(16,29,66, 0.80), rgba(16,29,66, 0.80)), url("/src/assets/images/newBG.jpg") center/cover;
-
     aspect-ratio: 16/9;
     background-position: center;
     background-size: cover;
@@ -239,11 +236,17 @@
     &__list {
 
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         gap: 0.5rem;
-        flex-wrap: wrap;
-        @include tablet {
+        @media (min-width: 450px)  {
+            
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 1rem;
+        }
+
+        @include tablet {
         }
     }
 
@@ -288,12 +291,15 @@
         padding: 0.5rem 1rem 0.5rem 1rem;
         border-radius: 0.25rem;
         text-decoration: none;
-        font-size: 1.25rem;
+        font-size: 1rem;
         display: flex;
         gap: 0.25rem;
-        // display: flex;
-        // gap: 0.25rem;
+
         cursor: default;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
     }
 
 
@@ -354,19 +360,6 @@
         @include tablet {
             font-size: 1.5rem;
         }
-    }
-
-    // &__value {
-    //     color: $secondary-text;
-    //     font-size: 1rem;
-    //     text-align: center;
-
-    //     @include tablet {
-    //         font-size: 1.25rem;
-    //     }
-    // }
-
-
-    
+    }    
 
 }

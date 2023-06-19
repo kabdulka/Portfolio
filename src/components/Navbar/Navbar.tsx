@@ -69,7 +69,7 @@ const Navbar = () => {
     }, [location])
 
     return (
-        // HERE
+ 
         <nav className={`navbar ${toggleNavbar ? "navbar--mobile": ""}`}>
             
             <div className={`navbar__button ${toggleNavbar ? "navbar__button--mobile" : ""}`}>

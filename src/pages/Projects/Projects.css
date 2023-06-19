@@ -8,7 +8,7 @@
 }
 .projects__heading {
   text-align: center;
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   font-size: 6vw;
   margin-bottom: 4rem;
 }
@@ -48,7 +48,7 @@
 }
 .projects__back {
   width: 100%;
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   transform: scale(1.5);
   transition: all 0.5s ease;
   align-self: flex-end;

@@ -26,7 +26,7 @@
         background-color: $primary-background;
         width: 100vw;
         height: 100vh;
-        transition: ease-out 0.5s all;
+        // transition: ease-out 0.5s all;
         z-index: 999;
 
         @include tablet {

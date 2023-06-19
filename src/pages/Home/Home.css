@@ -58,7 +58,7 @@
   animation: blinking 1.5s linear infinite;
   font-size: 0.8rem;
   align-self: flex-end;
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   color: white;
   cursor: pointer;
 }
@@ -168,9 +168,9 @@
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   line-height: 1.1rem;
-  border: 0.5px rgba(8, 19, 49, 0.95) solid;
+  border: 0.5px rgba(16, 29, 66, 0.95) solid;
   border: none;
-  color: rgba(8, 19, 49, 0.95);
+  color: rgba(16, 29, 66, 0.95);
   font-weight: 500;
   transition: 0.3s all;
 }
@@ -244,12 +244,14 @@
 }
 .skills__list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 0.5rem;
-  flex-wrap: wrap;
 }
-@media (min-width: 768px) {
+@media (min-width: 450px) {
   .skills__list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 }
@@ -259,7 +261,7 @@
   text-decoration: none;
   display: flex;
   gap: 0.25rem;
-  color: rgb(8, 19, 49);
+  color: rgb(16, 29, 66);
   font-size: 1rem;
   text-align: center;
 }
@@ -278,7 +280,7 @@
   text-decoration: none;
   display: flex;
   gap: 0.25rem;
-  color: rgb(8, 19, 49);
+  color: rgb(16, 29, 66);
   font-size: 1rem;
   text-align: center;
   cursor: default;
@@ -292,17 +294,22 @@
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.25rem;
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: flex;
   gap: 0.25rem;
   cursor: default;
+}
+@media (min-width: 768px) {
+  .skills__name--inactive {
+    font-size: 1.25rem;
+  }
 }
 .skills__icon--backEnd {
   font-size: 1.5rem;
 }
 .skills__heading {
   font-size: 2rem;
-  color: rgb(8, 19, 49);
+  color: rgb(16, 29, 66);
   font-style: none;
   margin-top: 4rem;
 }
@@ -346,7 +353,7 @@
   box-shadow: 3px 3px rgba(8, 19, 49, 0.5);
 }
 .skills__title {
-  color: rgb(8, 19, 49);
+  color: rgb(16, 29, 66);
   text-align: center;
   font-size: 1.25rem;
   line-break: loose;

@@ -24,7 +24,9 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/projects/:prjId" element={<Projects />}/>
       </Routes>
+
       <Footer />
+      
     </BrowserRouter>
       
   )
