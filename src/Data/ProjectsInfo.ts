@@ -9,6 +9,7 @@ import bandsite from "../assets/images/bandsite.png"
 import portfolio from "../assets/images/myWebsite.png"
 import hangMan from "../assets/images/hangman.png"
 import budgetPlanner from "../assets/images/budgetPlanner.png"
+import mortgageCalculator from "../assets/images/mortgateCalculator.png"
 
 interface projects {
     name: string
@@ -22,6 +23,15 @@ interface projects {
 
 const projectsInfo: projects[] = [
 
+
+    {
+        name: "Mortgage Calculator",
+        image: mortgageCalculator,
+        skills: "React,Typescript,Vite,MaterialUI",
+        description: "This project was developed using React, typescript and MaterialUI and allows users to calculate their monthly payment considering different variables such as the initial down payment, bank loan, interest rate and tenure",
+        github: "Github Repo",
+        githubUrlFE: "https://github.com/kabdulka/Portfolio",
+    },
 
     {
         name: "Portfolio Website",

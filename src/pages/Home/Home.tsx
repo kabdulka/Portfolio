@@ -51,7 +51,7 @@ const Home = () => {
                 </div>
                 <div className="main__info" onClick={handleModalChange}>
                     <button className="main__info-about"> 
-                        A bit about me
+                        Get to know me!
                     </button>
                 </div>
 
