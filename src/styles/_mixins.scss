@@ -72,6 +72,20 @@
 
 }
 
+@mixin move-sideways {
+  @keyframes move-sideways {
+
+    from { 
+        background-size:cover;
+        background-position: 0%; 
+    }
+    to { 
+        background-size:cover;
+        background-position: 90000%; 
+    }
+}
+}
+
 @mixin text-shine-tablet {
   @keyframes shine {
     0% {

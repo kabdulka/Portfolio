@@ -2,7 +2,7 @@
   color: rgba(16, 29, 66, 0.95);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   height: 70vh;
   width: 90vw;
   background-color: rgb(255, 255, 255);
@@ -18,9 +18,14 @@
   .modal {
     margin-bottom: 0rem;
     margin-top: 10rem;
-    max-height: 38rem;
     max-width: 60rem;
     padding: 2rem 2.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .modal {
+    height: 75vh;
+    max-height: 45rem;
   }
 }
 @media (min-width: 1280px) {
@@ -36,12 +41,29 @@
   gap: 3rem;
   align-items: center;
 }
+.modal__header--top {
+  display: flex;
+}
+.modal__header--x {
+  color: rgba(16, 29, 66, 0.95);
+  transform: scale(1.5);
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  transition: ease-out 0.25s all;
+}
+.modal__header--x:hover {
+  transform: scale(1.75);
+  cursor: pointer;
+  color: red;
+  transition: 0.25s all;
+}
 .modal__header-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .modal__header-content {
     flex-direction: row;
   }
@@ -55,6 +77,9 @@
   .modal__header-content--inner {
     justify-content: space-between;
   }
+}
+.modal__header-title {
+  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .modal__header-title {
@@ -77,32 +102,98 @@
   .modal__profile-img {
     height: 15rem;
     width: 15rem;
+    margin: auto;
   }
 }
 .modal__hobbies {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 3rem;
+}
+@media (min-width: 1100px) {
+  .modal__hobbies {
+    gap: 1rem;
+  }
 }
 .modal__hobbies-title {
-  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .modal__hobbies-title {
     font-size: 1.75rem;
   }
 }
-.modal__hobbies-desc {
-  font-size: 2rem;
+@media (min-width: 1100px) {
+  .modal__hobbies-title {
+    margin-top: 0;
+    text-align: start;
+  }
+}
+.modal__hobbies-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: baseline;
+  justify-content: center;
+}
+@media (min-width: 1100px) {
+  .modal__hobbies-wrapper {
+    padding: 1rem;
+    overflow: hidden;
+    width: 33rem;
+    flex-wrap: nowrap;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translate3d(1200px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1200px, 0, 0);
+  }
+}
+.modal__hobbies-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.25rem;
+  width: 38%;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 10px 5px 10px rgba(16, 29, 66, 0.95);
+}
+@media (min-width: 1100px) {
+  .modal__hobbies-container {
+    flex: 0 0 auto;
+    width: 10rem;
+    height: 6rem;
+    font-size: 1.5rem;
+    animation: slide 15s linear infinite;
+  }
+}
+.modal__hobbies-text {
+  font-size: 0.65rem;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .modal__hobbies-text {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 600px) {
+  .modal__hobbies-text {
+    font-size: 1rem;
+  }
 }
 .modal__currently {
   color: rgba(16, 29, 66, 0.95);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 0.9rem;
 }
 @media (min-width: 768px) {
   .modal__currently {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 }
 .modal__story-wrapper {
@@ -114,13 +205,19 @@
   gap: 0.5rem;
 }
 .modal__story-title {
+  margin: auto;
   font-weight: bold;
-  font-size: 1rem;
-  width: 5rem;
+  font-size: 1.5rem;
+  width: 10rem;
 }
 .modal__story-title:hover {
   cursor: pointer;
   color: #e06666;
+}
+@media (min-width: 1100px) {
+  .modal__story-title {
+    margin: 0;
+  }
 }
 @media (min-width: 768px) {
   .modal__story-title {
@@ -133,9 +230,12 @@
 }
 .modal__close {
   position: relative;
+  display: flex;
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 .modal__close-btn {
   padding: 0.5rem 1rem 0.5rem 1rem;

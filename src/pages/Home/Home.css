@@ -207,7 +207,7 @@
   transform: scale(1.5);
 }
 
-@keyframes blink {
+@keyframes move-sideways {
   from {
     background-size: cover;
     background-position: 0%;
@@ -215,6 +215,14 @@
   to {
     background-size: cover;
     background-position: 90000%;
+  }
+}
+@keyframes slideSkills {
+  0% {
+    transform: translate3d(0px, 0, 0);
+  }
+  100% {
+    transform: translate3d(-650px, 0, 0);
   }
 }
 .skills {
@@ -227,7 +235,7 @@
   padding: 2rem 4rem 6rem 4rem;
   gap: 2.5rem;
   background-repeat: repeat-x;
-  animation: blink 15000s infinite linear;
+  animation: move-sideways 15000s infinite linear;
 }
 @media (min-width: 768px) {
   .skills {
@@ -253,6 +261,11 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .skills__list {
+    overflow: hidden;
   }
 }
 .skills__value {
@@ -333,6 +346,9 @@
   .skills__details {
     gap: 4rem;
   }
+}
+.skills__chart {
+  width: 200px;
 }
 .skills__info {
   display: flex;

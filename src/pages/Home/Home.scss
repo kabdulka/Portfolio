@@ -90,8 +90,6 @@
         &:hover {
             color: white;
         }
-
-      
     }
 
     &__intro {
@@ -187,7 +185,7 @@
     
 }
 
-@keyframes blink {
+@keyframes move-sideways {
 
     from { 
         background-size:cover;
@@ -199,6 +197,14 @@
     }
 }
 
+@keyframes slideSkills {
+    0% {
+        transform: translate3d(0px, 0, 0);
+    }
+    100% {
+        transform: translate3d(-650px, 0, 0);  //  item width
+    }
+}
 
 .skills {
     background: linear-gradient(rgba(239, 243, 247, 0.7), rgba(247, 249, 250, 0.7)), url("../../assets/images/skills_bg.avif") ;    
@@ -212,7 +218,7 @@
     gap: 2.5rem;
     background-repeat: repeat-x;
 
-    animation: blink 15000s infinite linear;
+    animation: move-sideways 15000s infinite linear;
 
     @include tablet {
         padding: 8rem 8rem 11rem 8rem;
@@ -242,6 +248,7 @@
         }
 
         @include tablet {
+            overflow: hidden;
         }
     }
 
@@ -263,6 +270,9 @@
 
         @include tablet {
             font-size: 1.25rem;
+            // flex: 0 0 auto;
+            // animation: slideSkills 15s linear infinite;
+       
         }
     }
 
@@ -293,7 +303,12 @@
         cursor: default;
 
         @include tablet {
+            // animation: slideSkills 10s linear infinite;
             font-size: 1.25rem;
+
+            &:hover {
+                // animation: none;
+            }
         }
     }
 
@@ -326,6 +341,10 @@
         @include tablet {
             gap: 4rem
         }
+    }
+
+    &__chart {
+        width: 200px;
     }
 
     &__info {
