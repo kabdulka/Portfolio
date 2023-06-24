@@ -344,7 +344,20 @@
     }
 
     &__chart {
-        width: 200px;
+        // canvas {
+
+            width: 12.5rem;
+            height: 12.5rem;
+        // }
+        @include tablet {
+            width: 21.875rem;
+            height: 21.875rem;
+        }
+
+        @include desktop {
+            width: 31.25rem;
+            height: 31.25rem;
+        }
     }
 
     &__info {

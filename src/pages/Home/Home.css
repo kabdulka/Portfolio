@@ -348,7 +348,20 @@
   }
 }
 .skills__chart {
-  width: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
+}
+@media (min-width: 768px) {
+  .skills__chart {
+    width: 21.875rem;
+    height: 21.875rem;
+  }
+}
+@media (min-width: 1280px) {
+  .skills__chart {
+    width: 31.25rem;
+    height: 31.25rem;
+  }
 }
 .skills__info {
   display: flex;

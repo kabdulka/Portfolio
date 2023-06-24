@@ -8,42 +8,13 @@ import { techType, frontEndTechs, backEndTechs, languages, futureTech, otherTech
 import { useRef, useEffect, useState } from "react";
 import Modal from "../../components/Modal/Modal";
 
-import { Stack, Typography } from "@mui/material"
+// import { Stack, Typography } from "@mui/material"
 
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
-import { PieChart } from "@mui/icons-material";
+import { frontEndData, backendData, languageData } from "../../Data/PieData";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-
-const frontEndData = {
-    labels: ['React', 'Vite', 'Axios', 'SASS', 'CSS', 'HTML'],
-
-    datasets: [
-      {
-        label: 'frontend technology ration',
-        data: [5, 3, 4, 5, 2, 3],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
 
 const Home = () => {
     const refSkills = useRef<null | HTMLElement>(null)
@@ -120,9 +91,9 @@ const Home = () => {
                 <div className="skills__details">
                     <article className="skills__info">
                         <h2 className="skills__title"> Front-End </h2>
-                        <div className="skills_chart">
-                            <Pie 
-                                style={{width: "200px"}}
+                        <div className="skills__chart">
+                            <Pie
+                                className="skills__chart"
                                 data={frontEndData}/>
                         </div>
                         <div className="skills__list">
@@ -148,7 +119,11 @@ const Home = () => {
                     </article>
                     <article className="skills__info">
                         <h2 className="skills__title"> Back-End </h2>
-
+                        <div className="skills__chart">
+                            <Pie
+                                className="skills__chart"
+                                data={backendData}/>
+                        </div>
                         <div className="skills__list">
 
                             {
@@ -181,6 +156,11 @@ const Home = () => {
                     </article>
                     <article className="skills__info">
                         <h2 className="skills__title"> Languages </h2>
+                        <div className="skills__chart">
+                            <Pie
+                                className="skills__chart"
+                                data={languageData}/>
+                        </div>
                         <div className="skills__list">
 
                             {

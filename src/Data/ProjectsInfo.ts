@@ -55,7 +55,7 @@ const projectsInfo: projects[] = [
     {
         name: "Instock",
         image: inStock,
-        skills: "Node.js,React,ExpressJS,Axios,MySQL,Knex.js,SASS,BEM",
+        skills: "Node.js,React,Express.js,Axios,MySQL,Knex.js,SASS,BEM",
         description: "InStock is a full stack react website that tracks the inventory of items across various different warehouses. I collaborated on this project with classmates from the Brainstation Bootcamp utilizing Git Version control in order to contribute to a single codebase. the backend Express Server handles fetches to the MySQL databases using Knex. The frontend handles user validation when creating/ editing inventory/warehouse information.",
         github: "Github Repo",
         githubUrlFE: "https://github.com/koionaroll/InStock-Frontend",
