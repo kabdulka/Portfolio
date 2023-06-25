@@ -65,7 +65,7 @@ const Modal = ({handleModalChange}: ModalProps) => {
                                 </div> 
                                 <div className="modal__hobbies-container">
                                     <span> 🏃‍♂️ </span> 
-                                    <span className="modal__hobbies-text">Always Running</span>
+                                    <span className="modal__hobbies-text"> Sprinter </span>
                                 </div> 
                                 <div className="modal__hobbies-container">
                                     <span> 🏕️ </span> 

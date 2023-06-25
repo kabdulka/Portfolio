@@ -5,6 +5,7 @@ import myProjects from "../../Data/ProjectsInfo"
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 interface ProjectType {
     name: string
@@ -39,6 +40,11 @@ const Projects = () => {
     const {prjId}: any = useParams();
 
     const myProjects = getFilteredProjects(prjId)
+
+    const handleClick = ():void => {
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+
+    }
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -83,6 +89,22 @@ const Projects = () => {
                 }
             </ul>
 
+            <div 
+                className="projects__up"
+              
+            >
+                <div className="projects__up-wrapper"
+                    onClick={handleClick}
+                >
+                    <ArrowDropUpIcon   
+                    />
+                    <p className="projects__up-text">
+                        Scroll Back Up
+                    </p>
+
+                </div>
+            </div>
+            
         </section>
     )
 

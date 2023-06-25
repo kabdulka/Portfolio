@@ -18,13 +18,15 @@ const Experience = () => {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            borderTop: "#e06666 solid 4px"
+            borderTop: "#e06666 solid 4px",
+            color: "#101d42"
          }
          const educationStyle: CSSProperties= {
             display: "flex",
             flexDirection: "column",
             gap: "1rem",
-            borderTop: "#101d42 solid 4px"
+            borderTop: "#101d42 solid 4px",
+            color: "#101d42"
          }
 
          return timeLineType === "work" ? workStyle : educationStyle;

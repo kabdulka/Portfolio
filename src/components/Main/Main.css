@@ -53,6 +53,7 @@
   animation: blinking 1.5s linear infinite;
   font-size: 0.8rem;
   align-self: flex-end;
+  margin-right: 2rem;
   color: rgba(16, 29, 66, 0.95);
   color: white;
   cursor: pointer;

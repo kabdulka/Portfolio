@@ -78,7 +78,7 @@ const Main = ({handleToSkillsClick, setCurrentLocation}: MainProps) => {
                     
                 </div>
 
-                <h3 onClick={handleClick} className="main__to-skills"> - See Technologies I've used - </h3>
+                <h3 onClick={handleClick} className="main__to-skills"> - My Tech Stack - </h3>
                 
             </main>
     )

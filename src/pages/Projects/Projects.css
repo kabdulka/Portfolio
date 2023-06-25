@@ -55,4 +55,31 @@
 }
 .projects__back:hover {
   transform: scale(2);
+}
+.projects__up {
+  width: 100%;
+  display: flex;
+  color: rgba(16, 29, 66, 0.95);
+  justify-content: center;
+  margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .projects__up {
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .projects__up {
+    display: none;
+  }
+}
+.projects__up-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s;
+}
+.projects__up-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.15);
 }/*# sourceMappingURL=Projects.css.map */
