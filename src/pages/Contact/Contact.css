@@ -1,23 +1,42 @@
 .contact {
-  background: linear-gradient(rgb(233, 233, 233), rgb(232, 232, 232)), url(/src/assets/images/contactBg.webp);
+  background: linear-gradient(rgba(233, 233, 233, 0.96), rgba(232, 232, 232, 0.96)), url(/src/assets/images/contactBg.webp);
   padding: 6rem 1rem 1rem 1rem;
   width: 100%;
   gap: 2rem;
 }
 .contact__header {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  font-weight: 900;
+  text-align: center;
   color: rgb(16, 29, 66);
   width: 100%;
   margin-bottom: 2rem;
+  background-color: rgb(248, 243, 237);
+  padding: 1rem 2rem;
+  border-radius: 5rem;
 }
 @media (min-width: 768px) {
   .contact__header {
+    font-size: 2rem;
+  }
+}
+.contact__sub-header {
+  color: rgba(16, 29, 66, 0.95);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .contact__sub-header {
     font-size: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 @media (min-width: 768px) {
   .contact {
-    padding: 8rem 2rem 2rem 2rem;
+    padding: 10rem 2rem 2rem 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -137,7 +156,7 @@
 .form__contact-email {
   border: rgba(16, 29, 66, 0.95) solid 1px;
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(16, 29, 66, 0.95);
@@ -188,7 +207,7 @@
 .form__contact-name {
   border: rgba(16, 29, 66, 0.95) solid 1px;
   border-radius: 0.25rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(16, 29, 66, 0.95);
@@ -210,7 +229,7 @@
 .form__contact-button {
   border-radius: 0.5rem;
   width: 10rem;
-  padding: 0.25rem 1rem;
+  padding: 0.75rem 0rem;
   cursor: pointer;
   color: #fff;
   background-color: rgba(16, 29, 66, 0.95);

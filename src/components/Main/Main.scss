@@ -1,0 +1,184 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+
+.main {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100%;
+    background: linear-gradient(rgba(16,29,66, 0.80), rgba(16,29,66, 0.80)), url("/src/assets/images/newBG.jpg") center/cover;
+    aspect-ratio: 16/9;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    padding: 3rem 2rem 3rem 2rem;
+
+
+    &__modal--open {
+        background: linear-gradient(rgba(3, 8, 35, 0.9), rgba(3, 8, 35, 0.9)), url("/src/assets/images/newBG.jpg") center/cover;
+
+    }
+
+    @include tablet {
+
+        padding: 10rem 6rem 10rem 6rem;
+        justify-content: space-evenly;
+        height: 100vh;
+    }
+
+    @include desktop {
+        // height: 55rem;
+    }
+
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image-profile {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 0.5rem;
+        transition: all 0.5s;
+
+        &:hover {
+            box-shadow: 4px 4px #888888;
+        }
+
+        @include tablet {
+            height: 20rem;
+            width: 20rem;
+        }
+
+    }
+
+    &__to-skills {
+
+        animation: blinking 1.5s linear infinite;
+        @include text-bliking;
+        font-size: 0.8rem;
+        align-self: flex-end;
+        color: $primary-background;
+        color: white;
+        cursor: pointer;
+
+        @media screen and (min-width: 350px) {
+            font-size: 1.25rem;
+        }
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &__intro {
+
+        width: 100%;
+        text-align: center;
+    }
+
+    &__intro-title {
+        color: $intro-title;
+        font-size: 3.4rem;
+        color: white;
+
+        background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include text-shine-mobile;
+        animation: shine-mobile 2s infinite linear;
+        
+
+        @include tablet {
+            @include text-shine-tablet;
+            animation: shine 2s infinite linear;
+            font-size: 4rem;
+        }
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+
+    &__intro-wave {
+        @include wave-animation;
+        animation-name: wave;
+        animation-iteration-count: infinite;
+        animation-duration: 2.5s; 
+        transform-origin: 70% 70%; 
+
+        display: inline-block;
+        font-size: 3.4rem;
+ 
+
+        @include tablet {
+            font-size: 4rem;
+        }
+
+        @include desktop {
+            font-size: 5rem;
+        }
+        
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__info-about {
+        font-weight: 100;
+        font-size: 0.85rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        line-height: 1.1rem;
+        border: 0.5px $primary-background solid;
+
+        border: none;
+        color: $primary-background;
+        font-weight: 500;
+        transition: 0.3s all;
+        &:hover {
+            cursor: pointer;
+            filter: brightness(80%);
+            transition: 0.3s all;
+        }
+        
+        @include tablet {
+            font-size: 1rem;
+            width: 10rem;
+
+        }
+    }
+
+    &__icons {
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+            @include icon-styles;
+        }
+    }
+
+    
+}

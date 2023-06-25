@@ -1,0 +1,218 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+@keyframes move-sideways {
+
+    from { 
+        background-size:cover;
+        background-position: 0%; 
+    }
+    to { 
+        background-size:cover;
+        background-position: 90000%; 
+    }
+}
+
+@keyframes slideSkills {
+    0% {
+        transform: translate3d(0px, 0, 0);
+    }
+    100% {
+        transform: translate3d(-650px, 0, 0);  //  item width
+    }
+}
+
+.skills {
+    background: linear-gradient(rgba(239, 243, 247, 0.7), rgba(247, 249, 250, 0.7)), url("../../assets/images/skills_bg.avif") ;    
+    background-size:cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 4rem 6rem 4rem;
+    gap: 2.5rem;
+    background-repeat: repeat-x;
+
+    animation: move-sideways 15000s infinite linear;
+
+    @include tablet {
+        padding: 8rem 8rem 11rem 8rem;
+    }
+    @include desktop {
+        padding: 10rem 10rem 13rem 10rem;
+    }
+
+    &__back {
+        margin-top: 4rem;
+        text-decoration: none;
+        color: $primary-background;
+        &:hover {
+            color: $contrast-colour;
+        }
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+
+    &__modal--open {
+        background: linear-gradient(rgba(119, 117, 117, 0.9), rgba(119, 117, 117, 0.9)), url("../../assets/images/skills_bg.avif") ;    
+
+    }
+
+    &__list {
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        @media (min-width: 450px)  {
+            
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        @include tablet {
+            overflow: hidden;
+        }
+    }
+
+    &__value {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        display: flex;
+        gap: 0.25rem;
+        color: $secondary-text;
+        font-size: 1rem;
+        text-align: center;
+        
+        &:hover {
+            color: rgb(227, 134, 134);
+            cursor: pointer;
+            
+        }
+
+        @include tablet {
+            font-size: 1.25rem;
+            // flex: 0 0 auto;
+            // animation: slideSkills 15s linear infinite;
+       
+        }
+    }
+
+    &__value--inactive {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        display: flex;
+        gap: 0.25rem;
+        color: $secondary-text;
+        font-size: 1rem;
+        text-align: center;
+        cursor: default;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__name--inactive {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-size: 1rem;
+        display: flex;
+        gap: 0.25rem;
+
+        cursor: default;
+
+        @include tablet {
+            // animation: slideSkills 10s linear infinite;
+            font-size: 1.25rem;
+
+            &:hover {
+                // animation: none;
+            }
+        }
+    }
+
+
+    &__icon--backEnd {
+        font-size: 1.5rem;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        color: $secondary-text;
+        font-style: none;
+        margin-top: 2rem;
+
+        @include tablet {
+            
+            font-size: 3rem;
+        }
+        @include desktop {
+            font-size: 5rem;
+        }
+    }
+
+    &__details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+ 
+        
+        @include tablet {
+            gap: 4rem
+        }
+    }
+
+    &__chart {
+
+        width: 12.5rem;
+        height: 12.5rem;
+
+        @include tablet {
+            width: 19.875rem;
+            height: 19.875rem;
+        }
+
+        @include desktop {
+            width: 25.25rem;
+            height: 25.25rem;
+        }
+    }
+
+    &__info {
+        @include skills-info;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+        border-radius: 3.25rem;
+        gap: 2rem;
+        transition: all 0.75s;
+
+        background-color: rgb(229, 233, 243, 0.4);
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 3px 3px rgba(8, 19, 49, 0.5);
+        }
+
+    }
+
+    &__title {
+        color: $secondary-text;
+        text-align: center;
+        font-size: 1.25rem;
+        line-break:loose;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+    }    
+
+}

@@ -150,9 +150,8 @@ const Contact = () => {
 
         <section className="contact">
 
-            <h2 className="contact__header"> Got a question?  </h2>
-            <h2 className="contact__header"> Or do you just want to say hi? 👋</h2>
-            <h2 className="contact__header"> Feel free to reach out! </h2>
+            <h2 className="contact__header"> Got a question? Or do you just want to say hi? 👋 </h2>
+            <h2 className="contact__sub-header"> Feel free to reach out! </h2>
 
             <div className="contact__divider">
 
@@ -164,7 +163,7 @@ const Contact = () => {
                         <input 
                             name="name" 
                             id="name"
-                            placeholder="Enter your name"
+                            placeholder="Enter your name *"
                             type="text" 
                             className="form__contact-name" 
                             value={contactInfo.name}
@@ -179,7 +178,7 @@ const Contact = () => {
                             name="email" 
                             id="email"
                             type="email"
-                            placeholder="Enter your email" 
+                            placeholder="Enter your email *" 
                             className="form__contact-email"
                             value={contactInfo.email}
                             onChange={handleInputChange}
@@ -192,7 +191,7 @@ const Contact = () => {
                         <textarea 
                             name="message" 
                             id="message"
-                            placeholder="Type your message"
+                            placeholder="Type your message *"
                             className="form__contact-message"
                             value={contactInfo.message}
                             onChange={handleInputChange}
@@ -208,7 +207,7 @@ const Contact = () => {
                             className="form__contact-button"
 
                         >
-                            Submit
+                            SUBMIT
                         </button>
                     </div>
 
@@ -237,7 +236,7 @@ const Contact = () => {
                         <div className="contact__details">
                             <div className="contact__details-info" onClick={()=>{handleVisibilityChange("phone")}}>
                                 <PhoneIcon></PhoneIcon>
-                                <p className="contact__phone-header"> phone number </p> 
+                                <p className="contact__phone-header"> Call Me </p> 
                             </div>
                             <p className={`${contactVisibility.phone ? "" : "contact__info--hidden"}`} > 604-442-6525 </p>
                         </div>
@@ -245,7 +244,7 @@ const Contact = () => {
                         <div className="contact__details">
                             <div className="contact__details-info" onClick={()=>{handleVisibilityChange("email")}}>
                                 <EmailIcon></EmailIcon>
-                                <p className="contact__email-header"> Email </p> 
+                                <p className="contact__email-header"> Email Me </p> 
                             </div>
                             <p className={`${contactVisibility.email ? "" : "contact__info--hidden"}`} > kenabdulka@gmail.com </p>
                         </div>
@@ -253,7 +252,7 @@ const Contact = () => {
                         <div className="contact__details">
                             <div className="contact__details-info"onClick={() => {handleVisibilityChange("linkedIn")}}>
                                 <LinkedInIcon></LinkedInIcon>
-                                <p className="contact__linkedIn-header"> LinkedIn </p> 
+                                <p className="contact__linkedIn-header"> Let's Connect on LinkedIn </p> 
                             </div>
                             <div className={`${contactVisibility.linkedIn ? "" : "contact__info--hidden"}`} > 
                                 
@@ -267,7 +266,7 @@ const Contact = () => {
                         <div className="contact__details">
                             <div className="contact__details-info" onClick={()=>{handleVisibilityChange("github")}}>
                                 <GitHubIcon></GitHubIcon>
-                                <p className="contact__email-header"> Github </p> 
+                                <p className="contact__email-header"> Follow me on Github </p> 
                             </div>
                             <div className={`${contactVisibility.github ? "" : "contact__info--hidden"}`} >
 
@@ -280,14 +279,6 @@ const Contact = () => {
                             
                             </div>
                         </div>
-
-                        {/* <div className="contact__details" onClick={handleVisibilityChange}>
-                            <div className="contact__details-info">
-                                <PhoneIcon></PhoneIcon>
-                                <p className="contact__linkedIn-header"> LinkedIn </p> 
-                            </div>
-                            <p className={`${phoneNumvisible ? "contact__linkedIn--visible" : "contact__linkedIn--hidden"}`} > 604-442-6525 </p>
-                        </div> */}
 
                     </div>
                 </article>

@@ -1,0 +1,203 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
+  width: 100%;
+  background: linear-gradient(rgba(16, 29, 66, 0.8), rgba(16, 29, 66, 0.8)), url("/src/assets/images/newBG.jpg") center/cover;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem 2rem 3rem 2rem;
+}
+.main__modal--open {
+  background: linear-gradient(rgba(3, 8, 35, 0.9), rgba(3, 8, 35, 0.9)), url("/src/assets/images/newBG.jpg") center/cover;
+}
+@media (min-width: 768px) {
+  .main {
+    padding: 10rem 6rem 10rem 6rem;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+}
+.main__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main__image {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main__image-profile {
+  width: 50vw;
+  height: 50vw;
+  border-radius: 0.5rem;
+  transition: all 0.5s;
+}
+.main__image-profile:hover {
+  box-shadow: 4px 4px #888888;
+}
+@media (min-width: 768px) {
+  .main__image-profile {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+.main__to-skills {
+  animation: blinking 1.5s linear infinite;
+  font-size: 0.8rem;
+  align-self: flex-end;
+  color: rgba(16, 29, 66, 0.95);
+  color: white;
+  cursor: pointer;
+}
+@media screen and (min-width: 350px) {
+  .main__to-skills {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .main__to-skills {
+    font-size: 1.5rem;
+  }
+}
+.main__to-skills:hover {
+  color: white;
+}
+.main__intro {
+  width: 100%;
+  text-align: center;
+}
+.main__intro-title {
+  color: rgb(247, 247, 178);
+  font-size: 3.4rem;
+  color: white;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-mobile 2s infinite linear;
+}
+@keyframes shine-mobile {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+@media (min-width: 768px) {
+  .main__intro-title {
+    animation: shine 2s infinite linear;
+    font-size: 4rem;
+  }
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 500px;
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .main__intro-title {
+    font-size: 5rem;
+  }
+}
+.main__intro-wave {
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  font-size: 3.4rem;
+}
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media (min-width: 768px) {
+  .main__intro-wave {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main__intro-wave {
+    font-size: 5rem;
+  }
+}
+.main__info {
+  text-align: center;
+}
+.main__info-about {
+  font-weight: 100;
+  font-size: 0.85rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1.1rem;
+  border: 0.5px rgba(16, 29, 66, 0.95) solid;
+  border: none;
+  color: rgba(16, 29, 66, 0.95);
+  font-weight: 500;
+  transition: 0.3s all;
+}
+.main__info-about:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+  transition: 0.3s all;
+}
+@media (min-width: 768px) {
+  .main__info-about {
+    font-size: 1rem;
+    width: 10rem;
+  }
+}
+.main__icons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.main__icons svg {
+  color: #fff;
+  font-size: 2rem;
+  color: #fff;
+  transition: ease 0.5s all;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .main__icons svg {
+    font-size: 2.5rem;
+  }
+}
+.main__icons svg:hover {
+  transform: scale(1.5);
+}/*# sourceMappingURL=Main.css.map */

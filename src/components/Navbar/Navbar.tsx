@@ -11,19 +11,23 @@ const getCurrentpage = (queryStr: string): number => {
     
     if (queryStr === "/") {
         // Projects
-        console.log("navbar", queryStr)
+        // console.log("navbar", queryStr)
         return 0;
     } else if (queryStr === "/experience") {
         // experience
         return 2
     } else if (queryStr === "/contact") {
-        console.log("navbar", queryStr)
+        // console.log("navbar", queryStr)
         return 3
     } else if (queryStr === "/about") {
         return 4
+    } else if (queryStr === "/about/main") {
+        return 4
+    } else if (queryStr === "/about/skills") {
+        return 4
     }
     else  {
-        console.log("navbar", queryStr)
+        // console.log("navbar", queryStr)
         // projects
         return 1
     } 

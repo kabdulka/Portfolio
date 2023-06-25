@@ -38,6 +38,19 @@
     padding: 10rem 10rem 13rem 10rem;
   }
 }
+.skills__back {
+  margin-top: 4rem;
+  text-decoration: none;
+  color: rgba(16, 29, 66, 0.95);
+}
+.skills__back:hover {
+  color: #e06666;
+}
+@media (min-width: 768px) {
+  .skills__back {
+    margin-top: 0;
+  }
+}
 .skills__modal--open {
   background: linear-gradient(rgba(119, 117, 117, 0.9), rgba(119, 117, 117, 0.9)), url("../../assets/images/skills_bg.avif");
 }
@@ -115,7 +128,7 @@
   font-size: 2rem;
   color: rgb(16, 29, 66);
   font-style: none;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .skills__heading {
@@ -144,14 +157,14 @@
 }
 @media (min-width: 768px) {
   .skills__chart {
-    width: 21.875rem;
-    height: 21.875rem;
+    width: 19.875rem;
+    height: 19.875rem;
   }
 }
 @media (min-width: 1280px) {
   .skills__chart {
-    width: 31.25rem;
-    height: 31.25rem;
+    width: 25.25rem;
+    height: 25.25rem;
   }
 }
 .skills__info {
@@ -163,7 +176,7 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 3.25rem;
   gap: 2rem;
   transition: all 0.75s;
   background-color: rgba(229, 233, 243, 0.4);
@@ -182,4 +195,4 @@
   .skills__title {
     font-size: 1.5rem;
   }
-}/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Skills.css.map */

@@ -1,63 +1,34 @@
 
-import "./Home.scss"
-
-import { useRef, useEffect, useState } from "react";
 
 
-import Main from "../../components/Main/Main";
-import Skills from "../../components/Skills/Skills";
-import { useLocation } from "react-router-dom";
 
-const Home = () => {
+import "./Skills.scss";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+import { frontEndData, backendData, languageData } from "../../Data/PieData";
+import {  useEffect  } from "react";
+import { Link } from 'react-router-dom';
 
-    const refSkills = useRef<HTMLDivElement | null>(null)
+import { techType, frontEndTechs, backEndTechs, languages, futureTech, otherTech} from "../../Data/techStack";
 
-    const [currentlocation, setCurrentLocation] = useState<string>("")
-    const location = useLocation();
-    console.log(location.pathname)
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-    const handleHomeSection = (location: string): string => {
-
-        if (location === "/about") {
-            return "about"
-        } else if (location === "/main") {
-            
-            return "main"
-        }
-        return "skills"
-    }
+const Skills = () => {
 
     useEffect(() => {
-        setCurrentLocation(handleHomeSection(location.pathname));
-    }, [location])
- 
-    const handleToSkillsClick = (): void => {
-        refSkills.current?.scrollIntoView({behavior: "smooth" })
-        // setCurrentLocation("skills")
-    }
+        window.scrollTo({top: 90, left: 90, behavior: 'smooth'});
+    }, [])
 
-   return (
-    
-        <>
-            {
-                currentlocation === "main" || currentlocation === "about" && 
-                <Main 
-                    handleToSkillsClick={handleToSkillsClick}
-                    setCurrentLocation={setCurrentLocation}
-                /> 
-            }
-  
-            {    
-                
-                    
-                   currentlocation === "skills" && 
-                   <div ref={refSkills}> 
-                        <Skills />
-                  
-                    </div>
-            }
-            {/* <section className={`skills`} ref={refSkills}>
+    return (
+        <section className={`skills`} >
+                <Link 
 
+                    className="skills__back"
+                    to="/about"
+         
+                >
+                    Back to About
+                </Link>
                 <h1 className="skills__heading"> Skills </h1>
          
                 <div className="skills__details">
@@ -197,13 +168,7 @@ const Home = () => {
                 </div>
 
             </section>
-
-            
-             */}
-        </>
-
-   )
-    
+    )
 }
 
-export default Home;
+export default Skills;

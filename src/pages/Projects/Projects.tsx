@@ -38,11 +38,7 @@ const Projects = () => {
 
     const {prjId}: any = useParams();
 
-    console.log(prjId)
     const myProjects = getFilteredProjects(prjId)
-    console.log(myProjects)
-
-
 
     useEffect(() => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -56,7 +52,7 @@ const Projects = () => {
                     prjId !== undefined && 
                         <Link 
                             className="projects__back-link" 
-                            to="/about"> 
+                            to="/About/skills"> 
                             
                             <ArrowBackIcon className="projects__back"></ArrowBackIcon> 
                         </Link>
