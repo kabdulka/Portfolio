@@ -1,5 +1,5 @@
 .experience {
-  background-color: #f0f0f0;
+  background-color: #909090;
   padding-top: 4rem;
 }
 @media (min-width: 768px) {
@@ -11,9 +11,9 @@
 .vertical-timeline-element-content .vertical-timeline-element-date {
   float: left;
   padding: 0.8em 0;
-  opacity: 0.9;
+  opacity: 0;
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
-  color: #101d42;
+  color: rgba(16, 29, 66, 0.95);
 }/*# sourceMappingURL=Experience.css.map */

@@ -1,5 +1,5 @@
 .contact {
-  background: linear-gradient(rgba(233, 233, 233, 0.96), rgba(232, 232, 232, 0.96)), url(/src/assets/images/contactBg.webp);
+  background: linear-gradient(rgba(186, 186, 186, 0.96), rgba(188, 187, 187, 0.96)), url(/src/assets/images/contactBg.webp);
   padding: 6rem 1rem 1rem 1rem;
   padding: 10rem 2rem 2rem 2rem;
   display: flex;
@@ -14,7 +14,7 @@
   text-align: center;
   color: rgb(16, 29, 66);
   width: 100%;
-  background-color: rgb(248, 243, 237);
+  background-color: floralwhite;
   padding: 1rem 2rem;
   border-radius: 5rem;
 }
@@ -30,11 +30,14 @@
   }
 }
 .contact__sub-header {
+  padding: 1rem 2rem;
   color: rgba(16, 29, 66, 0.95);
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
   margin-bottom: 1.5rem;
+  background-color: floralwhite;
+  border-radius: 5rem;
 }
 @media (min-width: 768px) {
   .contact__sub-header {
@@ -58,7 +61,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
-  border: rgba(16, 29, 66, 0.95) 1px solid;
+  background-color: floralwhite;
 }
 @media (min-width: 768px) {
   .contact__divider {
@@ -158,7 +161,6 @@
   visibility: hidden;
 }
 .form__contact-error--visible {
-  font-size: small;
   color: rgb(186, 48, 48);
 }
 .form__contact-email {

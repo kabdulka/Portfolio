@@ -2,7 +2,8 @@
 @use "../../styles/variables" as *;
 
 .experience {
-    background-color: $background-third;
+    // background-color: $background-third;
+    background-color: #909090;
     padding-top: 4rem;
 
     @include tablet {
@@ -13,32 +14,13 @@
 .vertical-timeline-element-content .vertical-timeline-element-date {
     float: left;
     padding: 0.8em 0;
-    opacity: .9;
+    opacity: 0;
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
-    // width: 10rem;
-    // border-radius: 0.25rem;
-    // text-align: center;
-    // padding: 0.8em 1rem;
-    // opacity: .8; 
-    // background-color: antiquewhite;
-    color: #101d42;
-    // color: white;
-    
+    color: $primary-background;
 }
 
-.vertical-timeline-element-date {
-    // border: red solid 1px;
-    // left: auto;
-    // right: 124%;
-    // text-align: right;
-    // display: flex;
-    // justify-content: center;
-    // color: red;
-    
-    // text-align: center;
-}
 
 
 

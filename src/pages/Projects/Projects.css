@@ -4,11 +4,12 @@
   background-color: #f0f0f0;
   width: 100%;
   padding: 9rem 2.5rem 6rem 2.5rem;
-  background: linear-gradient(rgba(205, 201, 201, 0.95), rgba(191, 186, 186, 0.95)), url("/src/assets/images/projects.jpg") center/cover;
+  background: linear-gradient(rgba(71, 71, 71, 0.95), rgba(136, 133, 133, 0.95)), url("/src/assets/images/projects.jpg") center/cover;
 }
 .projects__heading {
   text-align: center;
-  color: rgba(16, 29, 66, 0.95);
+  color: #fff;
+  font-weight: 500;
   font-size: 6vw;
   margin-bottom: 4rem;
 }
@@ -59,7 +60,7 @@
 .projects__up {
   width: 100%;
   display: flex;
-  color: rgba(16, 29, 66, 0.95);
+  color: #fff;
   justify-content: center;
   margin-top: 3rem;
 }

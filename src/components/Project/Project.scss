@@ -168,8 +168,10 @@
     
 
     @include tablet {
+
         height: 19.25rem;
         width: 18.5rem;
+
     }
 
     @include desktop {
